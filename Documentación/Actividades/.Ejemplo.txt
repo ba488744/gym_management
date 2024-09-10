@@ -38,11 +38,11 @@ Ejemplos:
 	1	Grupo de metas
 	1	Étapa de Análisis
 
-	2	Inicio(YYYY-MM-DD)	Final(YYYY-MM-DD)	Progreso(0-100)	Meta
-	2	2024-09-10	2024-09-11	50	Diagrama de requisitos
+	2	Inicio(YYYY-MM-DD)	Final(YYYY-MM-DD)	Progreso(0-100)	Meta	Número(s) de responsable
+	2	2024-09-10	2024-09-11	50	Diagrama de requisitos	4,5
 
 	3	Inicio(YYYY-MM-DD)	Final(YYYY-MM-DD)	Progreso(0-100)	Meta conectada al elemento anterior
-	3	2024-09-11	2024-09-12	10	Diagrama de actividades
+	3	2024-09-11	2024-09-12	10	Diagrama de actividades	1
 
 	4	Milestone
 	4	Implementación de característica x
