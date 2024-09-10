@@ -1,6 +1,6 @@
 #!/usr/bin/env fish
 
-set commondir "$HOME/Sync/UAEH/Asignaturas/Bases de datos distribuidas/gym_management/Documentación/_LaTeX"
+set commondir "$HOME/Sync/UAEH/Asignaturas/Bases de datos distribuidas/gym_management/Documentación/_LaTeX/"
 set dir "$commondir/GANTT"
 set activities (find "$dir/Actividades" -mindepth 1 -maxdepth 1 -type f ! -name ".*" | sort)
 set responsable \
@@ -65,7 +65,7 @@ set end_day (getlastday)
 function pre
 	echo '
 	\begin{landscape}
-	\scalebox{0.99}{
+	\scalebox{0.9}{
 	%\begin{adjustbox}{max size={0.9999\textwidth}{0.9999\textheight}}'
 	echo '
 	\def\pgfcalendarweekdayletter#1{%
@@ -75,7 +75,7 @@ function pre
 	\begin{ganttchart}[
 		x unit=0.5cm,
 		y unit title=1cm,
-		y unit chart=1cm,
+		y unit chart=1.1cm,
 		time slot format=big-endian,
 		vgrid,
 		hgrid,
@@ -134,6 +134,9 @@ function list-activities
 					end) '0)/'"$count"
 				)']{'(
 					echo $act | cut -d \t -f 2
+					if test (echo $act | cut -d \t -f 3)
+						echo a
+					end
 				)'}{'(
 				if test $n -eq 1
 					getfirstday "$file"
@@ -148,13 +151,13 @@ function list-activities
 				)']{'(
 					echo (echo $act | cut -d \t -f 5) (
 					if test (echo $act | cut -d \t -f 6) && test $n -le 3
-						echo '\ganttalignnewline \textit{ \footnotesize{ Responsable(s): ' (
+						echo '\ganttalignnewline \footnotesize{ \textit{ Responsable(s): ' (
 						echo $responsable[(echo $act | cut -d \t -f 6 | sed 's/,/\t/g' | cut -d \t -f 1)]
 						for resp in (echo $act | cut -d \t -f 6 | sed 's/,/\t/g' | cut -d \t -f 2-)
 							echo ', '$responsable[$resp]
 						end) '.}}'
 					end
-				)'}{'(
+				))'}{'(
 					echo $act | cut -d \t -f 2
 				)'}{'(
 					echo $act | cut -d \t -f 3
