@@ -1,36 +1,40 @@
-Primera columna: Tipo de elemento:
-1. Grupo de metas.
-2. Meta.
-3. Meta conectada al elemento anterior.
-4. Milestone.
-5. Milestone conectado al elemento anterior.
+Un archivo de texto que contiene actividades, cada actividad en una línea y con campos en columnas separadas por una tabulación (Tab).
 
-Segunda columna:
-- Para 1, 4 y 5: Título del elemento.
-- Para 2 y 3: Fecha de inicio
+Estructura:
 
-Tercera columna (sólo 2 y 4):
-- Fecha de final.
+	Primera columna: Tipo de elemento:
+	1. Grupo de metas.
+	2. Meta.
+	3. Meta conectada al elemento anterior.
+	4. Milestone.
+	5. Milestone conectado al elemento anterior.
 
-Cuarta columna (sólo 2 y 4):
-- Progreso.
+	Segunda columna:
+	- Para 1, 4 y 5: Título del elemento.
+	- Para 2 y 3: Fecha de inicio
 
-Quinta columna (sólo 2 y 4):
-- Título del elemento.
+	Tercera columna (sólo 2 y 4):
+	- Fecha de final.
+
+	Cuarta columna (sólo 2 y 4):
+	- Progreso.
+
+	Quinta columna (sólo 2 y 4):
+	- Título del elemento.
 
 Ejemplos:
 
-1	Grupo de metas
-1	Análisis
+	1	Grupo de metas
+	1	Análisis
 
-2	Inicio(YYYY-MM-DD)	Final(YYYY-MM-DD)	Progreso(0-100)	Meta
-2	2024-09-10	2024-09-11	50	Diagrama de requisitos
+	2	Inicio(YYYY-MM-DD)	Final(YYYY-MM-DD)	Progreso(0-100)	Meta
+	2	2024-09-10	2024-09-11	50	Diagrama de requisitos
 
-3	Inicio(YYYY-MM-DD)	Final(YYYY-MM-DD)	Progreso(0-100)	Meta conectada al elemento anterior
-3	2024-09-11	2024-09-12	10	Diagrama de actividades
+	3	Inicio(YYYY-MM-DD)	Final(YYYY-MM-DD)	Progreso(0-100)	Meta conectada al elemento anterior
+	3	2024-09-11	2024-09-12	10	Diagrama de actividades
 
-4	Milestone
-4	Implementación de característica x
+	4	Milestone
+	4	Implementación de característica x
 
-5	Milestone conectado al elemento anterior
-5	Implementación de característica y
+	5	Milestone conectado al elemento anterior
+	5	Implementación de característica y
