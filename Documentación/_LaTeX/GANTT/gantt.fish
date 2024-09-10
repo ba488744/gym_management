@@ -151,7 +151,7 @@ function list-activities
 				)']{'(
 					echo (echo $act | cut -d \t -f 5) (
 					if test (echo $act | cut -d \t -f 6) && test $n -le 3
-						echo '\ganttalignnewline \footnotesize{ \textit{ Responsable(s): ' (
+						echo '\ganttalignnewline \footnotesize{ \textit{ ' (
 						echo $responsable[(echo $act | cut -d \t -f 6 | sed 's/,/\t/g' | cut -d \t -f 1)]
 						for resp in (echo $act | cut -d \t -f 6 | sed 's/,/\t/g' | cut -d \t -f 2-)
 							echo ', '$responsable[$resp]
