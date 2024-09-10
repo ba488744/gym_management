@@ -1,7 +1,14 @@
 1	Grupo de metas
+1	Análisis
 
 2	Inicio(YYYY-MM-DD)	Final(YYYY-MM-DD)	Progreso(0-100)	Meta
+2	2024-09-10	2024-09-11	50	Diagrama de requisitos
+
 3	Inicio(YYYY-MM-DD)	Final(YYYY-MM-DD)	Progreso(0-100)	Meta conectada al elemento anterior
+3	2024-09-11	2024-09-12	10	Diagrama de actividades
 
 4	Milestone
+4	Implementación de característica x
+
 5	Milestone conectado al elemento anterior
+5	Implementación de característica y
