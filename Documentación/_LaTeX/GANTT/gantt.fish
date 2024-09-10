@@ -146,14 +146,13 @@ function list-activities
 				echo '[progress='(
 					echo $act | cut -d \t -f 4
 				)']{'(
-					echo $act | cut -d \t -f 5
 					echo (echo $act | cut -d \t -f 5) (
 					if test (echo $act | cut -d \t -f 6) && test $n -le 3
-						echo '\ganttalignnewline \textit{ Responsable(s): ' (
+						echo '\ganttalignnewline \textit{ \footnotesize{ Responsable(s): ' (
 						echo $responsable[(echo $act | cut -d \t -f 6 | sed 's/,/\t/g' | cut -d \t -f 1)]
 						for resp in (echo $act | cut -d \t -f 6 | sed 's/,/\t/g' | cut -d \t -f 2-)
 							echo ', '$responsable[$resp]
-						end) '}'
+						end) '.}}'
 					end
 				)'}{'(
 					echo $act | cut -d \t -f 2
