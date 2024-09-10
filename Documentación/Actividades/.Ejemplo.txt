@@ -1,3 +1,25 @@
+Primera columna: Tipo de elemento:
+1. Grupo de metas.
+2. Meta.
+3. Meta conectada al elemento anterior.
+4. Milestone.
+5. Milestone conectado al elemento anterior.
+
+Segunda columna:
+- Para 1, 4 y 5: Título del elemento.
+- Para 2 y 3: Fecha de inicio
+
+Tercera columna (sólo 2 y 4):
+- Fecha de final.
+
+Cuarta columna (sólo 2 y 4):
+- Progreso.
+
+Quinta columna (sólo 2 y 4):
+- Título del elemento.
+
+Ejemplos:
+
 1	Grupo de metas
 1	Análisis
 
