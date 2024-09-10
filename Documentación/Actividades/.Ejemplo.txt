@@ -15,13 +15,13 @@ Estructura:
 	- Para 1, 4 y 5: Título del elemento.
 	- Para 2 y 3: Fecha de inicio
 
-	Tercera columna (sólo 2 y 4):
+	Tercera columna (sólo 2 y 3):
 	- Fecha de final.
 
-	Cuarta columna (sólo 2 y 4):
+	Cuarta columna (sólo 2 y 3):
 	- Progreso.
 
-	Quinta columna (sólo 2 y 4):
+	Quinta columna (sólo 2 y 3):
 	- Título del elemento.
 
 Ejemplos:
