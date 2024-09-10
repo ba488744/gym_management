@@ -25,7 +25,7 @@ Estructura:
 	- Título del elemento.
 
 	Sexta columna (sólo 2 y 3, opcional):
-	- Número de responsable de la meta, en orden alfabético:
+	- Número de responsable de la meta:
 		1. Aimar Jair
 		2. Cristian
 		3. Gerardo
