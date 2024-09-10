@@ -27,7 +27,7 @@ Estructura:
 Ejemplos:
 
 	1	Grupo de metas
-	1	Análisis
+	1	Étapa de Análisis
 
 	2	Inicio(YYYY-MM-DD)	Final(YYYY-MM-DD)	Progreso(0-100)	Meta
 	2	2024-09-10	2024-09-11	50	Diagrama de requisitos
@@ -39,4 +39,4 @@ Ejemplos:
 	4	Implementación de característica x
 
 	5	Milestone conectado al elemento anterior
-	5	Implementación de característica y
+	5	Implementación de característica y que dependía de x
