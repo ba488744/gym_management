@@ -3,6 +3,20 @@
 set commondir "$HOME/Sync/UAEH/Asignaturas/Bases de datos distribuidas/gym_management/Documentación/_LaTeX"
 set dir "$commondir/GANTT"
 set activities (find "$dir/Actividades" -mindepth 1 -maxdepth 1 -type f ! -name ".*" | sort)
+set responsable \
+"Aimar Jair" \
+"Cristian" \
+"Gerardo" \
+"Magaly" \
+"Monserrat" \
+"Valentín"
+set responsable_completo \
+"Barón Salinas Mauricio Valentín" \
+"Cristóbal Silverio Cristian" \
+"Gómez Daniel Aimar Jair" \
+"Hernández Reyes Magaly" \
+"Sánchez Carrasco Monserrat" \
+"Ramírez Suárez Gerardo"
 set c 12
 
 set element group bar linkedbar milestone linkedmilestone
@@ -60,16 +74,17 @@ function pre
 	echo "
 	\begin{ganttchart}[
 		x unit=0.5cm,
-		y unit title=0.75cm,
-		y unit chart=0.75cm,
+		y unit title=1cm,
+		y unit chart=1cm,
 		time slot format=big-endian,
 		vgrid,
 		hgrid,
 		title label font=\footnotesize,
 		progress label text={},
 		newline shortcut=true,
-		bar label node/.append style=%
-		{align=left}
+		group label node/.append style={align=right},
+		bar label node/.append style={align=right},
+		milestone label node/.append style={align=right},
 		canvas/.style={
 			draw=black,
 			dotted
@@ -119,9 +134,6 @@ function list-activities
 					end) '0)/'"$count"
 				)']{'(
 					echo $act | cut -d \t -f 2
-					#if test (echo $act | cut -d \t -f 3)
-					#	echo '\\ganttalignnewline \textit{' (echo $act | cut -d \t -f 3) '}'
-					#end
 				)'}{'(
 				if test $n -eq 1
 					getfirstday "$file"
@@ -135,9 +147,14 @@ function list-activities
 					echo $act | cut -d \t -f 4
 				)']{'(
 					echo $act | cut -d \t -f 5
-					#if test (echo $act | cut -d \t -f 6)
-					#	echo '\\ganttalignnewline \textit{' (echo $act | cut -d \t -f 6) '}'
-					#end
+					echo (echo $act | cut -d \t -f 5) (
+					if test (echo $act | cut -d \t -f 6) && test $n -le 3
+						echo '\ganttalignnewline \textit{ Responsable(s): ' (
+						echo $responsable[(echo $act | cut -d \t -f 6 | sed 's/,/\t/g' | cut -d \t -f 1)]
+						for resp in (echo $act | cut -d \t -f 6 | sed 's/,/\t/g' | cut -d \t -f 2-)
+							echo ', '$responsable[$resp]
+						end) '}'
+					end
 				)'}{'(
 					echo $act | cut -d \t -f 2
 				)'}{'(

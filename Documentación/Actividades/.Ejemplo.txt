@@ -24,6 +24,15 @@ Estructura:
 	Quinta columna (sólo 2 y 3):
 	- Título del elemento.
 
+	Sexta columna (sólo 2 y 3):
+	- Número de responsable de la meta, en orden alfabético:
+		1. Aimar Jair
+		2. Cristian
+		3. Gerardo
+		4. Magaly
+		5. Monserrat
+		6. Valentín
+
 Ejemplos:
 
 	1	Grupo de metas
