@@ -1,5 +1,7 @@
 #!/usr/bin/env fish
 
+argparse -- $argv
+
 set commondir "$HOME/Sync/UAEH/Asignaturas/Bases de datos distribuidas/gym_management/Documentación/_LaTeX/"
 set dir "$commondir/GANTT"
 set activities (find "$dir/Actividades" -mindepth 1 -maxdepth 1 -type f ! -name ".*" | sort)
@@ -17,7 +19,8 @@ set responsable_completo \
 "Hernández Reyes Magaly" \
 "Sánchez Carrasco Monserrat" \
 "Ramírez Suárez Gerardo"
-set c 12
+set c $argv[1]
+if not test $c; set c 2; end
 
 set element group bar linkedbar milestone linkedmilestone
 set barpattern \
@@ -151,11 +154,10 @@ function list-activities
 				)']{'(
 					echo (echo $act | cut -d \t -f 5) (
 					if test (echo $act | cut -d \t -f 6) && test $n -le 3
-						echo '\ganttalignnewline \footnotesize{ \textit{ ' (
-						echo $responsable[(echo $act | cut -d \t -f 6 | sed 's/,/\t/g' | cut -d \t -f 1)]
-						for resp in (echo $act | cut -d \t -f 6 | sed 's/,/\t/g' | cut -d \t -f 2-)
-							echo ', '$responsable[$resp]
-						end) '.}}'
+						echo '\ganttalignnewline \footnotesize{ \textit{ \textcolor{gray}{ Responsable(s): } ' (
+						for resp in (echo $act | cut -d \t -f 6 | sed 's/,/\t/g' | sort | uniq)
+							echo ', \textcolor{html'$c'}{ \textbf{ '$responsable[$resp]'}}'
+						end | sed 's/^, //g') '}}'
 					end
 				))'}{'(
 					echo $act | cut -d \t -f 2
