@@ -1,0 +1,7 @@
+1	Grupo de metas
+
+2	Inicio(YYYY-MM-DD)	Final(YYYY-MM-DD)	Progreso(0-100)	Meta
+3	Inicio(YYYY-MM-DD)	Final(YYYY-MM-DD)	Progreso(0-100)	Meta conectada al elemento anterior
+
+4	Milestone
+5	Milestone conectado al elemento anterior

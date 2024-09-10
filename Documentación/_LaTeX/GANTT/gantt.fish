@@ -1,6 +1,6 @@
 #!/usr/bin/env fish
 
-set commondir "$HOME/Sync/UAEH/Asignaturas/Bases de datos distribuidas/gym_management/LaTeX"
+set commondir "$HOME/Sync/UAEH/Asignaturas/Bases de datos distribuidas/gym_management/Documentación/_LaTeX"
 set dir "$commondir/GANTT"
 set activities (find "$dir/Actividades" -mindepth 1 -maxdepth 1 -type f ! -name ".*" | sort)
 set c 12

@@ -1,7 +1,7 @@
 #!/usr/bin/env fish
 
-set commondir "$HOME/Sync/UAEH/Asignaturas/Bases de datos distribuidas/gym_management/LaTeX"
-set dir "$commondir/User Stories"
+set commondir "$HOME/Sync/UAEH/Asignaturas/Bases de datos distribuidas/gym_management/Documentación/_LaTeX"
+set dir "$HOME/Sync/UAEH/Asignaturas/Bases de datos distribuidas/gym_management/Documentación/User Stories"
 set stories (find "$dir/Stories" -mindepth 1 -maxdepth 1 -type f ! -name ".*" | sort)
 set c 1
 
