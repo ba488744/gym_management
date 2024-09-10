@@ -1,0 +1,5 @@
+1	Análisis de requerimientos
+
+2	2024-09-09	2024-09-09	30	Entrevista al responsable del gym.
+3	2024-09-10	2024-09-11	20	Identificación de User Stories (US).
+3	2024-09-11	2024-09-12	0	Priorización de las US más relevantes e importantes.

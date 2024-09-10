@@ -1,0 +1,42 @@
+\documentclass[spanish,12pt]{article}
+\date{\today}
+\usepackage[letterpaper,margin=1in]{geometry}
+\usepackage{fontspec}
+\defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\setmainfont{IBM Plex Sans}
+\setmonofont{IBM Plex Mono}
+
+\usepackage{babel}
+\usepackage{translator}
+\usepackage{graphicx}
+\usepackage{pdflscape}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{adjustbox}
+\usepackage{sepfootnotes}
+
+% Header/Footer
+%\usepackage[headsepline,footsepline]{scrlayer-scrpage}
+%\clearpairofpagestyles
+%\ihead*{\title}
+%\ohead*{\thepage}
+%\addtokomafont{pageheadfoot}{\upshape}
+%\deftripstyle{ChapterStyle}{}{}{}{}{\pagemark}{}
+%\renewcommand*{\chapterpagestyle}{ChapterStyle}
+
+% Cite
+%\usepackage{citation-style-language}
+%\cslsetup{style=apa}
+%\addbibresource{bib.bib}
+
+% MD
+\providecommand{\tightlist}{%
+\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+% GANTT
+\usepackage{pgfgantt}
+
+% User Stories
+\usepackage{.resources/sty/postit}
+
+\AddToHook{cmd/section/before}{\clearpage} % New page with each section
+\begin{document}

@@ -1,0 +1,5 @@
+# Point 2 Point 2 Point 2
+
+    If you wish the bibliography to have a section heading, you can set reference-section-title in the metadata, or put the heading at the beginning of the div with id refs (if you are using it) or at the end of your document:
+
+    last paragraph...
