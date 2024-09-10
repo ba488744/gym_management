@@ -1,5 +1,7 @@
 Un archivo de texto que contiene actividades, cada actividad en una línea y con campos en columnas separadas por una tabulación (Tab).
 
+A cada archivo se le asigna un color específico (12 colores disponibles).
+
 Estructura:
 
 	Primera columna: Tipo de elemento:
