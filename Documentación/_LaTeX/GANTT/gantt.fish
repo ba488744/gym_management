@@ -4,7 +4,7 @@ argparse -- $argv
 if not test "$argv[1]"; return; end
 
 set commondir "$argv[1]"
-set dir "$commondir/GANTT"
+set dir (dirname "$commondir")
 set activities (find "$dir/Actividades" -mindepth 1 -maxdepth 1 -type f ! -name ".*" -a -name "*$argv[3]*" | sort)
 if not test "$activities[1]"; return; end
 

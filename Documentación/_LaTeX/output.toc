@@ -20,4 +20,5 @@
 \contentsline {subsubsection}{\numberline {2.3.6}Integración con Otros Sistemas}{7}{}%
 \contentsline {subsubsection}{\numberline {2.3.7}Facilidad de Uso y Soporte Técnico}{8}{}%
 \contentsline {subsection}{\numberline {2.4}Prioridad de historias de usuario}{8}{}%
-\contentsline {subsection}{\numberline {2.5}Story Board}{8}{}%
+\contentsline {subsection}{\numberline {2.5}Vision Board}{8}{}%
+\contentsline {section}{\numberline {3}Cronograma de actividades}{10}{}%

@@ -13,9 +13,10 @@ cat "$dir/.resources/pre-common.tex"
 	echo "\subsection{Vision Board}\label{vision-board}"
 	fish "$dir/User Stories/user-stories.fish" "$dir" 2
 # GANTT
-#	echo '%\begin{landscape}'
-	fish "$dir/GANTT/gantt.fish" "$dir" 2 1
-#	echo '%\end{landscape}'
+	echo '\begin{landscape}'
+	echo "\section{Cronograma de actividades}\label{cronograma}"
+	fish "$dir/GANTT/gantt.fish" "$dir" 2
+	echo '\end{landscape}'
 
 cat "$dir/.resources/post-common.tex"
 end
