@@ -29,23 +29,33 @@
 %\cslsetup{style=apa}
 %\addbibresource{bib.bib}
 
-% MD
-\providecommand{\tightlist}{%
-\setlength{\itemsep}{0pt}
-\setlength{\parskip}{0pt}}
-
 % GANTT
 \usepackage{pgfgantt}
 
 % User Stories
 \usepackage{.resources/sty/postit}
 
+% MD
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}
+\setlength{\parskip}{0pt}}
+
 % Portada
 \usepackage{tikz}
 \usetikzlibrary{calc}
 \usepackage{anyfontsize}
 
+% Style
 \AddToHook{cmd/section/before}{\clearpage} % New page with each section
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+\setlength{\emergencystretch}{3em}
+
+\usepackage{enumitem}
+\setlist{nolistsep}
+\setlength{\itemsep}{0pt}
+\setlength{\itemindent}{0pt}
+\setlength{\parsep}{0pt}
+
 \begin{document}
 	\justifying
 	\pagestyle{empty}
@@ -133,18 +143,363 @@
 		\draw[ultra thick, gray]
 			($(current page.center)+(5,2)$) -- ++(0,-3cm)
 			node[midway, left=0.25cm, text width=5cm, align=right, black!75]
-				{{\fontsize{25}{30} \selectfont \bf ANNUAL \\[10pt] REPORT}}
+				{{\fontsize{25}{30} \selectfont \bf GESTIÓN DE \\[10pt] GIMNASIOS}}
 			node[midway, right=0.25cm, text width=6cm, align=left, orange]
-				{{\fontsize{72}{86.4} \selectfont 2020}};
+				{{\fontsize{72}{86.4} \selectfont 2024}};
 
 		\node at
 			($(current page.center)+(0,-4)$)
-			{{\fontsize{60}{72} \selectfont Title of the Report}};
+			{{\fontsize{60}{72} \selectfont Sistema Distribuido}};
 
-		\node[text width=4cm, align=center]
+		\node[text width=\linewidth, align=center]
 			at
-			($(current page.center)+(0,-6.5)$)
-			{{\fontsize{16}{19.2} \selectfont \textcolor{orange}{ \bf Author Name}} \\[3pt] Company Name\\[3pt] Address};
+			($(current page.center)+(0,-8)$)
+			{{\fontsize{16}{19.2} \selectfont \textcolor{orange}{ \bf SQL-Slayers}} \\[3pt] Barón Salinas Mauricio Valentín\\ Cristóbal Silverio Cristian\\ Gómez Daniel Aimar Jair \\ Hernández Reyes Magaly\\ Sánchez Carrasco Monserrat\\ Ramírez Suárez Gerardo};
 	\end{tikzpicture}
 	\tableofcontents
+	\section{Introduccion}
+	\label{introduccion}
+
+	\section{Marco teorico}
+	\label{marco-teorico}
+
+	\subsection{Descripcion}
+	\label{descripcion}
+
+	\subsection{Entrevista de Requisitos: Administrador de Gimnasios}
+	\label{entrevista-de-requisitos-administrador-de-gimnasios}
+
+	\subsubsection{Visión general de negocios}
+	\label{visiuxf3n-general-de-negocios}
+
+	\textbf{Entrevistador:} Buenas tardes. Gracias por tomarse el tiempo para esta
+	entrevista. Para empezar, ¿puede darme una visión general de su negocio y qué es
+	lo que espera lograr con este nuevo sistema?
+
+	\textbf{Administrador:} Buenas tardes. Claro, tengo varios gimnasios en
+	diferentes ubicaciones, y actualmente gestionamos todo manualmente o con sistemas
+	muy básicos. Lo que realmente necesito es un sistema que me permita gestionar
+	las inscripciones de los miembros, el seguimiento de su actividad y productividad,
+	y también la administración de los empleados y horarios.
+
+	\textbf{Entrevistador:} Entiendo. Vamos a desglosar esto en partes. Primero,
+	¿puede describir cómo maneja actualmente el registro de miembros y qué
+	aspectos le gustaría mejorar?
+
+	\textbf{Administrador:} En este momento, usamos un sistema de hojas de cálculo
+	para el registro de nuevos miembros y el seguimiento de pagos. Esto es bastante
+	ineficiente y propenso a errores. Me gustaría que el nuevo sistema permitiera
+	registrar automáticamente nuevos miembros, gestionar sus pagos y proporcionar informes
+	detallados sobre su actividad y asistencia.
+
+	\subsubsection{Registro de miembros}
+	\label{registro-de-miembros}
+
+	\textbf{Entrevistador:} Perfecto. Para el registro de miembros, ¿qué información
+	específica necesita capturar?
+
+	\textbf{Administrador:} Necesitamos capturar información básica como:
+
+	\begin{itemize}
+		\tightlist
+
+		\item nombre,
+
+		\item número de teléfono principal y
+
+		\item número de teléfono alternativo.
+	\end{itemize}
+
+	También necesitamos registrar:
+
+	\begin{itemize}
+		\tightlist
+
+		\item el tipo de membresía,
+
+		\item la fecha de inicio y
+
+		\item los pagos realizados.
+	\end{itemize}
+
+	Además, me gustaría poder tener acceso a:
+
+	\begin{itemize}
+		\tightlist
+
+		\item un historial de actividad del miembro.
+	\end{itemize}
+
+	\subsubsection{Seguimiento Administrativo}
+	\label{seguimiento-administrativo}
+
+	\textbf{Entrevistador:} Muy bien. En cuanto al seguimiento de la productividad,
+	¿qué tipo de métricas o indicadores le interesan?
+
+	\textbf{Administrador:} Me gustaría tener información sobre:
+
+	\begin{itemize}
+		\tightlist
+
+		\item la asistencia de los miembros y
+
+		\item la frecuencia con la que utilizan las instalaciones.
+	\end{itemize}
+
+	También sería útil conocer:
+
+	\begin{itemize}
+		\tightlist
+
+		\item el nivel de satisfacción del cliente a través de encuestas integradas en
+			el sistema.
+	\end{itemize}
+
+	\subsubsection{Recursos Humanos}
+	\label{recursos-humanos}
+
+	\textbf{Entrevistador:} En relación a la administración de empleados y horarios,
+	¿qué funcionalidades específicas está buscando?
+
+	\textbf{Administrador:} Necesito un módulo para gestionar:
+
+	\begin{itemize}
+		\tightlist
+
+		\item los horarios de los empleados, incluyendo:
+
+			\begin{itemize}
+				\tightlist
+
+				\item las asignaciones de turno y
+
+				\item las solicitudes de vacaciones.
+			\end{itemize}
+	\end{itemize}
+
+	También sería útil poder hacer un seguimiento de:
+
+	\begin{itemize}
+		\tightlist
+
+		\item sus horas trabajadas y
+
+		\item sus pagos.
+	\end{itemize}
+
+	\subsubsection{Accesos al sistema}
+	\label{accesos-al-sistema}
+
+	\textbf{Entrevistador:} Entiendo. ¿Qué tipo de acceso y permisos deberían
+	tener los diferentes usuarios del sistema? Por ejemplo, ¿qué pueden ver o
+	hacer los administradores frente a los empleados o los entrenadores?
+
+	\textbf{Administrador:}
+
+	\begin{itemize}
+		\tightlist
+
+		\item Los administradores deberían tener acceso completo a todas las funciones
+			del sistema, incluyendo: la gestión de miembros, empleados, informes y configuraciones.
+
+		\item Los empleados y entrenadores solo deberían tener acceso a funciones relacionadas
+			con su trabajo, como ver sus horarios y gestionar sus propias clases.
+
+		\item Los miembros deberían tener acceso a sus propios datos, horarios de
+			clases y la posibilidad de reservar sesiones.
+	\end{itemize}
+
+	\subsubsection{Integración}
+	\label{integraciuxf3n}
+
+	\textbf{Entrevistador:} Muy bien. En términos de integración, ¿hay otros sistemas
+	o herramientas con los que el nuevo sistema debería integrarse, como sistemas
+	de contabilidad o plataformas de marketing?
+
+	\textbf{Administrador:} Sí, el sistema debería integrarse con nuestro software
+	de contabilidad para que los pagos se registren automáticamente.
+
+	\subsubsection{Soporte y mantenimiento}
+	\label{soporte-y-mantenimiento}
+
+	\textbf{Entrevistador:} Perfecto. Para finalizar, ¿hay algún otro
+	requerimiento o aspecto específico que no hayamos cubierto y que sea
+	importante para usted?
+
+	\textbf{Administrador:} Creo que lo hemos cubierto bastante bien. Solo me
+	gustaría:
+
+	\begin{itemize}
+		\tightlist
+
+		\item que el sistema fuera fácil de usar y
+
+		\item que tuviera un buen soporte técnico.
+	\end{itemize}
+
+	La facilidad de uso es importante para que tanto los empleados como los miembros
+	puedan adaptarse rápidamente.
+
+	\subsubsection{Últimas palabras}
+	\label{uxfaltimas-palabras}
+
+	\textbf{Entrevistador:} Entendido. Muchas gracias por la información detallada.
+	Con estos requisitos, podemos empezar a definir el alcance del proyecto y
+	trabajar en el diseño del sistema. ¿Hay algo más que quiera agregar antes de que
+	terminemos?
+
+	\textbf{Administrador:} No, eso es todo. Gracias a usted.
+
+	\textbf{Entrevistador:} De nada. Le mantendremos informado sobre el avance del
+	proyecto. Que tenga un buen día.
+
+	\textbf{Administrador:} Igualmente. Que tenga un buen día.
+
+	\subsection{Historias de Usuario}
+	\label{historias-de-usuario}
+
+	\subsubsection{Registro de Miembros}
+	\label{registro-de-miembros-1}
+
+	Como \textbf{administrador}, Quiero \textbf{poder registrar nuevos miembros en
+	el sistema}, Para \textbf{automatizar el proceso de inscripción y tener un
+	registro preciso de los datos de los miembros}.
+
+	\textbf{Criterios de Aceptación:}
+
+	\begin{itemize}
+		\tightlist
+
+		\item El sistema debe permitir ingresar información básica del miembro:
+			nombre, número de teléfono principal y número de teléfono alternativo.
+
+		\item El sistema debe registrar el tipo de membresía, fecha de inicio y
+			pagos realizados.
+
+		\item El sistema debe mantener un historial de actividad del miembro.
+	\end{itemize}
+
+	\subsubsection{Gestión de Pagos}
+	\label{gestiuxf3n-de-pagos}
+
+	Como \textbf{administrador}, Quiero \textbf{poder gestionar los pagos de los
+	miembros dentro del sistema}, Para \textbf{asegurarme de que los pagos se
+	registren de manera precisa y automática}.
+
+	\textbf{Criterios de Aceptación:}
+
+	\begin{itemize}
+		\tightlist
+
+		\item El sistema debe registrar pagos realizados por los miembros.
+
+		\item El sistema debe permitir consultar el estado de cuenta y el historial de
+			pagos.
+	\end{itemize}
+
+	\subsubsection{Seguimiento Administrativo}
+	\label{seguimiento-administrativo-1}
+
+	Como \textbf{administrador}, Quiero \textbf{tener acceso a informes sobre la
+	asistencia y frecuencia de uso de las instalaciones por parte de los miembros},
+	Para \textbf{monitorear la utilización de las instalaciones y mejorar la
+	gestión de recursos}.
+
+	\textbf{Criterios de Aceptación:}
+
+	\begin{itemize}
+		\tightlist
+
+		\item El sistema debe generar informes sobre la asistencia de los miembros.
+
+		\item El sistema debe mostrar la frecuencia con la que los miembros utilizan
+			las instalaciones y asisten a clases.
+
+		\item El sistema debe permitir la integración de encuestas para medir la satisfacción
+			del cliente.
+	\end{itemize}
+
+	\subsubsection{Gestión de Empleados y Horarios}
+	\label{gestiuxf3n-de-empleados-y-horarios}
+
+	Como \textbf{administrador}, Quiero \textbf{poder gestionar los horarios de
+	los empleados, incluyendo turnos y solicitudes de vacaciones}, Para \textbf{facilitar
+	la administración del personal y asegurar una cobertura adecuada en los
+	gimnasios}.
+
+	\textbf{Criterios de Aceptación:}
+
+	\begin{itemize}
+		\tightlist
+
+		\item El sistema debe permitir asignar turnos y gestionar solicitudes de vacaciones.
+
+		\item El sistema debe hacer seguimiento de las horas trabajadas por cada empleado.
+
+		\item El sistema debe gestionar los pagos de los empleados.
+	\end{itemize}
+
+	\subsubsection{Control de Acceso y Permisos}
+	\label{control-de-acceso-y-permisos}
+
+	Como \textbf{administrador}, Quiero \textbf{definir diferentes niveles de
+	acceso y permisos para los usuarios del sistema}, Para \textbf{asegurar que
+	cada usuario tenga acceso solo a las funciones relevantes para su rol}.
+
+	\textbf{Criterios de Aceptación:}
+
+	\begin{itemize}
+		\tightlist
+
+		\item El sistema debe permitir asignar roles y permisos específicos a administradores,
+			empleados, entrenadores y miembros.
+
+		\item Los administradores deben tener acceso completo a todas las funciones del
+			sistema.
+
+		\item Los empleados y entrenadores deben tener acceso solo a las funciones relacionadas
+			con su trabajo.
+
+		\item Los miembros deben tener acceso a sus propios datos y reservas.
+	\end{itemize}
+
+	\subsubsection{Integración con Otros Sistemas}
+	\label{integraciuxf3n-con-otros-sistemas}
+
+	Como \textbf{administrador}, Quiero \textbf{integrar el sistema con el
+	software de contabilidad y plataformas de marketing}, Para \textbf{facilitar
+	la gestión financiera y la comunicación con los miembros}.
+
+	\textbf{Criterios de Aceptación:}
+
+	\begin{itemize}
+		\tightlist
+
+		\item El sistema debe integrarse con el software de contabilidad para registrar
+			automáticamente los pagos.
+
+		\item El sistema debe permitir la integración con plataformas de marketing para
+			enviar campañas de correo electrónico y promociones.
+	\end{itemize}
+
+	\subsubsection{Facilidad de Uso y Soporte Técnico}
+	\label{facilidad-de-uso-y-soporte-tuxe9cnico}
+
+	Como \textbf{usuario del sistema}, Quiero \textbf{que el sistema sea fácil de
+	usar y cuente con buen soporte técnico}, Para \textbf{poder adaptarme
+	rápidamente y recibir ayuda cuando sea necesario}.
+
+	\textbf{Criterios de Aceptación:}
+
+	\begin{itemize}
+		\tightlist
+
+		\item El sistema debe tener una interfaz intuitiva y fácil de usar.
+
+		\item Debe estar disponible soporte técnico para resolver problemas y responder
+			preguntas.
+	\end{itemize}
+
+	\subsection{Prioridad de historias de usuario}
+	\label{prioridad-de-historias-de-usuario}
 \end{document}
