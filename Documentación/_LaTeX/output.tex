@@ -520,7 +520,7 @@
 	\begin{minipage}{0.498\linewidth}
 		\noindent
 		\begin{PostItNote}
-			[Width=0.9\linewidth,Corner=true,Pin=None,Color=html2,Rotate=2.3 ,Title={ Registro de Miembros},FontTitle={\bfseries\itshape}
+			[Width=0.9\linewidth,Corner=true,Pin=None,Color=html2,Rotate=1.2 ,Title={ Registro de Miembros},FontTitle={\bfseries\itshape}
 			] Como \textbf{administrador},
 
 			Quiero \textbf{poder registrar nuevos miembros en el sistema},
@@ -534,7 +534,7 @@
 	\begin{minipage}{0.498\linewidth}
 		\noindent
 		\begin{PostItNote}
-			[Width=0.9\linewidth,Corner=true,Pin=None,Color=html3,Rotate=-0.2 ,Title={ Gestión de Pagos},FontTitle={\bfseries\itshape}
+			[Width=0.9\linewidth,Corner=true,Pin=None,Color=html3,Rotate=0.8 ,Title={ Gestión de Pagos},FontTitle={\bfseries\itshape}
 			] Como \textbf{administrador},
 
 			Quiero \textbf{poder gestionar los pagos de los miembros dentro del
@@ -549,7 +549,7 @@
 	\begin{minipage}{0.498\linewidth}
 		\noindent
 		\begin{PostItNote}
-			[Width=0.9\linewidth,Corner=true,Pin=None,Color=html4,Rotate=0.7 ,Title={ Seguimiento Administrativo},FontTitle={\bfseries\itshape}
+			[Width=0.9\linewidth,Corner=true,Pin=None,Color=html4,Rotate=0.2 ,Title={ Seguimiento Administrativo},FontTitle={\bfseries\itshape}
 			] Como \textbf{administrador},
 
 			Quiero \textbf{tener acceso a informes sobre la asistencia y frecuencia de
@@ -564,7 +564,7 @@
 	\begin{minipage}{0.498\linewidth}
 		\noindent
 		\begin{PostItNote}
-			[Width=0.9\linewidth,Corner=true,Pin=None,Color=html5,Rotate=-0.6 ,Title={ Gestión de Empleados y Horarios},FontTitle={\bfseries\itshape}
+			[Width=0.9\linewidth,Corner=true,Pin=None,Color=html5,Rotate=1.5 ,Title={ Gestión de Empleados y Horarios},FontTitle={\bfseries\itshape}
 			] Como \textbf{administrador},
 
 			Quiero \textbf{poder gestionar los horarios de los empleados, incluyendo turnos
@@ -579,7 +579,7 @@
 	\begin{minipage}{0.498\linewidth}
 		\noindent
 		\begin{PostItNote}
-			[Width=0.9\linewidth,Corner=true,Pin=None,Color=html6,Rotate=2.9 ,Title={ Control de Acceso y Permisos},FontTitle={\bfseries\itshape}
+			[Width=0.9\linewidth,Corner=true,Pin=None,Color=html6,Rotate=-1.5 ,Title={ Control de Acceso y Permisos},FontTitle={\bfseries\itshape}
 			] Como \textbf{administrador},
 
 			Quiero \textbf{definir diferentes niveles de acceso y permisos para los
@@ -594,7 +594,7 @@
 	\begin{minipage}{0.498\linewidth}
 		\noindent
 		\begin{PostItNote}
-			[Width=0.9\linewidth,Corner=true,Pin=None,Color=html7,Rotate=-0.2 ,Title={ Integración con Otros Sistemas},FontTitle={\bfseries\itshape}
+			[Width=0.9\linewidth,Corner=true,Pin=None,Color=html7,Rotate=-2.2 ,Title={ Integración con Otros Sistemas},FontTitle={\bfseries\itshape}
 			] Como \textbf{administrador},
 
 			Quiero \textbf{integrar el sistema con el software de contabilidad y
@@ -609,7 +609,7 @@
 	\begin{minipage}{0.498\linewidth}
 		\noindent
 		\begin{PostItNote}
-			[Width=0.9\linewidth,Corner=true,Pin=None,Color=html8,Rotate=0.4 ,Title={ Facilidad de Uso y Soporte Técnico},FontTitle={\bfseries\itshape}
+			[Width=0.9\linewidth,Corner=true,Pin=None,Color=html8,Rotate=2 ,Title={ Facilidad de Uso y Soporte Técnico},FontTitle={\bfseries\itshape}
 			] Como \textbf{usuario del sistema},
 
 			Quiero \textbf{que el sistema sea fácil de usar y cuente con buen soporte
@@ -623,48 +623,44 @@
 	\begin{landscape}
 		\section{Cronograma de actividades}
 		\label{cronograma}
+		\subsection{Análisis}
 
-		\scalebox{0.9}{%\begin{adjustbox}{max size={0.9999\textwidth}{0.9999\textheight}}
+		\begin{adjustbox}
+			{max size={0.9\textwidth}{0.9\textheight}} \scalebox{3}{
 
-		\def\pgfcalendarweekdayletter#1{%
-		\ifcase#1L\or M\or M\or J\or V\or S\or D\fi%
-		}
+			\def\pgfcalendarweekdayletter#1{%
+			\ifcase#1L\or M\or M\or J\or V\or S\or D\fi%
+			}
 
-		\begin{ganttchart}
-			[ x unit=0.5cm, y unit title=1cm, y unit chart=1.1cm, time slot format=big-endian,
-			vgrid, hgrid, title label font=\footnotesize, progress label text={}, newline
-			shortcut=true, group label node/.append style={align=right}, bar label
-			node/.append style={align=right}, milestone label node/.append style={align=right},
-			canvas/.style={ draw=black, dotted } ]{2024-09-09}{2024-09-22}
+			\begin{ganttchart}
+				[ x unit=0.5cm, y unit title=1cm, y unit chart=1.1cm, time slot format=big-endian,
+				vgrid, hgrid, title label font=\footnotesize, progress label text={}, newline
+				shortcut=true, group label node/.append style={align=right}, bar label
+				node/.append style={align=right}, milestone label node/.append style={align=right},
+				canvas/.style={ draw=black, dotted } ]{2024-09-09}{2024-09-12}
 
-			\gantttitlecalendar{year, month=name, weekday=letter, day} \\
-			\definecolor{html1}{HTML}{FFFF00}
-			\definecolor{html2}{HTML}{FF00FF}
-			\definecolor{html3}{HTML}{FF0000}
-			\definecolor{html4}{HTML}{00FFFF}
-			\definecolor{html5}{HTML}{00FF00}
-			\definecolor{html6}{HTML}{0000FF}
-			\definecolor{html7}{HTML}{FF7700}
-			\definecolor{html8}{HTML}{FF0077}
-			\definecolor{html9}{HTML}{77FF00}
-			\definecolor{html10}{HTML}{7700FF}
-			\definecolor{html11}{HTML}{00FF77}
-			\definecolor{html12}{HTML}{0077FF}
-			\ganttset{ bar/.append style={ pattern color=html2 }, group/.append style={ draw=black, fill=html2 }, milestone/.append style={ fill=html2 }, }
-			\ganttset{ bar/.append style={ pattern=dots }, } \ganttgroup[progress=16.666667]{Análisis de requerimientos}{2024-09-09}{2024-09-12}
-			\\ \ganttset{ bar/.append style={ pattern=dots }, } \ganttbar[progress=30]{Entrevista al responsable del gym.}{2024-09-09}{2024-09-09}
-			\\ \ganttset{ bar/.append style={ pattern=crosshatch dots }, } \ganttlinkedbar[progress=20]{Identificación de User Stories (US).}{2024-09-10}{2024-09-11}
-			\\ \ganttset{ bar/.append style={ pattern=horizontal lines }, }
-			\ganttlinkedbar[progress=0]{Priorización de las US más relevantes e importantes.}{2024-09-11}{2024-09-12}
-			\\ \ganttset{ bar/.append style={ pattern color=html3 }, group/.append style={ draw=black, fill=html3 }, milestone/.append style={ fill=html3 }, }
-			\ganttset{ bar/.append style={ pattern=dots }, } \ganttgroup[progress=0]{Etapa de diseño}{2024-09-12}{2024-09-22}
-			\\ \ganttset{ bar/.append style={ pattern=dots }, } \ganttbar[progress=0]{Diagrama de casos de uso}{2024-09-12}{2024-09-16}
-			\\ \ganttset{ bar/.append style={ pattern=crosshatch dots }, } \ganttbar[progress=0]{diagrama de secuencia}{2024-09-13}{2024-09-17}
-			\\ \ganttset{ bar/.append style={ pattern=horizontal lines }, } \ganttbar[progress=0]{Diagrama de actividades}{2024-09-17}{2024-09-19}
-			\\ \ganttset{ bar/.append style={ pattern=vertical lines }, } \ganttbar[progress=0]{Diagrama de componentes}{2024-09-18}{2024-09-22}
-			\\ \ganttset{ ,vrule offset =0.583333,} \ganttvrule{HOY}{\the\year-\the\month-\the\day}
-		\end{ganttchart}
-		%\end{adjustbox}
-		}
+				\gantttitlecalendar{year, month=name, weekday=letter, day} \\
+				\definecolor{html1}{HTML}{FFFF00}
+				\definecolor{html2}{HTML}{FF00FF}
+				\definecolor{html3}{HTML}{FF0000}
+				\definecolor{html4}{HTML}{00FFFF}
+				\definecolor{html5}{HTML}{00FF00}
+				\definecolor{html6}{HTML}{0000FF}
+				\definecolor{html7}{HTML}{FF7700}
+				\definecolor{html8}{HTML}{FF0077}
+				\definecolor{html9}{HTML}{77FF00}
+				\definecolor{html10}{HTML}{7700FF}
+				\definecolor{html11}{HTML}{00FF77}
+				\definecolor{html12}{HTML}{0077FF}
+				\ganttset{ bar/.append style={ pattern color=html2 }, group/.append style={ draw=black, fill=html2 }, milestone/.append style={ fill=html2 }, }
+				\ganttset{ bar/.append style={ pattern=dots }, } \ganttgroup[progress=16.666667]{Análisis de requerimientos}{2024-09-09}{2024-09-12}
+				\\ \ganttset{ bar/.append style={ pattern=dots }, } \ganttbar[progress=30]{Entrevista al responsable del gym.}{2024-09-09}{2024-09-09}
+				\\ \ganttset{ bar/.append style={ pattern=crosshatch dots }, } \ganttlinkedbar[progress=20]{Identificación de User Stories (US).}{2024-09-10}{2024-09-11}
+				\\ \ganttset{ bar/.append style={ pattern=horizontal lines }, }
+				\ganttlinkedbar[progress=0]{Priorización de las US más relevantes e importantes.}{2024-09-11}{2024-09-12}
+				\\ \ganttset{ ,vrule offset =0.625,} \ganttvrule{HOY}{\the\year-\the\month-\the\day}
+			\end{ganttchart}
+			}
+		\end{adjustbox}
 	\end{landscape}
 \end{document}

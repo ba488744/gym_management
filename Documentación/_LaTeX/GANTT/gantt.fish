@@ -5,7 +5,7 @@ if not test "$argv[1]"; return; end
 
 set commondir "$argv[1]"
 set dir (dirname "$commondir")
-set activities (find "$dir/Actividades" -mindepth 1 -maxdepth 1 -type f ! -name ".*" -a -name "*$argv[3]*" | sort)
+set activities (find "$dir/Actividades" -mindepth 1 -maxdepth 1 -type f -iname "*$argv[3]*" -a ! -name ".*" | sort)
 if not test "$activities[1]"; return; end
 
 set responsable \
@@ -68,8 +68,8 @@ set end_day (getlastday)
 
 function pre
 	echo '
-	\scalebox{0.9}{
-	%\begin{adjustbox}{max size={0.9999\textwidth}{0.9999\textheight}}'
+	\begin{adjustbox}{max size={0.9\textwidth}{0.9\textheight}}
+	\scalebox{3}{'
 	echo '
 	\def\pgfcalendarweekdayletter#1{%
 	\ifcase#1L\or M\or M\or J\or V\or S\or D\fi%
@@ -99,8 +99,8 @@ end
 function post
 	echo "
 	\end{ganttchart}
-	%\end{adjustbox}
-	}"
+	}
+	\end{adjustbox}"
 end
 function list-activities
 	for file in $activities
