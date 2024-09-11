@@ -5,7 +5,7 @@ if not test "$argv[1]"; return; end
 
 set commondir "$argv[1]"
 set dir "$commondir/GANTT"
-set activities (find "$dir/Actividades" -mindepth 1 -maxdepth 1 -type f ! -name ".*" | sort)
+set activities (find "$dir/Actividades" -mindepth 1 -maxdepth 1 -type f ! -name ".*" -a -name "*$argv[3]*" | sort)
 if not test "$activities[1]"; return; end
 
 set responsable \
@@ -68,7 +68,6 @@ set end_day (getlastday)
 
 function pre
 	echo '
-	\begin{landscape}
 	\scalebox{0.9}{
 	%\begin{adjustbox}{max size={0.9999\textwidth}{0.9999\textheight}}'
 	echo '
@@ -101,8 +100,7 @@ function post
 	echo "
 	\end{ganttchart}
 	%\end{adjustbox}
-	}
-	\end{landscape}"
+	}"
 end
 function list-activities
 	for file in $activities
