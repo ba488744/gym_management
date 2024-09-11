@@ -1,6 +1,7 @@
 \documentclass[spanish,12pt]{article}
 \date{\today}
 \usepackage[letterpaper,margin=1in]{geometry}
+\usepackage{ragged2e}
 \usepackage{fontspec}
 \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
 \setmainfont{IBM Plex Sans}
@@ -40,3 +41,4 @@
 
 \AddToHook{cmd/section/before}{\clearpage} % New page with each section
 \begin{document}
+\justifying
