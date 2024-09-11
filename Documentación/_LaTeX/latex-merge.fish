@@ -12,7 +12,9 @@ end
 function gantt-all
 	echo '\begin{landscape}'
 	echo "\section{Cronograma de actividades}\label{cronograma}"
-	gantt "Análisis"
+	for grafica in "Análisis"
+		gantt "$grafica"
+	end
 	echo '\end{landscape}'
 end
 
