@@ -1,12 +1,15 @@
-set dir "$HOME/Sync/UAEH/Asignaturas/Bases de datos distribuidas/gym_management/LaTeX"
+set dir "$HOME/Sync/UAEH/Asignaturas/Bases de datos distribuidas/gym_management/Documentación/_LaTeX/"
 set output "$dir/output"
 
 cat "$dir/.resources/pre-common.tex" > "$output.tex"
 
-#	echo '\tableofcontents' >> "$output.tex"
-#	fish "$dir/MDtoLaTeX/mdtolatex.fish" >> "$output.tex"
-	fish "$dir/GANTT/gantt.fish" >> "$output.tex"
-#	fish "$dir/User Stories/user-stories.fish" >> "$output.tex"
+	cat "$dir/Documentos LaTeX/0. Portada.tex" >> "$output.tex"
+
+	echo '\tableofcontents' >> "$output.tex"
+
+	fish "$dir/MDtoLaTeX/mdtolatex.fish" "$dir" >> "$output.tex"
+#	fish "$dir/GANTT/gantt.fish" "$dir" 2 >> "$output.tex"
+#	fish "$dir/User Stories/user-stories.fish" "$dir" 2 >> "$output.tex"
 
 cat "$dir/.resources/post-common.tex" >> "$output.tex"
 

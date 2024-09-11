@@ -1,9 +1,13 @@
 #!/usr/bin/env fish
 
-set commondir "$HOME/Sync/UAEH/Asignaturas/Bases de datos distribuidas/gym_management/Documentación/_LaTeX"
+argparse -- $argv
+if not test $argv[1]; return; end
+
+set commondir $argv[1]
 set dir "$HOME/Sync/UAEH/Asignaturas/Bases de datos distribuidas/gym_management/Documentación/User Stories"
 set stories (find "$dir/Stories" -mindepth 1 -maxdepth 1 -type f ! -name ".*" | sort)
-set c 1
+set c $argv[2]
+if not test $c; set c 1; end
 
 set pin Paperclip Pushpin Scotch None
 set pinstyle 4

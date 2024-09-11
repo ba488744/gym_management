@@ -1,10 +1,13 @@
 #!/usr/bin/env fish
 
 argparse -- $argv
+if not test $argv[1]; return; end
 
-set commondir "$HOME/Sync/UAEH/Asignaturas/Bases de datos distribuidas/gym_management/Documentación/_LaTeX/"
+set commondir $argv[1]
 set dir "$commondir/GANTT"
 set activities (find "$dir/Actividades" -mindepth 1 -maxdepth 1 -type f ! -name ".*" | sort)
+if not test $activities[1]; return; end
+
 set responsable \
 "Aimar Jair" \
 "Cristian" \
@@ -19,8 +22,8 @@ set responsable_completo \
 "Hernández Reyes Magaly" \
 "Sánchez Carrasco Monserrat" \
 "Ramírez Suárez Gerardo"
-set c $argv[1]
-if not test $c; set c 2; end
+set c $argv[2]
+if not test $c; set c 1; end
 
 set element group bar linkedbar milestone linkedmilestone
 set barpattern \
@@ -29,8 +32,6 @@ set barpattern \
 "north west lines" "north east lines" "crosshatch" \
 "bricks" "checkerboard" \
 "fivepointed stars" "sixpointed stars"
-
-if not test $activities[1]; return; end
 
 function extractdays -a column file
 	for date in (cat "$file" | grep -v '^[1,4,5]' | sed '/^$/d' | cut -d \t -f "$column")
