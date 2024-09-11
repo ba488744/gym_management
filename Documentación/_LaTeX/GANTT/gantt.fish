@@ -1,12 +1,12 @@
 #!/usr/bin/env fish
 
 argparse -- $argv
-if not test $argv[1]; return; end
+if not test "$argv[1]"; return; end
 
-set commondir $argv[1]
+set commondir "$argv[1]"
 set dir "$commondir/GANTT"
 set activities (find "$dir/Actividades" -mindepth 1 -maxdepth 1 -type f ! -name ".*" | sort)
-if not test $activities[1]; return; end
+if not test "$activities[1]"; return; end
 
 set responsable \
 "Aimar Jair" \
