@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.15.0 (TeX Live 2022/Debian)  (format=lualatex 2024.7.20)  11 SEP 2024 15:26
+This is LuaHBTeX, Version 1.15.0 (TeX Live 2022/Debian)  (format=lualatex 2024.8.11)  12 SEP 2024 14:33
  restricted system commands enabled.
 **"/home/mau/Sync/UAEH/Asignaturas/Bases de datos distribuidas/gym_management/D
 ocumentación/_LaTeX//output.tex"
@@ -270,90 +270,90 @@ Package: babel 2022/12/26 3.84 The Babel package
 \l@dumylang=\language2
 Package babel Info: Non-standard hyphenation setup on input line 118.
 \l@nohyphenation=\language3
-\l@ethiopic=\language4
-\l@russian=\language5
-\l@esperanto=\language6
-\l@danish=\language7
-\l@liturgicallatin=\language8
-\l@turkmen=\language9
-\l@french=\language10
-\l@churchslavonic=\language11
-\l@turkish=\language12
-\l@gujarati=\language13
-\l@panjabi=\language14
+\l@serbian=\language4
+\l@slovak=\language5
+\l@telugu=\language6
+\l@ngerman-x-2022-03-16=\language7
+\l@pali=\language8
+\l@assamese=\language9
+\l@piedmontese=\language10
+\l@armenian=\language11
+\l@hungarian=\language12
+\l@monogreek=\language13
+\l@sanskrit=\language14
 \l@romanian=\language15
-\l@uppersorbian=\language16
-\l@belarusian=\language17
-\l@welsh=\language18
-\l@catalan=\language19
-\l@hungarian=\language20
-\l@dutch=\language21
-\l@nynorsk=\language22
-\l@kannada=\language23
-\l@occitan=\language24
-\l@lithuanian=\language25
-\l@bengali=\language26
-\l@german-x-2022-03-16=\language27
-\l@swedish=\language28
-\l@finnish=\language29
-\l@slovenian=\language30
-\l@georgian=\language31
-\l@classiclatin=\language32
-\l@oriya=\language33
-\l@kurmanji=\language34
-\l@ukrainian=\language35
-\l@latvian=\language36
-\l@ngerman=\language37
-\l@slovak=\language38
-\l@ukenglish=\language39
-\l@monogreek=\language40
-\l@interlingua=\language41
-\l@afrikaans=\language42
-\l@pinyin=\language43
-\l@macedonian=\language44
-\l@piedmontese=\language45
-\l@sanskrit=\language46
-\l@hindi=\language47
-\l@galician=\language48
-\l@polish=\language49
-\l@serbianc=\language50
-\l@bokmal=\language51
-\l@italian=\language52
-\l@tamil=\language53
-\l@coptic=\language54
-\l@basque=\language55
-\l@mongolianlmc=\language56
-\l@pali=\language57
-\l@schoolfinnish=\language58
-\l@usenglishmax=\language59
-\l@croatian=\language60
-\l@indonesian=\language61
-\l@estonian=\language62
-\l@ancientgreek=\language63
-\l@ibycus=\language64
-\l@thai=\language65
-\l@czech=\language66
-\l@telugu=\language67
-\l@spanish=\language68
-\l@armenian=\language69
-\l@malayalam=\language70
-\l@portuguese=\language71
-\l@marathi=\language72
-\l@irish=\language73
-\l@swissgerman=\language74
-\l@romansh=\language75
+\l@basque=\language16
+\l@hindi=\language17
+\l@greek=\language18
+\l@bengali=\language19
+\l@latin=\language20
+\l@macedonian=\language21
+\l@ethiopic=\language22
+\l@serbianc=\language23
+\l@uppersorbian=\language24
+\l@dutch=\language25
+\l@esperanto=\language26
+\l@bokmal=\language27
+\l@irish=\language28
+\l@panjabi=\language29
+\l@swissgerman=\language30
+\l@polish=\language31
+\l@estonian=\language32
+\l@belarusian=\language33
+\l@lithuanian=\language34
+\l@latvian=\language35
+\l@occitan=\language36
+\l@italian=\language37
+\l@interlingua=\language38
+\l@spanish=\language39
+\l@romansh=\language40
+\l@farsi=\language41
+\l@russian=\language42
+\l@ukrainian=\language43
+\l@czech=\language44
+\l@arabic=\language45
+\l@turkmen=\language46
+\l@schoolfinnish=\language47
+\l@german=\language48
+\l@liturgicallatin=\language49
+\l@mongolian=\language50
+\l@danish=\language51
+\l@thai=\language52
+\l@kurmanji=\language53
+\l@ancientgreek=\language54
+\l@ngerman=\language55
+\l@nynorsk=\language56
+\l@classiclatin=\language57
+\l@finnish=\language58
+\l@marathi=\language59
+\l@pinyin=\language60
+\l@ibycus=\language61
+\l@malayalam=\language62
+\l@gujarati=\language63
+\l@oriya=\language64
+\l@swedish=\language65
+\l@bulgarian=\language66
+\l@welsh=\language67
+\l@turkish=\language68
+\l@slovenian=\language69
+\l@croatian=\language70
+\l@galician=\language71
+\l@tamil=\language72
+\l@indonesian=\language73
+\l@french=\language74
+\l@churchslavonic=\language75
 \l@friulan=\language76
-\l@bulgarian=\language77
-\l@ngerman-x-2022-03-16=\language78
-\l@arabic=\language79
-\l@greek=\language80
-\l@assamese=\language81
-\l@german=\language82
-\l@mongolian=\language83
-\l@serbian=\language84
-\l@farsi=\language85
-\l@latin=\language86
-\l@icelandic=\language87
+\l@catalan=\language77
+\l@ukenglish=\language78
+\l@georgian=\language79
+\l@usenglishmax=\language80
+\l@german-x-2022-03-16=\language81
+\l@portuguese=\language82
+\l@coptic=\language83
+\l@icelandic=\language84
+\l@afrikaans=\language85
+\l@mongolianlmc=\language86
+\l@kannada=\language87
 \babelcatcodetablenum=\catcodetable12
 \bbl@pattcodes=\catcodetable13
 )
@@ -942,28 +942,28 @@ LaTeX Info: Redefining \% on input line 9.
 )
 \openout1 = output.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 59.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 58.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 5
-9.
+8.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: luatex
@@ -1005,68 +1005,68 @@ Package fontspec Info: Adjusting the maths setup (use [no-math] to avoid
 
 \symlegacymaths=\mathgroup4
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 59.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 59.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 59.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 59.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 59.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 59.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 59.
-LaTeX Font Info:    Redeclaring math accent \check on input line 59.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 59.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 59.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 59.
-LaTeX Font Info:    Redeclaring math symbol \colon on input line 59.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 59.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 59.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 59.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 59.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 59.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 59.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 59.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 59.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 59.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 59.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 59.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 59.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 59.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 58.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 58.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 58.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 58.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 58.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 58.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 58.
+LaTeX Font Info:    Redeclaring math accent \check on input line 58.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 58.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 58.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 58.
+LaTeX Font Info:    Redeclaring math symbol \colon on input line 58.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 58.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 58.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 58.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 58.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 58.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 58.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 58.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 58.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 58.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 58.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 58.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 58.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 58.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 59.
+(Font)              `operators' in the math version `normal' on input line 58.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/IBMPlexSans(0)/m/n on input line 59.
+(Font)                  OT1/cmr/m/n --> TU/IBMPlexSans(0)/m/n on input line 58.
 
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 59.
+(Font)              `operators' in the math version `bold' on input line 58.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/IBMPlexSans(0)/m/n on input line 59
+(Font)                  OT1/cmr/bx/n --> TU/IBMPlexSans(0)/m/n on input line 58
 .
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  TU/IBMPlexSans(0)/m/n --> TU/IBMPlexSans(0)/m/n on inpu
-t line 59.
+t line 58.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
 (Font)                  OT1/cmr/m/it --> TU/IBMPlexSans(0)/m/it on input line 5
-9.
+8.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/IBMPlexSans(0)/b/n on input line 59
+(Font)                  OT1/cmr/bx/n --> TU/IBMPlexSans(0)/b/n on input line 58
 .
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 59.
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 58.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/IBMPlexMono(0)/m/n on input line 59
+(Font)                  OT1/cmtt/m/n --> TU/IBMPlexMono(0)/m/n on input line 58
 .
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  TU/IBMPlexSans(0)/m/n --> TU/IBMPlexSans(0)/b/n on inpu
-t line 59.
+t line 58.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/cmr/bx/it --> TU/IBMPlexSans(0)/b/it on input line 
-59.
+58.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 59.
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 58.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/IBMPlexMono(0)/b/n on input line 59
+(Font)                  OT1/cmtt/m/n --> TU/IBMPlexMono(0)/b/n on input line 58
 .
-LaTeX Info: Redefining \. on input line 59.
-LaTeX Info: Redefining \% on input line 59.
+LaTeX Info: Redefining \. on input line 58.
+LaTeX Info: Redefining \% on input line 58.
 
 (/usr/share/texlive/texmf-dist/tex/latex/translator/translator-months-dictionar
 y-English.dict
@@ -1098,26 +1098,64 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
+Runaway argument?
+rounded corners=22pt, left color=RoyalBlue 
+! Paragraph ended before \pgfutil@next was complete.
+<to be read again> 
+\par 
+l.105 
+    
+? 
 LaTeX Font Info:    Font shape `TU/IBMPlexSans(0)/m/n' will be
-(Font)              scaled to size 20.88165pt on input line 146.
+(Font)              scaled to size 6.68213pt on input line 106.
+LaTeX Font Info:    Font shape `TU/IBMPlexSans(0)/m/n' will be
+(Font)              scaled to size 5.0116pt on input line 106.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 106.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 106.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 106.
+LaTeX Font Info:    Font shape `TU/IBMPlexSans(0)/m/n' will be
+(Font)              scaled to size 20.88165pt on input line 128.
 LaTeX Font Info:    Font shape `TU/IBMPlexSans(0)/b/n' will be
-(Font)              scaled to size 20.52383pt on input line 146.
+(Font)              scaled to size 20.52383pt on input line 128.
 LaTeX Font Info:    Font shape `TU/IBMPlexSans(0)/m/n' will be
-(Font)              scaled to size 60.13916pt on input line 148.
+(Font)              scaled to size 60.13916pt on input line 128.
 LaTeX Font Info:    Font shape `TU/IBMPlexSans(0)/m/n' will be
-(Font)              scaled to size 50.11597pt on input line 152.
+(Font)              scaled to size 50.11597pt on input line 130.
 LaTeX Font Info:    Font shape `TU/IBMPlexSans(0)/m/n' will be
-(Font)              scaled to size 13.36426pt on input line 157.
+(Font)              scaled to size 13.36426pt on input line 132.
 LaTeX Font Info:    Font shape `TU/IBMPlexSans(0)/b/n' will be
-(Font)              scaled to size 13.13525pt on input line 157.
-
-[1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+(Font)              scaled to size 13.13525pt on input line 132.
+! Extra }, or forgotten \endgroup.
+\endpgfpicture ...globally \endgroup \hss \egroup 
+                                                  \pgf@restore@layerlist@fro...
+l.134 \end{tikzpicture}
+                     
+? 
+! Missing } inserted.
+<inserted text> 
+}
+l.134 \end{tikzpicture}
+                     
+? 
+! Extra }, or forgotten \endgroup.
+\endpgfpicture ...dpicture \endgroup \hss \egroup 
+                                                  \pgfsys@typesetpicturebox ...
+l.134 \end{tikzpicture}
+                     
+? 
+! Missing } inserted.
+<inserted text> 
+}
+l.134 \end{tikzpicture}
+                     
+? 
 LaTeX Font Info:    Font shape `TU/IBMPlexSans(0)/m/n' will be
-(Font)              scaled to size 14.4334pt on input line 159.
+(Font)              scaled to size 14.4334pt on input line 135.
 LaTeX Font Info:    Font shape `TU/IBMPlexSans(0)/b/n' will be
-(Font)              scaled to size 14.18607pt on input line 159.
+(Font)              scaled to size 14.18607pt on input line 135.
 
 ("/home/mau/Sync/UAEH/Asignaturas/Bases de datos distribuidas/gym_management/Do
 cumentación/_LaTeX//output.toc"
@@ -1125,52 +1163,34 @@ LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 LaTeX Font Info:    Font shape `TU/IBMPlexSans(0)/b/n' will be
 (Font)              scaled to size 9.85144pt on input line 2.
-LaTeX Font Info:    Font shape `TU/IBMPlexSans(0)/m/n' will be
-(Font)              scaled to size 6.68213pt on input line 4.
-LaTeX Font Info:    Font shape `TU/IBMPlexSans(0)/m/n' will be
-(Font)              scaled to size 5.0116pt on input line 4.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 4.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 4.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 4.
 )
 \tf@toc=\write4
 
 \openout4 = output.toc
+ [1
+
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+LaTeX Font Info:    Font shape `TU/IBMPlexSans(0)/m/n' will be
+(Font)              scaled to size 12.02782pt on input line 138.
+LaTeX Font Info:    Font shape `TU/IBMPlexSans(0)/b/n' will be
+(Font)              scaled to size 11.82172pt on input line 138.
  [2
 
 ] [3
 
-]
-LaTeX Font Info:    Font shape `TU/IBMPlexSans(0)/m/n' will be
-(Font)              scaled to size 12.02782pt on input line 166.
-LaTeX Font Info:    Font shape `TU/IBMPlexSans(0)/b/n' will be
-(Font)              scaled to size 11.82172pt on input line 166.
- [4
+] [4] [5] [6]
 
-] [5] [6] [7]
-LaTeX Font Info:    Font shape `TU/IBMPlexSans(0)/b/it' will be
-(Font)              scaled to size 9.85144pt on input line 530.
+! LaTeX Error: \begin{tikzpicture} on input line 62 ended by \end{document}.
 
-Underfull \hbox (badness 1874) in paragraph at lines 530--530
-[]\TU/IBMPlexSans(0)/m/n/12 Quie-ro \TU/IBMPlexSans(0)/b/n/12 po-der re-gis-trar
- nue-vos miem-
- []
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.468 \end{document}
+                  
+? 
 
-
-Underfull \hbox (badness 1147) in paragraph at lines 560--560
-\TU/IBMPlexSans(0)/b/n/12 ins-ta-la-cio-nes por par-te de los miem-
- []
-
-[8] [9]
-LaTeX Font Info:    Font shape `TU/IBMPlexSans(0)/m/n' will be
-(Font)              scaled to size 8.35266pt on input line 663.
- [10
-
-
-]
 ("/home/mau/Sync/UAEH/Asignaturas/Bases de datos distribuidas/gym_management/Do
 cumentación/_LaTeX//output.aux"
 LaTeX Info: Redefining \. on input line 9.
@@ -1180,24 +1200,27 @@ LaTeX Info: Redefining \% on input line 9.
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 )
+(\end occurred inside a group at level 1)
+
+### semi simple group (level 1) entered at line 62 (\begingroup)
+### bottom level
 
 Here is how much of LuaTeX's memory you used:
- 25829 strings out of 478382
+ 25285 strings out of 478382
  100000,1977958 words of node,token memory allocated
- 545 words of node memory still in use:
-   4 hlist, 1 vlist, 1 rule, 4 glue, 3 kern, 1 glyph, 11 attribute, 66 glue_spec
-, 7 attribute_list, 3 write nodes
-   avail lists: 2:7051,3:3228,4:92,5:1074,6:68,7:5794,8:1,9:1002,10:7,11:805
- 44978 multiletter control sequences out of 65536+600000
- 62 fonts using 6634407 bytes
- 109i,10n,122p,573b,1205s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/opentype/ibm/plex/IBMPlexSans-BoldItalic.ot
-f></usr/share/texlive/texmf-dist/fonts/opentype/ibm/plex/IBMPlexSans-Regular.otf
-></usr/share/texlive/texmf-dist/fonts/opentype/ibm/plex/IBMPlexSans-Bold.otf>
-Output written on output.pdf (10 pages, 45545 bytes).
+ 541 words of node memory still in use:
+   4 hlist, 1 vlist, 1 rule, 4 glue, 3 kern, 1 glyph, 9 attribute, 67 glue_spec,
+ 6 attribute_list, 2 write nodes
+   avail lists: 2:1385,3:298,4:98,5:1483,6:50,7:8115,8:32,9:350,10:6,11:1059
+ 44434 multiletter control sequences out of 65536+600000
+ 60 fonts using 6342871 bytes
+ 109i,6n,122p,573b,751s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/opentype/ibm/plex/IBMPlexSans-Regular.otf><
+/usr/share/texlive/texmf-dist/fonts/opentype/ibm/plex/IBMPlexSans-Bold.otf>
+Output written on output.pdf (6 pages, 26779 bytes).
 
-PDF statistics: 92 PDF objects out of 1000 (max. 8388607)
- 52 compressed objects within 1 object stream
+PDF statistics: 54 PDF objects out of 1000 (max. 8388607)
+ 32 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 131072)
- 181 words of extra memory for PDF output out of 10000 (max. 100000000)
+ 86 words of extra memory for PDF output out of 10000 (max. 100000000)
 

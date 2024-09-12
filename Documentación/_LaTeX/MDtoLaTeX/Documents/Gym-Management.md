@@ -2,21 +2,89 @@
 title: Administración de gimnasios
 ---
 
-# Introduccion
+# Definición de Proyecto
+## Introducción
+## Planteamiento del problema
+## Objetivo General
+## Objetivos Especificos
+## Justificación
+## Alcances y Limitaciones
+
+### Alcances del Proyecto
+
+1. **Distribución Geográfica de Datos**: Implementación de una base de datos distribuida que permita almacenar y gestionar datos en múltiples ubicaciones físicas ---en nuestro caso, las sedes de gimnasio gestionadas por el cliente--- para mejorar la disponibilidad y la redundancia.
+2. **Sincronización y Consistencia de Datos**: Desarrollo de mecanismos que garantizen que los datos sean consistentes entre las distintas ubicaciones y que cualquier actualización se propague adecuadamente.
+3. **Escalabilidad**: Diseño de la base de datos para que pueda escalar horizontalmente, añadiendo más nodos según sea necesario para manejar el aumento del volumen de datos y la carga de trabajo.
+4. **Seguridad de Datos**: Implementación de medidas de seguridad que protejan los datos distribuidos contra accesos no autorizados y posibles ataques cibernéticos.
+5. **Resiliencia y Recuperación ante Desastres**: Establecemiento de procedimientos y tecnologías para asegurar la recuperación rápida y efectiva en caso de fallos o desastres.
+
+### Limitaciones del Proyecto
+
+1. **Latencia de Red**: La latencia de la red entre los nodos puede afectar el rendimiento del sistema, especialmente si los nodos están ubicados en regiones geográficas distantes.
+2. **Complejidad de Gestión**: La administración y el mantenimiento de una base de datos distribuida pueden ser significativamente más complejos en comparación con una base de datos centralizada.
+3. **Costos de Infraestructura**: Los costos asociados con el hardware, el software y la red para soportar una base de datos distribuida pueden ser elevados.
+4. **Consistencia Eventual**: Algunas arquitecturas distribuidas optan por la consistencia eventual, lo que puede llevar a periodos en los que los datos no están sincronizados en todos los nodos.
+5. **Problemas de Sincronización**: La sincronización de datos entre nodos puede enfrentar problemas, especialmente en redes con alta latencia o en escenarios de particionamiento de red.
 
 
 
 # Marco teorico
 
+## Descripción
 
+### Metodologia de Analisis
 
-## Descripcion
+#### ¿Qué es metodología Scrum?
 
+Es un pequeño equipo de personas, un equipo Scrum. El equipo Scrum
+consta de:
+- un Scrum Master,
+- un propietario de producto (Product Owner) y
+- desarrolladores.
 
+Dentro de
+un equipo de Scrum, no hay sub-equipos ni jerarquías. Es una unidad cohesionada de profesionales
+enfocada en un objetivo a la vez, el objetivo del Producto.
 
-## Entrevista de Requisitos: Administrador de Gimnasios
+Scrum (nombre que proviene de cierta jugada que tiene lugar durante un partido de rugby) es
+un método de desarrollo ágil de software concebido por Jeff Sutherland y su equipo de desarrollo a principios de la década de 1990.
 
-### Visión general de negocios
+Retraso: lista de prioridades de los requerimientos o características del proyecto que dan al
+cliente un valor del negocio. Es posible agregar en cualquier momento otros aspectos al retraso (ésta es la forma en la que se introducen los cambios). El gerente del proyecto evalúa el
+retraso y actualiza las prioridades según se requiera.
+Sprints: consiste en unidades de trabajo que se necesitan para alcanzar un requerimiento
+definido en el retraso que debe ajustarse en una caja de tiempo predefinida (lo común son 30
+días). Durante el sprint no se introducen cambios (por ejemplo, aspectos del trabajo retrasado). Así, el sprint permite a los miembros del equipo trabajar en un ambiente de corto plazo
+pero estable.
+Reuniones Scrum: son reuniones breves (de 15 minutos, por lo general) que el equipo
+Scrum efectúa a diario. Hay tres preguntas clave que se pide que respondan todos los miembros del equipo.
+• ¿Qué hiciste desde la última reunión del equipo?
+• ¿Qué obstáculos estás encontrando?
+• ¿Qué planeas hacer mientras llega la siguiente reunión del equipo?
+Un líder del equipo, llamado maestro Scrum, dirige la junta y evalúa las respuestas de cada persona.
+#### ¿Qué es una Metodología de análisis?
+Nosotros enfocamos un marco teorico que influye en el proceso estructurado para guiar el desarrollo desde los elementos de entrada(información recopilada), hasta las herramientas que se utilizaran para la elaboración de ellas.
+Asi facilitando su implementación en las diferentes etapas del proceso.
+Pressman promueve un enfoque iterativo e incrementalen e desarrollo de software, en este caso lo utilizaremos en el desarrollo de nuestra base de datos distribuida en base al proyecto del GYM, esto para que se contruya y mejore partes del proyecto de manera gradual.
+Esto tambien tomando en cuenta los aspectos de gestión de proyectos, estimación, planificación y control, asi tambien la detección temprana de los defectos y su corrección inmediata.
+# Historias de usuario y Casos de uso
+## Casos de Uso
+Analiza el comportamiento del sistema en
+distintas condiciones en las que el sistema responde a una petición de alguno de sus participantes. En esencia, un caso de uso narra una historia estilizada sobre cómo interactúa un
+usuario final (que tiene cierto número de roles posibles) con el sistema en circunstancias específicas.
+Un caso de uso ilustra el software o sistema desde el punto de vista del usuario final.
+## Historias de Usuario
+Las historia de usuario consta de ser un texto narrativo, un lineamiento de tareas o interacciones, una
+descripción basada en un formato o una representación diagramática. Sin importar su forma
+
+## Entrevista de requerimientos
+Éste es el enfoque más directo, los miembros del equipo de software se reúnen con los usuarios para entender mejor sus necesidades, motivaciones, cultura laboral y
+una multitud de aspectos adicionales. Esto se logra en reuniones individuales o a través de
+grupos de enfoque.
+
+## Analisis
+
+### Entrevista
 
 **Entrevistador:** Buenas tardes. Gracias por tomarse el tiempo para esta entrevista. Para empezar, ¿puede darme una visión general de su negocio y qué es lo que espera lograr con este nuevo sistema?
 
@@ -24,7 +92,7 @@ title: Administración de gimnasios
 
 **Entrevistador:** Entiendo. Vamos a desglosar esto en partes. Primero, ¿puede describir cómo maneja actualmente el registro de miembros y qué aspectos le gustaría mejorar?
 
-**Administrador:** En este momento, usamos un sistema de hojas de cálculo para el registro de nuevos miembros y el seguimiento de pagos. Esto es bastante ineficiente y propenso a errores. Me gustaría que el nuevo sistema permitiera registrar automáticamente nuevos miembros, gestionar sus pagos y proporcionar informes detallados sobre su actividad y asistencia.
+**Administrador:** En este momento, usamos un sistema de hojas de cálculo para el registro de nuevos miembros y el seguimiento de pagos. Esto es bastante ineficiente y propenso a errores. Me gustaría que el nuevo sistema permitiera registrar automáticamente nuevos miembros y gestionar sus pagos.
 
 ### Registro de miembros
 
@@ -42,24 +110,7 @@ También necesitamos registrar:
 - la fecha de inicio y
 - los pagos realizados.
 
-Además, me gustaría poder tener acceso a:
-
-- un historial de actividad del miembro.
-
 ### Seguimiento Administrativo
-
-**Entrevistador:** Muy bien. En cuanto al seguimiento de la productividad, ¿qué tipo de métricas o indicadores le interesan?
-
-**Administrador:** Me gustaría tener información sobre:
-
-- la asistencia de los miembros y
-- la frecuencia con la que utilizan las instalaciones.
-
-También sería útil conocer:
-
-- el nivel de satisfacción del cliente a través de encuestas integradas en el sistema.
-
-### Recursos Humanos
 
 **Entrevistador:** En relación a la administración de empleados y horarios, ¿qué funcionalidades específicas está buscando?
 
@@ -82,7 +133,6 @@ También sería útil poder hacer un seguimiento de:
 
 - Los administradores deberían tener acceso completo a todas las funciones del sistema, incluyendo: la gestión de miembros, empleados, informes y configuraciones.
 - Los empleados y entrenadores solo deberían tener acceso a funciones relacionadas con su trabajo, como ver sus horarios y gestionar sus propias clases.
-- Los miembros deberían tener acceso a sus propios datos, horarios de clases y la posibilidad de reservar sesiones.
 
 ### Integración
 
@@ -96,8 +146,9 @@ También sería útil poder hacer un seguimiento de:
 
 **Administrador:** Creo que lo hemos cubierto bastante bien. Solo me gustaría:
 
-- que el sistema fuera fácil de usar y
-- que tuviera un buen soporte técnico.
+- que el sistema fuera fácil de usar,
+- que tuviera un buen soporte técnico y
+- una interfaz llamativa.
 
 La facilidad de uso es importante para que tanto los empleados como los miembros puedan adaptarse rápidamente.
 
@@ -113,87 +164,26 @@ La facilidad de uso es importante para que tanto los empleados como los miembros
 
 ## Historias de Usuario
 
-### Registro de Miembros
+- Diagramas de Casos de uso
+- Historias de Usuario
 
-Como **administrador**,
-Quiero **poder registrar nuevos miembros en el sistema**,
-Para **automatizar el proceso de inscripción y tener un registro preciso de los datos de los miembros**.
+## Diseño
 
-**Criterios de Aceptación:**
+- Arquitectura de Sistema de Base de Datos Distriuido
+- Esquema Conceptual Global
+- Esquema Conceptual Local
 
-- El sistema debe permitir ingresar información básica del miembro: nombre, número de teléfono principal y número de teléfono alternativo.
-- El sistema debe registrar el tipo de membresía, fecha de inicio y pagos realizados.
-- El sistema debe mantener un historial de actividad del miembro.
+## Desarrollo
+- Implementacion del SBDD
+- Implementacion De Interfaces de Usuario
+- Pruebas Unitarias
 
-### Gestión de Pagos
 
-Como **administrador**,
-Quiero **poder gestionar los pagos de los miembros dentro del sistema**,
-Para **asegurarme de que los pagos se registren de manera precisa y automática**.
 
-**Criterios de Aceptación:**
 
-- El sistema debe registrar pagos realizados por los miembros.
-- El sistema debe permitir consultar el estado de cuenta y el historial de pagos.
 
-### Seguimiento Administrativo
 
-Como **administrador**,
-Quiero **tener acceso a informes sobre la asistencia y frecuencia de uso de las instalaciones por parte de los miembros**,
-Para **monitorear la utilización de las instalaciones y mejorar la gestión de recursos**.
 
-**Criterios de Aceptación:**
-
-- El sistema debe generar informes sobre la asistencia de los miembros.
-- El sistema debe mostrar la frecuencia con la que los miembros utilizan las instalaciones y asisten a clases.
-- El sistema debe permitir la integración de encuestas para medir la satisfacción del cliente.
-
-### Gestión de Empleados y Horarios
-
-Como **administrador**,
-Quiero **poder gestionar los horarios de los empleados, incluyendo turnos y solicitudes de vacaciones**,
-Para **facilitar la administración del personal y asegurar una cobertura adecuada en los gimnasios**.
-
-**Criterios de Aceptación:**
-
-- El sistema debe permitir asignar turnos y gestionar solicitudes de vacaciones.
-- El sistema debe hacer seguimiento de las horas trabajadas por cada empleado.
-- El sistema debe gestionar los pagos de los empleados.
-
-### Control de Acceso y Permisos
-
-Como **administrador**,
-Quiero **definir diferentes niveles de acceso y permisos para los usuarios del sistema**,
-Para **asegurar que cada usuario tenga acceso solo a las funciones relevantes para su rol**.
-
-**Criterios de Aceptación:**
-
-- El sistema debe permitir asignar roles y permisos específicos a administradores, empleados, entrenadores y miembros.
-- Los administradores deben tener acceso completo a todas las funciones del sistema.
-- Los empleados y entrenadores deben tener acceso solo a las funciones relacionadas con su trabajo.
-- Los miembros deben tener acceso a sus propios datos y reservas.
-
-### Integración con Otros Sistemas
-
-Como **administrador**,
-Quiero **integrar el sistema con el software de contabilidad y plataformas de marketing**,
-Para **facilitar la gestión financiera y la comunicación con los miembros**.
-
-**Criterios de Aceptación:**
-
-- El sistema debe integrarse con el software de contabilidad para registrar automáticamente los pagos.
-- El sistema debe permitir la integración con plataformas de marketing para enviar campañas de correo electrónico y promociones.
-
-### Facilidad de Uso y Soporte Técnico
-
-Como **usuario del sistema**,
-Quiero **que el sistema sea fácil de usar y cuente con buen soporte técnico**,
-Para **poder adaptarme rápidamente y recibir ayuda cuando sea necesario**.
-
-**Criterios de Aceptación:**
-
-- El sistema debe tener una interfaz intuitiva y fácil de usar.
-- Debe estar disponible soporte técnico para resolver problemas y responder preguntas.
 
 ## Prioridad de historias de usuario
 

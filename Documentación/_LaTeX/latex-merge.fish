@@ -27,14 +27,14 @@ cat "$dir/.resources/pre-common.tex"
 # MD
 	fish "$dir/MDtoLaTeX/mdtolatex.fish" "$dir"
 # User Stories
-	user-stories
+#	user-stories
 # GANTT
-	gantt-all
+#	gantt-all
 
 cat "$dir/.resources/post-common.tex"
 end
 
 escribir > "$output.tex"
-prettier --plugin=/usr/local/lib/node_modules/prettier-plugin-latex/dist/prettier-plugin-latex.js "$output.tex" --write
+#prettier --plugin=/usr/local/lib/node_modules/prettier-plugin-latex/dist/prettier-plugin-latex.js "$output.tex" --write
 lualatex --output-directory="$dir" "$output.tex"
 qpdf --linearize --replace-input "$output.pdf"
