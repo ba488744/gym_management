@@ -62,22 +62,30 @@ Scrum efectúa a diario. Hay tres preguntas clave que se pide que respondan todo
 • ¿Qué obstáculos estás encontrando?
 • ¿Qué planeas hacer mientras llega la siguiente reunión del equipo?
 Un líder del equipo, llamado maestro Scrum, dirige la junta y evalúa las respuestas de cada persona.
+
 #### ¿Qué es una Metodología de análisis?
+
 Nosotros enfocamos un marco teorico que influye en el proceso estructurado para guiar el desarrollo desde los elementos de entrada(información recopilada), hasta las herramientas que se utilizaran para la elaboración de ellas.
 Asi facilitando su implementación en las diferentes etapas del proceso.
 Pressman promueve un enfoque iterativo e incrementalen e desarrollo de software, en este caso lo utilizaremos en el desarrollo de nuestra base de datos distribuida en base al proyecto del GYM, esto para que se contruya y mejore partes del proyecto de manera gradual.
 Esto tambien tomando en cuenta los aspectos de gestión de proyectos, estimación, planificación y control, asi tambien la detección temprana de los defectos y su corrección inmediata.
+
 # Historias de usuario y Casos de uso
+
 ## Casos de Uso
+
 Analiza el comportamiento del sistema en
 distintas condiciones en las que el sistema responde a una petición de alguno de sus participantes. En esencia, un caso de uso narra una historia estilizada sobre cómo interactúa un
 usuario final (que tiene cierto número de roles posibles) con el sistema en circunstancias específicas.
 Un caso de uso ilustra el software o sistema desde el punto de vista del usuario final.
+
 ## Historias de Usuario
+
 Las historia de usuario consta de ser un texto narrativo, un lineamiento de tareas o interacciones, una
 descripción basada en un formato o una representación diagramática. Sin importar su forma
 
 ## Entrevista de requerimientos
+
 Éste es el enfoque más directo, los miembros del equipo de software se reúnen con los usuarios para entender mejor sus necesidades, motivaciones, cultura laboral y
 una multitud de aspectos adicionales. Esto se logra en reuniones individuales o a través de
 grupos de enfoque.

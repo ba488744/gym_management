@@ -12,16 +12,20 @@
 \contentsline {subsection}{\numberline {2.1}Descripción}{3}{}%
 \contentsline {subsubsection}{\numberline {2.1.1}Metodologia de Analisis}{3}{}%
 \contentsline {paragraph}{¿Qué es metodología Scrum?}{3}{}%
-\contentsline {subsection}{\numberline {2.2}Entrevista de requerimientos}{4}{}%
-\contentsline {subsection}{\numberline {2.3}Analisis}{4}{}%
-\contentsline {subsubsection}{\numberline {2.3.1}Entrevista}{4}{}%
-\contentsline {subsubsection}{\numberline {2.3.2}Registro de miembros}{4}{}%
-\contentsline {subsubsection}{\numberline {2.3.3}Seguimiento Administrativo}{4}{}%
-\contentsline {subsubsection}{\numberline {2.3.4}Accesos al sistema}{5}{}%
-\contentsline {subsubsection}{\numberline {2.3.5}Integración}{5}{}%
-\contentsline {subsubsection}{\numberline {2.3.6}Soporte y mantenimiento}{5}{}%
-\contentsline {subsubsection}{\numberline {2.3.7}Últimas palabras}{5}{}%
-\contentsline {subsection}{\numberline {2.4}Historias de Usuario}{6}{}%
-\contentsline {subsection}{\numberline {2.5}Diseño}{6}{}%
-\contentsline {subsection}{\numberline {2.6}Desarrollo}{6}{}%
-\contentsline {subsection}{\numberline {2.7}Prioridad de historias de usuario}{6}{}%
+\contentsline {paragraph}{¿Qué es una Metodología de análisis?}{3}{}%
+\contentsline {section}{\numberline {3}Historias de usuario y Casos de uso}{4}{}%
+\contentsline {subsection}{\numberline {3.1}Casos de Uso}{4}{}%
+\contentsline {subsection}{\numberline {3.2}Historias de Usuario}{4}{}%
+\contentsline {subsection}{\numberline {3.3}Entrevista de requerimientos}{4}{}%
+\contentsline {subsection}{\numberline {3.4}Analisis}{4}{}%
+\contentsline {subsubsection}{\numberline {3.4.1}Entrevista}{4}{}%
+\contentsline {subsubsection}{\numberline {3.4.2}Registro de miembros}{4}{}%
+\contentsline {subsubsection}{\numberline {3.4.3}Seguimiento Administrativo}{5}{}%
+\contentsline {subsubsection}{\numberline {3.4.4}Accesos al sistema}{5}{}%
+\contentsline {subsubsection}{\numberline {3.4.5}Integración}{5}{}%
+\contentsline {subsubsection}{\numberline {3.4.6}Soporte y mantenimiento}{6}{}%
+\contentsline {subsubsection}{\numberline {3.4.7}Últimas palabras}{6}{}%
+\contentsline {subsection}{\numberline {3.5}Historias de Usuario}{6}{}%
+\contentsline {subsection}{\numberline {3.6}Diseño}{6}{}%
+\contentsline {subsection}{\numberline {3.7}Desarrollo}{6}{}%
+\contentsline {subsection}{\numberline {3.8}Prioridad de historias de usuario}{6}{}%
