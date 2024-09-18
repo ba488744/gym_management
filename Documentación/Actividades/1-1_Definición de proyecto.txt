@@ -1,8 +1,8 @@
 1	Definición de proyecto
 
-2	2024-09-12	2024-09-18	100	Introducción	4
-2	2024-09-12	2024-09-18	100	Planteamiento del problema	5
-2	2024-09-12	2024-09-18	100	Objetivo general	2
-2	2024-09-12	2024-09-18	100	Objetivos específicos	1
-2	2024-09-12	2024-09-18	100	Justificación	3
-2	2024-09-12	2024-09-18	100	Alcances y limitaciones	6
+2	2024-09-12	2024-09-17	100	Introducción	4
+2	2024-09-12	2024-09-17	100	Planteamiento del problema	5
+2	2024-09-12	2024-09-17	100	Objetivo general	2
+2	2024-09-12	2024-09-17	100	Objetivos específicos	1
+2	2024-09-12	2024-09-17	100	Justificación	3
+2	2024-09-12	2024-09-17	100	Alcances y limitaciones	6

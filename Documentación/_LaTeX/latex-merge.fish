@@ -7,15 +7,16 @@ function user-stories
 end
 function gantt -a titulo color
 	echo "\subsection{$titulo}"
-	fish "$dir/GANTT/gantt.fish" "$dir" 2 "$titulo"
+	fish "$dir/GANTT/gantt.fish" "$dir" "$color" "$titulo"
 end
 function gantt-all
 	#echo '\begin{landscape}'
 	echo "\section{Cronograma de actividades}\label{cronograma}"
-	set colores 1
+	set colores (seq 16)
 	set n 1
 	for grafica in \
-	"Definición de proyecto"
+	"Definición de proyecto" \
+	"Marco Teórico"
 		gantt "$grafica" "$colores[$n]"
 		set n (
 		if test $n -eq (count $colores)

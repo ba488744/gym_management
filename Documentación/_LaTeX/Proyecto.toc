@@ -36,3 +36,4 @@
 \contentsline {subsection}{\numberline {5.3}Vision Board}{12}{}%
 \contentsline {section}{\numberline {6}Cronograma de actividades}{14}{}%
 \contentsline {subsection}{\numberline {6.1}Definición de proyecto}{14}{}%
+\contentsline {subsection}{\numberline {6.2}Marco Teórico}{15}{}%

@@ -192,9 +192,12 @@ function list-activities
 			math $ncolor + 1
 		end)
 	end
-	echo "\ganttset{
-	,vrule offset ="(math (date "+%H")'/24')",}
-	\ganttvrule{HOY}{\the\year-\the\month-\the\day}"
+	if test (date -d "$begin_day" +%s) -lt (date +%s) \
+	&& test (date -d "$end_day + 1 day" +%s) -gt (date +%s)
+		echo "\ganttset{
+		,vrule offset ="(math (date "+%H")'/24')",}
+		\ganttvrule{HOY}{\the\year-\the\month-\the\day}"
+	end
 end
 function gantt-format
 	pre
