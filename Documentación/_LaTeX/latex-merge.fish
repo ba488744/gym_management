@@ -1,5 +1,5 @@
 set dir "$HOME/Sync/UAEH/Asignaturas/Bases de datos distribuidas/gym_management/Documentación/_LaTeX/"
-set output "$dir/output"
+set output "$dir/Proyecto"
 
 function user-stories
 	echo "\subsection{Vision Board}\label{vision-board}"

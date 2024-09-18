@@ -1,10 +1,10 @@
-This is LuaHBTeX, Version 1.15.0 (TeX Live 2022/Debian)  (format=lualatex 2024.8.11)  18 SEP 2024 14:31
+This is LuaHBTeX, Version 1.15.0 (TeX Live 2022/Debian)  (format=lualatex 2024.8.11)  18 SEP 2024 14:54
  restricted system commands enabled.
 **"/home/mau/Sync/UAEH/Asignaturas/Bases de datos distribuidas/gym_management/D
-ocumentación/_LaTeX//output.tex"
+ocumentación/_LaTeX//Proyecto.tex"
 
 ("/home/mau/Sync/UAEH/Asignaturas/Bases de datos distribuidas/gym_management/Do
-cumentación/_LaTeX//output.tex"
+cumentación/_LaTeX//Proyecto.tex"
 LaTeX2e <2022-11-01> patch level 1
 Lua module: luaotfload 2022-10-03 3.23 Lua based OpenType font support
 Lua module: lualibs 2022-10-04 2.75 ConTeXt Lua standard libraries.
@@ -1091,11 +1091,11 @@ Package: enumitem 2019/06/20 v3.9 Customized lists
 \enitdp@description=\count341
 )
 ("/home/mau/Sync/UAEH/Asignaturas/Bases de datos distribuidas/gym_management/Do
-cumentación/_LaTeX//output.aux"
+cumentación/_LaTeX//Proyecto.aux"
 LaTeX Info: Redefining \. on input line 10.
 LaTeX Info: Redefining \% on input line 10.
 )
-\openout1 = output.aux
+\openout1 = Proyecto.aux
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 78.
 LaTeX Font Info:    ... okay on input line 78.
@@ -1275,7 +1275,7 @@ LaTeX Font Info:    Font shape `TU/IBMPlexSans(0)/b/n' will be
 (Font)              scaled to size 14.18607pt on input line 178.
 
 ("/home/mau/Sync/UAEH/Asignaturas/Bases de datos distribuidas/gym_management/Do
-cumentación/_LaTeX//output.toc"
+cumentación/_LaTeX//Proyecto.toc"
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 LaTeX Font Info:    Font shape `TU/IBMPlexSans(0)/b/n' will be
@@ -1290,13 +1290,13 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 3.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 3.
-)
-\tf@toc=\write4
-
-\openout4 = output.toc
  [2
 
-] [3]
+])
+\tf@toc=\write4
+
+\openout4 = Proyecto.toc
+ [3]
 LaTeX Font Info:    Font shape `TU/IBMPlexSans(0)/m/n' will be
 (Font)              scaled to size 12.02782pt on input line 217.
 LaTeX Font Info:    Font shape `TU/IBMPlexSans(0)/b/n' will be
@@ -1307,7 +1307,8 @@ LaTeX Font Info:    Font shape `TU/IBMPlexSans(0)/b/n' will be
 
 ] [8
 
-] [9] [10] [11
+] [9] [10]
+[11
 
 ]
 LaTeX Font Info:    Font shape `TU/IBMPlexSans(0)/b/it' will be
@@ -1336,7 +1337,7 @@ LaTeX Font Info:    Font shape `TU/IBMPlexSans(0)/b/it' will be
 
 ]
 ("/home/mau/Sync/UAEH/Asignaturas/Bases de datos distribuidas/gym_management/Do
-cumentación/_LaTeX//output.aux"
+cumentación/_LaTeX//Proyecto.aux"
 LaTeX Info: Redefining \. on input line 10.
 LaTeX Info: Redefining \% on input line 10.
 )
@@ -1346,21 +1347,21 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 )
 
 Here is how much of LuaTeX's memory you used:
- 27503 strings out of 478382
+ 27499 strings out of 478382
  125002,1977958 words of node,token memory allocated
  731 words of node memory still in use:
    4 hlist, 1 vlist, 1 rule, 4 glue, 3 kern, 1 glyph, 9 attribute, 105 glue_spec
 , 6 attribute_list, 2 write nodes
-   avail lists: 1:1,2:7156,3:3132,4:114,5:1384,6:68,7:8044,8:1,9:1566,10:10,11:1
+   avail lists: 1:1,2:7156,3:3132,4:110,5:1384,6:68,7:8044,8:1,9:1566,10:10,11:1
 181
- 46516 multiletter control sequences out of 65536+600000
+ 46512 multiletter control sequences out of 65536+600000
  64 fonts using 6926007 bytes
- 109i,10n,122p,683b,1205s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 109i,10n,122p,685b,1205s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/opentype/ibm/plex/IBMPlexSans-Italic.otf></
 usr/share/texlive/texmf-dist/fonts/opentype/ibm/plex/IBMPlexSans-BoldItalic.otf>
 </usr/share/texlive/texmf-dist/fonts/opentype/ibm/plex/IBMPlexSans-Regular.otf><
 /usr/share/texlive/texmf-dist/fonts/opentype/ibm/plex/IBMPlexSans-Bold.otf>
-Output written on output.pdf (14 pages, 60143 bytes).
+Output written on Proyecto.pdf (14 pages, 60333 bytes).
 
 PDF statistics: 116 PDF objects out of 1000 (max. 8388607)
  66 compressed objects within 1 object stream
