@@ -1,6 +1,6 @@
-\documentclass[spanish,12pt]{article}
-\date{\today}
-\usepackage[letterpaper,margin=1in]{geometry}
+\documentclass[spanish, 12pt]{article}
+\usepackage[letterpaper, margin=1in]{geometry}
+
 \usepackage{ragged2e}
 \usepackage{fontspec}
 \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
@@ -28,6 +28,7 @@
 %\usepackage{citation-style-language}
 %\cslsetup{style=apa}
 %\addbibresource{bib.bib}
+%\usepackage{csquotes}
 
 % GANTT
 \usepackage{pgfgantt}
@@ -36,7 +37,8 @@
 \usepackage{.resources/sty/postit}
 
 % MD
-\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}
+\setlength{\parskip}{0pt}}
 
 % Portada
 \usepackage{tikz}
@@ -44,437 +46,837 @@
 \usepackage{anyfontsize}
 
 % Style
-\AddToHook{cmd/section/before}{\clearpage} % New page with each section
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{6pt plus 2pt minus 1pt}
-\setlength{\emergencystretch}{3em}
+\AddToHook{cmd/section/before}{\clearpage} % Nueva página en cada sección
+\setlength{\parindent}{0pt} %
+\setlength{\parskip}{6pt plus 2pt minus 1pt} %
+\setlength{\emergencystretch}{3em} %
 
+% Pretty Footnotes
+\usepackage[hang, flushmargin, bottom, multiple]{footmisc}
+\setlength{\footnotemargin}{0.8em} % set space between footnote nr and text
+\setlength{\footnotesep}{\baselineskip} % set space between multiple footnotes
+\setlength{\skip\footins}{0.3cm} % set space between page content and footnote
+\setlength{\footskip}{0.9cm}
+
+% Blockquote
+\definecolor{blockquote-border}{RGB}{221,221,221}
+\definecolor{blockquote-text}{RGB}{119,119,119}
+\usepackage{mdframed}
+\newmdenv[rightline=false,bottomline=false,topline=false,linewidth=3pt,linecolor=blockquote-border,skipabove=\parskip]{customblockquote}
+\renewenvironment{quote}{\begin{customblockquote}\list{}{\rightmargin=0em\leftmargin=0em}%
+\item\relax
+\color{blockquote-text}
+\ignorespaces}{\unskip\unskip\endlist\end{customblockquote}}
+
+% Enumerations and lists
 \usepackage{enumitem}
 \setlist{nolistsep}
-\setlength\itemsep{0pt}
+\setlength{\itemsep}{0pt}
 \setlength{\itemindent}{0pt}
 \setlength{\parsep}{0pt}
 
 \begin{document}
-\justifying
-\pagestyle{empty}
+	\justifying
+	\pagestyle{empty}
+
+	\begin{tikzpicture}[overlay, remember picture]
+		\fill[black!2]
+			(current page.south west) rectangle (current page.north east);
+
+		\begin{scope}[
+			transform canvas={rotate around ={45:($(current page.north west)+(-.5,-6)$)}}
+		]
+			\shade[
+				rounded corners=18pt,
+				left color=Dandelion,
+				right color=Dandelion!40
+			] ($(current page.north west)+(-.5,-6)$) rectangle ++(9,1.5);
+		\end{scope}
+
+		\begin{scope}[
+			transform canvas={rotate around ={45:($(current page.north west)+(.5,-10)$)}}
+		]
+			\shade[
+				rounded corners=18pt,
+				left color=lightgray,
+				right color=lightgray!60
+			] ($(current page.north west)+(0.5,-10)$) rectangle ++(15,1.5);
+		\end{scope}
+
+		\begin{scope}[
+			transform canvas={rotate around ={45:($(current page.north west)+(0.5,-10)$)}}
+		]
+			\shade[rounded corners=8pt, left color=lightgray]
+				($(current page.north west)+(1.5,-9.55)$) rectangle ++(7,.6);
+		\end{scope}
+
+		\begin{scope}[
+			transform canvas={rotate around ={45:($(current page.north)+(-1.5,-3)$)}}
+		]
+			\shade[rounded corners=12pt, left color=orange!80, right color=orange!60]
+				($(current page.north)+(-1.5,-3)$) rectangle ++(9,0.8);
+		\end{scope}
+
+		\begin{scope}[
+			transform canvas={rotate around ={45:($(current page.north)+(-3,-8)$)}}
+		]
+			\shade[rounded corners=28pt, left color=red!80, right color=red!80]
+				($(current page.north)+(-3,-8)$) rectangle ++(15,1.8);
+		\end{scope}
+
+		\begin{scope}[
+			transform canvas={rotate around ={45:($(current page.north west)+(4,-15.5)$)}}
+		]
+			\shade[rounded corners=25pt, left color=orange, right color=Dandelion]
+				($(current page.north west)+(4,-15.5)$) rectangle ++(30,1.8);
+		\end{scope}
+
+		\begin{scope}[
+			transform canvas={rotate around ={45:($(current page.north west)+(13,-10)$)}},
+		]
+			\shade[rounded corners=22pt, left color=RoyalBlue, right color=Emerald]
+				($(current page.north west)+(13,-10)$) rectangle ++(15,1.5);
+		\end{scope}
+
+		\begin{scope}[
+			transform canvas={rotate around ={45:($(current page.north west)+(18,-8)$)}},
+		]
+			\shade[rounded corners=8pt, left color=lightgray]
+				($(current page.north west)+(18,-8)$) rectangle ++(15,0.6);
+		\end{scope}
+
+		\begin{scope}[
+			transform canvas={rotate around ={45:($(current page.north west)+(19,-5.65)$)}},
+		]
+			\shade[rounded corners=12pt, left color=lightgray]
+				($(current page.north west)+(19,-5.65)$) rectangle ++(15,0.8);
+		\end{scope}
+
+		\begin{scope}[
+			transform canvas={rotate around ={45:($(current page.north west)+(20,-9)$)}}
+		]
+			\shade[rounded corners=20pt, left color=OrangeRed, right color=red!80]
+				($(current page.north west)+(20,-9)$) rectangle ++(14,1.2);
+		\end{scope}
+
+		\draw[ultra thick, gray]
+			($(current page.center)+(5,2)$) -- ++(0,-3cm)
+			node[midway, left=0.25cm, text width=5cm, align=right, black!75]
+				{{\fontsize{25}{30} \selectfont \bf GESTIÓN DE \\[10pt] GIMNASIOS}}
+			node[midway, right=0.25cm, text width=6cm, align=left, orange]
+				{{\fontsize{72}{86.4} \selectfont 2024}};
+
+		\node at
+			($(current page.center)+(0,-4)$)
+			{{\fontsize{60}{72} \selectfont Sistema Distribuido}};
+
+		\node[text width=\linewidth, align=center]
+			at
+			($(current page.center)+(0,-8)$)
+			{{\fontsize{16}{19.2} \selectfont \textcolor{orange}{ \bf SQL-Slayers}} \\[3pt] Barón Salinas Mauricio Valentín\\ Cristóbal Silverio Cristian\\ Gómez Daniel Aimar Jair \\ Hernández Reyes Magaly\\ Sánchez Carrasco Monserrat\\ Ramírez Suárez Gerardo};
+	\end{tikzpicture}
+	\tableofcontents
+	\section{Definición de Proyecto}
+	\label{definiciuxf3n-de-proyecto}
+
+	El proyecto en cuestión plantea el desarrollo de una base de datos para gestionar
+	de manera eficiente las operaciones de una serie de gimnasios. Su enfoque
+	principal está en la optimización de la administración diaria y en la mejora
+	de la experiencia de los usuarios a través de un sistema que maneje de manera
+	integral la información de membresías, pagos, empleados y el inventario de
+	productos o equipos. El propósito final de este sistema es garantizar que todas
+	las áreas operativas del gimnasio sean gestionadas de manera eficiente, con la
+	capacidad de escalar a medida que el negocio crezca.
+
+	Se destacan cinco objetivos específicos que buscan cubrir aspectos claves del
+	funcionamiento del gimnasio:
+
+	\begin{enumerate}
+		\def\labelenumi{\arabic{enumi}.} \tightlist
+
+		\item \textbf{Distribución geográfica} de los datos para gestionar múltiples
+			sedes.
+
+		\item \textbf{Sincronización y consistencia} de la información entre esas
+			sedes.
+
+		\item \textbf{Escalabilidad} del sistema para manejar el crecimiento del
+			negocio.
+
+		\item \textbf{Implementación} de medidas de seguridad para proteger los
+			datos.
+
+		\item \textbf{Garantizar la resiliencia y recuperación} en caso de desastres.
+	\end{enumerate}
+
+	A su vez, el proyecto identifica algunas limitaciones, tales como la latencia de
+	la red entre las distintas ubicaciones, la complejidad en la gestión de un
+	sistema distribuido, los costos de infraestructura asociados, y posibles
+	problemas de sincronización en redes de alta latencia.
+
+	\subsection{Introducción}
+	\label{introducciuxf3n}
+
+	En la actualidad, la eficiencia de un gimnasio depende no solo de la calidad
+	de sus instalaciones o de su personal, si no también de la correcta gestión de
+	los datos de sus miembros, participantes y operaciones diarias. Los gimnasios de
+	hoy en dia manejan una enorme cantidad de información que contiene el control de
+	membresías, el seguimiento de sus pagos e información personal de sus
+	integrantes. Por ello, sin un sistema bien organizado es fácil perder el
+	control sobre los aspectos antes mencionados y ocasiona un experiencia
+	negativa en los usuarios.
+
+	Este proyecto tiene la tarea de crear una base de datos que permita la
+	excelente gestión de un gimnasio para optimizar la administración diaria, mejorar
+	el servicio al cliente y aumentar la eficiencia operativa.
+
+	\subsection{Planteamiento del problema}
+	\label{planteamiento-del-problema}
+
+	El gimnasio enfrenta dificultades para gestionar eficientemente las membresías,
+	pagos y datos de usuarios. La falta de un sistema integral provoca
+	desorganización, pérdida de información y dificultades en el seguimiento de las
+	transacciones, lo que puede afectar la experiencia del cliente y la
+	rentabilidad del negocio.
+
+	\subsection{Objetivo General}
+	\label{objetivo-general}
+
+	Desarrollar una base de datos para un gimnasio, buscando una capacidad de
+	escalabilidad, que nos permita optimizar la administración y el control de todas
+	las áreas operativas, incluyendo gestión de membresías, el manejo de inventario
+	de equipos y productos como suplemnetos de igual manera el seguimiento de los empleados
+	de cada sucursal.
+
+	La base de datos nos dara la integridad y disponibilidad de la informacion en tiempo
+	real para facilitar la toma de decisiones estratégicas, mejorar la eficiencia
+	operativa y asegurar un control efectivo de los recursos a medida que el
+	negocio crezca.
+
+	\subsection{Objetivos Especificos}
+	\label{objetivos-especificos}
+
+	\begin{itemize}
+		\tightlist
+
+		\item Desarrollar una base de datos distribuida que permita el almacenamiento
+			de la información de los clientes, entrenadores, rutinas de entrenamiento,
+			y pagos.
+
+		\item Garantizar la comunicación entre los nodos de la base de datos para que
+			la información esté sincronizada y disponible en todo momento,
+			independientemente de la localización geográfica de los gimnasios o
+			sucursales.
+
+		\item Desarrollar una interfaz de usuario amigable, utilizando HTML, CSS y JavaScript,
+			que permita a los usuarios acceder, visualizar y modificar datos.
+	\end{itemize}
+
+	\subsection{Justificación}
+	\label{justificaciuxf3n}
+
+	La necesidad de desarrollar una base de datos robusta para la gestión de un gimnasio
+	surge de la creciente complejidad en la administración de los datos relacionados
+	con los usuarios, sus membresías, los pagos y el manejo de inventario. En el
+	contexto actual, donde la digitalización de los servicios se ha convertido en un
+	estándar, contar con un sistema de gestión que permita optimizar las
+	operaciones diarias no solo es una ventaja competitiva, sino también una necesidad
+	fundamental para la sostenibilidad y crecimiento de un gimnasio.
+
+	Uno de los problemas principales que enfrentan los gimnasios es la desorganización
+	y falta de control sobre los datos de sus miembros y transacciones financieras.
+	La ausencia de un sistema centralizado de información puede dar lugar a la
+	pérdida de datos, dificultades en la trazabilidad de las operaciones y errores
+	en la gestión de inventarios, lo que puede perjudicar la experiencia del
+	cliente y reducir la rentabilidad del negocio.
+
+	Por lo tanto, la implementación de una base de datos no solo resolvería estos problemas,
+	sino que también ofrecería una serie de beneficios adicionales. Por ejemplo,
+	permitiría un acceso rápido y seguro a la información en tiempo real, lo que facilitaría
+	la toma de decisiones informadas. Además, la posibilidad de contar con un sistema
+	que distribuya los datos geográficamente en múltiples ubicaciones permitiría gestionar
+	de manera efectiva las distintas sedes de un gimnasio, asegurando que toda la
+	información esté sincronizada y disponible para los administradores y usuarios
+	en cualquier momento y lugar.
+
+	Asimismo, la escalabilidad del sistema es un aspecto crítico en este proyecto,
+	ya que a medida que el gimnasio crezca y aumente la cantidad de miembros, empleados
+	y equipos, la base de datos debe ser capaz de manejar este crecimiento sin
+	comprometer la eficiencia operativa. La seguridad también es un factor esencial,
+	especialmente cuando se trata de la protección de información personal y
+	financiera de los usuarios. Las medidas de seguridad que se implementarán estarán
+	destinadas a prevenir accesos no autorizados y garantizar la integridad de los
+	datos.
+
+	Otro punto a considerar es la resiliencia del sistema. Dado que un gimnasio
+	maneja información crítica de sus operaciones, es indispensable que la base de
+	datos esté preparada para recuperar la información de manera rápida y efectiva
+	en caso de cualquier eventualidad, como fallos técnicos o desastres naturales.
+	Esto asegurará la continuidad de las operaciones sin afectar el servicio al cliente.
+
+	\subsection{Alcances y Limitaciones}
+	\label{alcances-y-limitaciones}
+
+	\subsubsection{Alcances}
+	\label{alcances}
+
+	\begin{enumerate}
+		\def\labelenumi{\arabic{enumi}.} \tightlist
+
+		\item \textbf{Distribución Geográfica de Datos}: Implementación de una base de
+			datos distribuida que permita almacenar y gestionar datos en múltiples ubicaciones
+			físicas ---en nuestro caso, las sedes de gimnasio gestionadas por el cliente---
+			para mejorar la disponibilidad y la redundancia.
+
+		\item \textbf{Sincronización y Consistencia de Datos}: Desarrollo de mecanismos
+			que garantizen que los datos sean consistentes entre las distintas ubicaciones
+			y que cualquier actualización se propague adecuadamente.
+
+		\item \textbf{Escalabilidad}: Diseño de la base de datos para que pueda escalar
+			horizontalmente, añadiendo más nodos según sea necesario para manejar el
+			aumento del volumen de datos y la carga de trabajo.
+
+		\item \textbf{Seguridad de Datos}: Implementación de medidas de seguridad que
+			protejan los datos distribuidos contra accesos no autorizados y posibles ataques
+			cibernéticos.
+
+		\item \textbf{Resiliencia y Recuperación ante Desastres}: Establecemiento de
+			procedimientos y tecnologías para asegurar la recuperación rápida y efectiva
+			en caso de fallos o desastres.
+	\end{enumerate}
+
+	\subsubsection{Limitaciones}
+	\label{limitaciones}
+
+	\begin{enumerate}
+		\def\labelenumi{\arabic{enumi}.} \tightlist
+
+		\item \textbf{Latencia de Red}: La latencia de la red entre los nodos puede afectar
+			el rendimiento del sistema, especialmente si los nodos están ubicados en
+			regiones geográficas distantes.
+
+		\item \textbf{Complejidad de Gestión}: La administración y el mantenimiento de
+			una base de datos distribuida pueden ser significativamente más complejos en
+			comparación con una base de datos centralizada.
+
+		\item \textbf{Costos de Infraestructura}: Los costos asociados con el hardware,
+			el software y la red para soportar una base de datos distribuida pueden
+			ser elevados.
+
+		\item \textbf{Consistencia Eventual}: Algunas arquitecturas distribuidas optan
+			por la consistencia eventual, lo que puede llevar a periodos en los que
+			los datos no están sincronizados en todos los nodos.
+
+		\item \textbf{Problemas de Sincronización}: La sincronización de datos entre
+			nodos puede enfrentar problemas, especialmente en redes con alta latencia
+			o en escenarios de particionamiento de red.
+	\end{enumerate}
+
+	\section{Marco teorico}
+	\label{marco-teorico}
+
+	\subsection{Metodologia de Analisis}
+	\label{metodologia-de-analisis}
+
+	\subsubsection{¿Qué es metodología Scrum?}
+	\label{quuxe9-es-metodologuxeda-scrum}
+
+	Es un pequeño equipo de personas, un equipo Scrum. El equipo Scrum consta de:
+
+	\begin{itemize}
+		\tightlist
+
+		\item un Scrum Master,
+
+		\item un propietario de producto (Product Owner) y
+
+		\item desarrolladores.
+	\end{itemize}
+
+	Dentro de un equipo de Scrum, no hay sub-equipos ni jerarquías. Es una unidad
+	cohesionada de profesionales enfocada en un objetivo a la vez, el objetivo del
+	Producto.
+
+	Scrum (nombre que proviene de cierta jugada que tiene lugar durante un partido
+	de rugby) es un método de desarrollo ágil de software concebido por Jeff Sutherland
+	y su equipo de desarrollo a principios de la década de 1990.
+
+	Retraso: lista de prioridades de los requerimientos o características del proyecto
+	que dan al cliente un valor del negocio. Es posible agregar en cualquier
+	momento otros aspectos al retraso (ésta es la forma en la que se introducen los
+	cambios). El gerente del proyecto evalúa el retraso y actualiza las prioridades
+	según se requiera. Sprints: consiste en unidades de trabajo que se necesitan para
+	alcanzar un requerimiento definido en el retraso que debe ajustarse en una caja
+	de tiempo predefinida (lo común son 30 días). Durante el sprint no se
+	introducen cambios (por ejemplo, aspectos del trabajo retrasado). Así, el sprint
+	permite a los miembros del equipo trabajar en un ambiente de corto plazo pero estable.
+	Reuniones Scrum: son reuniones breves (de 15 minutos, por lo general) que el
+	equipo Scrum efectúa a diario. Hay tres preguntas clave que se pide que respondan
+	todos los miembros del equipo.
+
+	\begin{itemize}
+		\tightlist
+
+		\item ¿Qué hiciste desde la última reunión del equipo?
+
+		\item ¿Qué obstáculos estás encontrando?
+
+		\item ¿Qué planeas hacer mientras llega la siguiente reunión del equipo? Un
+			líder del equipo, llamado maestro Scrum, dirige la junta y evalúa las
+			respuestas de cada persona.
+	\end{itemize}
+
+	\subsubsection{¿Qué es una Metodología de análisis?}
+	\label{quuxe9-es-una-metodologuxeda-de-anuxe1lisis}
+
+	Nosotros enfocamos un marco teorico que influye en el proceso estructurado para
+	guiar el desarrollo desde los elementos de entrada(información recopilada), hasta
+	las herramientas que se utilizaran para la elaboración de ellas. Asi
+	facilitando su implementación en las diferentes etapas del proceso. Pressman promueve
+	un enfoque iterativo e incrementalen e desarrollo de software, en este caso lo
+	utilizaremos en el desarrollo de nuestra base de datos distribuida en base al
+	proyecto del GYM, esto para que se contruya y mejore partes del proyecto de manera
+	gradual. Esto tambien tomando en cuenta los aspectos de gestión de proyectos, estimación,
+	planificación y control, asi tambien la detección temprana de los defectos y su
+	corrección inmediata.
 
-\begin{tikzpicture}[overlay,remember picture]
+	\section{Historias de usuario y Casos de uso}
+	\label{historias-de-usuario-y-casos-de-uso}
 
-\fill[black!2] (current page.south west) rectangle (current page.north east);
+	\subsection{Casos de Uso}
+	\label{casos-de-uso}
 
-\begin{scope}[transform canvas ={rotate around ={45:($(current page.north west)+(-.5,-6)$)}}]
+	Analiza el comportamiento del sistema en distintas condiciones en las que el sistema
+	responde a una petición de alguno de sus participantes. En esencia, un caso de
+	uso narra una historia estilizada sobre cómo interactúa un usuario final (que
+	tiene cierto número de roles posibles) con el sistema en circunstancias específicas.
+	Un caso de uso ilustra el software o sistema desde el punto de vista del
+	usuario final.
 
-\shade[rounded corners=18pt, left color=Dandelion, right color=Dandelion!40] ($(current page.north west)+(-.5,-6)$) rectangle ++(9,1.5);
+	\subsection{Historias de Usuario}
+	\label{historias-de-usuario}
 
-\end{scope}
+	Las historia de usuario consta de ser un texto narrativo, un lineamiento de
+	tareas o interacciones, una descripción basada en un formato o una representación
+	diagramática. Sin importar su forma
 
-\begin{scope}[transform canvas ={rotate around ={45:($(current page.north west)+(.5,-10)$)}}]
+	\subsection{Entrevista de requerimientos}
+	\label{entrevista-de-requerimientos}
 
-\shade[rounded corners=18pt, left color=lightgray,right color=lightgray!60] ($(current page.north west)+(0.5,-10)$) rectangle ++(15,1.5);
+	Éste es el enfoque más directo, los miembros del equipo de software se reúnen con
+	los usuarios para entender mejor sus necesidades, motivaciones, cultura laboral
+	y una multitud de aspectos adicionales. Esto se logra en reuniones
+	individuales o a través de grupos de enfoque.
 
-\end{scope}
+	\subsection{Analisis}
+	\label{analisis}
 
-\begin{scope}[transform canvas ={rotate around ={45:($(current page.north west)+(0.5,-10)$)}}]
+	\subsubsection{Entrevista}
+	\label{entrevista}
 
-\shade[rounded corners=8pt, left color=lightgray] ($(current page.north west)+(1.5,-9.55)$) rectangle ++(7,.6);
+	\textbf{Entrevistador:} Buenas tardes. Gracias por tomarse el tiempo para esta
+	entrevista. Para empezar, ¿puede darme una visión general de su negocio y qué
+	es lo que espera lograr con este nuevo sistema?
 
-\end{scope}
+	\textbf{Administrador:} Buenas tardes. Claro, tengo varios gimnasios en diferentes
+	ubicaciones, y actualmente gestionamos todo manualmente o con sistemas muy
+	básicos. Lo que realmente necesito es un sistema que me permita gestionar las inscripciones
+	de los miembros, el seguimiento de su actividad y productividad, y también la administración
+	de los empleados y horarios.
 
-\begin{scope}[transform canvas ={rotate around ={45:($(current page.north)+(-1.5,-3)$)}}]
+	\textbf{Entrevistador:} Entiendo. Vamos a desglosar esto en partes. Primero, ¿puede
+	describir cómo maneja actualmente el registro de miembros y qué aspectos le gustaría
+	mejorar?
 
-\shade[rounded corners=12pt, left color=orange!80, right color=orange!60] ($(current page.north)+(-1.5,-3)$) rectangle ++(9,0.8);
+	\textbf{Administrador:} En este momento, usamos un sistema de hojas de cálculo
+	para el registro de nuevos miembros y el seguimiento de pagos. Esto es
+	bastante ineficiente y propenso a errores. Me gustaría que el nuevo sistema permitiera
+	registrar automáticamente nuevos miembros y gestionar sus pagos.
 
-\end{scope}
+	\subsubsection{Registro de miembros}
+	\label{registro-de-miembros}
 
-\begin{scope}[transform canvas ={rotate around ={45:($(current page.north)+(-3,-8)$)}}]
+	\textbf{Entrevistador:} Perfecto. Para el registro de miembros, ¿qué información
+	específica necesita capturar?
 
-\shade[rounded corners=28pt, left color=red!80, right color=red!80] ($(current page.north)+(-3,-8)$) rectangle ++(15,1.8);
+	\textbf{Administrador:} Necesitamos capturar información básica como:
 
-\end{scope}
+	\begin{itemize}
+		\tightlist
 
-\begin{scope}[transform canvas ={rotate around ={45:($(current page.north west)+(4,-15.5)$)}}]
+		\item nombre,
 
-\shade[rounded corners=25pt, left color=orange, right color=Dandelion] ($(current page.north west)+(4,-15.5)$) rectangle ++(30,1.8);
+		\item número de teléfono principal y
 
-\end{scope}
+		\item número de teléfono alternativo.
+	\end{itemize}
 
-\begin{scope}[transform canvas ={rotate around ={45:($(current page.north west)+(13,-10)$)}},]
+	También necesitamos registrar:
 
-\shade[rounded corners=22pt, left color=RoyalBlue
+	\begin{itemize}
+		\tightlist
 
-,right color=Emerald] ($(current page.north west)+(13,-10)$) rectangle ++(15,1.5);
+		\item el tipo de membresía,
 
-\end{scope}
+		\item la fecha de inicio y
 
-\begin{scope}[transform canvas ={rotate around ={45:($(current page.north west)+(18,-8)$)}},]
+		\item los pagos realizados.
+	\end{itemize}
 
-\shade[rounded corners=8pt, left color=lightgray] ($(current page.north west)+(18,-8)$) rectangle ++(15,0.6);
+	\subsubsection{Seguimiento Administrativo}
+	\label{seguimiento-administrativo}
 
-\end{scope}
+	\textbf{Entrevistador:} En relación a la administración de empleados y
+	horarios, ¿qué funcionalidades específicas está buscando?
 
-\begin{scope}[transform canvas ={rotate around ={45:($(current page.north west)+(19,-5.65)$)}},]
+	\textbf{Administrador:} Necesito un módulo para gestionar:
 
-\shade[rounded corners=12pt, left color=lightgray] ($(current page.north west)+(19,-5.65)$) rectangle ++(15,0.8);
+	\begin{itemize}
+		\tightlist
 
-\end{scope}
+		\item los horarios de los empleados, incluyendo:
 
-\begin{scope}[transform canvas ={rotate around ={45:($(current page.north west)+(20,-9)$)}}]
+			\begin{itemize}
+				\tightlist
 
-\shade[rounded corners=20pt, left color=OrangeRed, right color=red!80] ($(current page.north west)+(20,-9)$) rectangle ++(14,1.2);
+				\item las asignaciones de turno y
 
-\end{scope}
+				\item las solicitudes de vacaciones.
+			\end{itemize}
+	\end{itemize}
 
-\draw[ultra thick,gray] ($(current page.center)+(5,2)$) -- ++(0,-3cm) node[midway,left=0.25cm,text width=5cm,align=right,black!75]{{\fontsize{25}{30} \selectfont \bf GESTIÓN DE \\[10pt] GIMNASIOS}} node[midway,right=0.25cm,text width=6cm,align=left,orange]{{\fontsize{72}{86.4} \selectfont 2024}};
+	También sería útil poder hacer un seguimiento de:
 
-\node at ($(current page.center)+(0,-4)$) {{\fontsize{60}{72} \selectfont Sistema Distribuido}};
+	\begin{itemize}
+		\tightlist
 
-\node[text width=\linewidth,align=center] at ($(current page.center)+(0,-8)$) {{\fontsize{16}{19.2} \selectfont \textcolor{orange}{ \bf SQL-Slayers}} \\[3pt] Barón Salinas Mauricio Valentín\\ Cristóbal Silverio Cristian\\ Gómez Daniel Aimar Jair \\ Hernández Reyes Magaly\\ Sánchez Carrasco Monserrat\\ Ramírez Suárez Gerardo};
+		\item sus horas trabajadas y
 
-\end{tikzpicture}
-\tableofcontents
-\section{Definición de Proyecto}\label{definiciuxf3n-de-proyecto}
+		\item sus pagos.
+	\end{itemize}
 
-\subsection{Introducción}\label{introducciuxf3n}
+	\subsubsection{Accesos al sistema}
+	\label{accesos-al-sistema}
 
-\subsection{Planteamiento del
-problema}\label{planteamiento-del-problema}
+	\textbf{Entrevistador:} Entiendo. ¿Qué tipo de acceso y permisos deberían tener
+	los diferentes usuarios del sistema? Por ejemplo, ¿qué pueden ver o hacer los administradores
+	frente a los empleados o los entrenadores?
 
-\subsection{Objetivo General}\label{objetivo-general}
+	\textbf{Administrador:}
 
-\subsection{Objetivos Especificos}\label{objetivos-especificos}
+	\begin{itemize}
+		\tightlist
 
-\subsection{Justificación}\label{justificaciuxf3n}
+		\item Los administradores deberían tener acceso completo a todas las funciones
+			del sistema, incluyendo: la gestión de miembros, empleados, informes y configuraciones.
 
-\subsection{Alcances y Limitaciones}\label{alcances-y-limitaciones}
+		\item Los empleados y entrenadores solo deberían tener acceso a funciones relacionadas
+			con su trabajo, como ver sus horarios y gestionar sus propias clases.
+	\end{itemize}
 
-\subsubsection{Alcances del Proyecto}\label{alcances-del-proyecto}
+	\subsubsection{Integración}
+	\label{integraciuxf3n}
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\tightlist
-\item
-  \textbf{Distribución Geográfica de Datos}: Implementación de una base
-  de datos distribuida que permita almacenar y gestionar datos en
-  múltiples ubicaciones físicas ---en nuestro caso, las sedes de
-  gimnasio gestionadas por el cliente--- para mejorar la disponibilidad
-  y la redundancia.
-\item
-  \textbf{Sincronización y Consistencia de Datos}: Desarrollo de
-  mecanismos que garantizen que los datos sean consistentes entre las
-  distintas ubicaciones y que cualquier actualización se propague
-  adecuadamente.
-\item
-  \textbf{Escalabilidad}: Diseño de la base de datos para que pueda
-  escalar horizontalmente, añadiendo más nodos según sea necesario para
-  manejar el aumento del volumen de datos y la carga de trabajo.
-\item
-  \textbf{Seguridad de Datos}: Implementación de medidas de seguridad
-  que protejan los datos distribuidos contra accesos no autorizados y
-  posibles ataques cibernéticos.
-\item
-  \textbf{Resiliencia y Recuperación ante Desastres}: Establecemiento de
-  procedimientos y tecnologías para asegurar la recuperación rápida y
-  efectiva en caso de fallos o desastres.
-\end{enumerate}
-
-\subsubsection{Limitaciones del
-Proyecto}\label{limitaciones-del-proyecto}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\tightlist
-\item
-  \textbf{Latencia de Red}: La latencia de la red entre los nodos puede
-  afectar el rendimiento del sistema, especialmente si los nodos están
-  ubicados en regiones geográficas distantes.
-\item
-  \textbf{Complejidad de Gestión}: La administración y el mantenimiento
-  de una base de datos distribuida pueden ser significativamente más
-  complejos en comparación con una base de datos centralizada.
-\item
-  \textbf{Costos de Infraestructura}: Los costos asociados con el
-  hardware, el software y la red para soportar una base de datos
-  distribuida pueden ser elevados.
-\item
-  \textbf{Consistencia Eventual}: Algunas arquitecturas distribuidas
-  optan por la consistencia eventual, lo que puede llevar a periodos en
-  los que los datos no están sincronizados en todos los nodos.
-\item
-  \textbf{Problemas de Sincronización}: La sincronización de datos entre
-  nodos puede enfrentar problemas, especialmente en redes con alta
-  latencia o en escenarios de particionamiento de red.
-\end{enumerate}
-
-\section{Marco teorico}\label{marco-teorico}
-
-\subsection{Descripción}\label{descripciuxf3n}
-
-\subsubsection{Metodologia de Analisis}\label{metodologia-de-analisis}
-
-\paragraph{¿Qué es metodología
-Scrum?}\label{quuxe9-es-metodologuxeda-scrum}
-
-Es un pequeño equipo de personas, un equipo Scrum. El equipo Scrum
-consta de: - un Scrum Master, - un propietario de producto (Product
-Owner) y - desarrolladores.
-
-Dentro de un equipo de Scrum, no hay sub-equipos ni jerarquías. Es una
-unidad cohesionada de profesionales enfocada en un objetivo a la vez, el
-objetivo del Producto.
-
-Scrum (nombre que proviene de cierta jugada que tiene lugar durante un
-partido de rugby) es un método de desarrollo ágil de software concebido
-por Jeff Sutherland y su equipo de desarrollo a principios de la década
-de 1990.
-
-Retraso: lista de prioridades de los requerimientos o características
-del proyecto que dan al cliente un valor del negocio. Es posible agregar
-en cualquier momento otros aspectos al retraso (ésta es la forma en la
-que se introducen los cambios). El gerente del proyecto evalúa el
-retraso y actualiza las prioridades según se requiera. Sprints: consiste
-en unidades de trabajo que se necesitan para alcanzar un requerimiento
-definido en el retraso que debe ajustarse en una caja de tiempo
-predefinida (lo común son 30 días). Durante el sprint no se introducen
-cambios (por ejemplo, aspectos del trabajo retrasado). Así, el sprint
-permite a los miembros del equipo trabajar en un ambiente de corto plazo
-pero estable. Reuniones Scrum: son reuniones breves (de 15 minutos, por
-lo general) que el equipo Scrum efectúa a diario. Hay tres preguntas
-clave que se pide que respondan todos los miembros del equipo. • ¿Qué
-hiciste desde la última reunión del equipo? • ¿Qué obstáculos estás
-encontrando? • ¿Qué planeas hacer mientras llega la siguiente reunión
-del equipo? Un líder del equipo, llamado maestro Scrum, dirige la junta
-y evalúa las respuestas de cada persona.
-
-\paragraph{¿Qué es una Metodología de
-análisis?}\label{quuxe9-es-una-metodologuxeda-de-anuxe1lisis}
-
-Nosotros enfocamos un marco teorico que influye en el proceso
-estructurado para guiar el desarrollo desde los elementos de
-entrada(información recopilada), hasta las herramientas que se
-utilizaran para la elaboración de ellas. Asi facilitando su
-implementación en las diferentes etapas del proceso. Pressman promueve
-un enfoque iterativo e incrementalen e desarrollo de software, en este
-caso lo utilizaremos en el desarrollo de nuestra base de datos
-distribuida en base al proyecto del GYM, esto para que se contruya y
-mejore partes del proyecto de manera gradual. Esto tambien tomando en
-cuenta los aspectos de gestión de proyectos, estimación, planificación y
-control, asi tambien la detección temprana de los defectos y su
-corrección inmediata.
-
-\section{Historias de usuario y Casos de
-uso}\label{historias-de-usuario-y-casos-de-uso}
-
-\subsection{Casos de Uso}\label{casos-de-uso}
-
-Analiza el comportamiento del sistema en distintas condiciones en las
-que el sistema responde a una petición de alguno de sus participantes.
-En esencia, un caso de uso narra una historia estilizada sobre cómo
-interactúa un usuario final (que tiene cierto número de roles posibles)
-con el sistema en circunstancias específicas. Un caso de uso ilustra el
-software o sistema desde el punto de vista del usuario final.
-
-\subsection{Historias de Usuario}\label{historias-de-usuario}
-
-Las historia de usuario consta de ser un texto narrativo, un lineamiento
-de tareas o interacciones, una descripción basada en un formato o una
-representación diagramática. Sin importar su forma
-
-\subsection{Entrevista de
-requerimientos}\label{entrevista-de-requerimientos}
-
-Éste es el enfoque más directo, los miembros del equipo de software se
-reúnen con los usuarios para entender mejor sus necesidades,
-motivaciones, cultura laboral y una multitud de aspectos adicionales.
-Esto se logra en reuniones individuales o a través de grupos de enfoque.
-
-\subsection{Analisis}\label{analisis}
-
-\subsubsection{Entrevista}\label{entrevista}
-
-\textbf{Entrevistador:} Buenas tardes. Gracias por tomarse el tiempo
-para esta entrevista. Para empezar, ¿puede darme una visión general de
-su negocio y qué es lo que espera lograr con este nuevo sistema?
-
-\textbf{Administrador:} Buenas tardes. Claro, tengo varios gimnasios en
-diferentes ubicaciones, y actualmente gestionamos todo manualmente o con
-sistemas muy básicos. Lo que realmente necesito es un sistema que me
-permita gestionar las inscripciones de los miembros, el seguimiento de
-su actividad y productividad, y también la administración de los
-empleados y horarios.
-
-\textbf{Entrevistador:} Entiendo. Vamos a desglosar esto en partes.
-Primero, ¿puede describir cómo maneja actualmente el registro de
-miembros y qué aspectos le gustaría mejorar?
-
-\textbf{Administrador:} En este momento, usamos un sistema de hojas de
-cálculo para el registro de nuevos miembros y el seguimiento de pagos.
-Esto es bastante ineficiente y propenso a errores. Me gustaría que el
-nuevo sistema permitiera registrar automáticamente nuevos miembros y
-gestionar sus pagos.
-
-\subsubsection{Registro de miembros}\label{registro-de-miembros}
-
-\textbf{Entrevistador:} Perfecto. Para el registro de miembros, ¿qué
-información específica necesita capturar?
-
-\textbf{Administrador:} Necesitamos capturar información básica como:
-
-\begin{itemize}
-\tightlist
-\item
-  nombre,
-\item
-  número de teléfono principal y
-\item
-  número de teléfono alternativo.
-\end{itemize}
-
-También necesitamos registrar:
-
-\begin{itemize}
-\tightlist
-\item
-  el tipo de membresía,
-\item
-  la fecha de inicio y
-\item
-  los pagos realizados.
-\end{itemize}
-
-\subsubsection{Seguimiento
-Administrativo}\label{seguimiento-administrativo}
-
-\textbf{Entrevistador:} En relación a la administración de empleados y
-horarios, ¿qué funcionalidades específicas está buscando?
-
-\textbf{Administrador:} Necesito un módulo para gestionar:
-
-\begin{itemize}
-\tightlist
-\item
-  los horarios de los empleados, incluyendo:
-
-  \begin{itemize}
-  \tightlist
-  \item
-    las asignaciones de turno y
-  \item
-    las solicitudes de vacaciones.
-  \end{itemize}
-\end{itemize}
-
-También sería útil poder hacer un seguimiento de:
-
-\begin{itemize}
-\tightlist
-\item
-  sus horas trabajadas y
-\item
-  sus pagos.
-\end{itemize}
-
-\subsubsection{Accesos al sistema}\label{accesos-al-sistema}
-
-\textbf{Entrevistador:} Entiendo. ¿Qué tipo de acceso y permisos
-deberían tener los diferentes usuarios del sistema? Por ejemplo, ¿qué
-pueden ver o hacer los administradores frente a los empleados o los
-entrenadores?
-
-\textbf{Administrador:}
-
-\begin{itemize}
-\tightlist
-\item
-  Los administradores deberían tener acceso completo a todas las
-  funciones del sistema, incluyendo: la gestión de miembros, empleados,
-  informes y configuraciones.
-\item
-  Los empleados y entrenadores solo deberían tener acceso a funciones
-  relacionadas con su trabajo, como ver sus horarios y gestionar sus
-  propias clases.
-\end{itemize}
-
-\subsubsection{Integración}\label{integraciuxf3n}
-
-\textbf{Entrevistador:} Muy bien. En términos de integración, ¿hay otros
-sistemas o herramientas con los que el nuevo sistema debería integrarse,
-como sistemas de contabilidad o plataformas de marketing?
-
-\textbf{Administrador:} Sí, el sistema debería integrarse con nuestro
-software de contabilidad para que los pagos se registren
-automáticamente.
-
-\subsubsection{Soporte y mantenimiento}\label{soporte-y-mantenimiento}
-
-\textbf{Entrevistador:} Perfecto. Para finalizar, ¿hay algún otro
-requerimiento o aspecto específico que no hayamos cubierto y que sea
-importante para usted?
-
-\textbf{Administrador:} Creo que lo hemos cubierto bastante bien. Solo
-me gustaría:
-
-\begin{itemize}
-\tightlist
-\item
-  que el sistema fuera fácil de usar,
-\item
-  que tuviera un buen soporte técnico y
-\item
-  una interfaz llamativa.
-\end{itemize}
-
-La facilidad de uso es importante para que tanto los empleados como los
-miembros puedan adaptarse rápidamente.
-
-\subsubsection{Últimas palabras}\label{uxfaltimas-palabras}
-
-\textbf{Entrevistador:} Entendido. Muchas gracias por la información
-detallada. Con estos requisitos, podemos empezar a definir el alcance
-del proyecto y trabajar en el diseño del sistema. ¿Hay algo más que
-quiera agregar antes de que terminemos?
-
-\textbf{Administrador:} No, eso es todo. Gracias a usted.
-
-\textbf{Entrevistador:} De nada. Le mantendremos informado sobre el
-avance del proyecto. Que tenga un buen día.
-
-\textbf{Administrador:} Igualmente. Que tenga un buen día.
-
-\subsection{Historias de Usuario}\label{historias-de-usuario-1}
-
-\begin{itemize}
-\tightlist
-\item
-  Diagramas de Casos de uso
-\item
-  Historias de Usuario
-\end{itemize}
-
-\subsection{Diseño}\label{diseuxf1o}
-
-\begin{itemize}
-\tightlist
-\item
-  Arquitectura de Sistema de Base de Datos Distriuido
-\item
-  Esquema Conceptual Global
-\item
-  Esquema Conceptual Local
-\end{itemize}
-
-\subsection{Desarrollo}\label{desarrollo}
-
-\begin{itemize}
-\tightlist
-\item
-  Implementacion del SBDD
-\item
-  Implementacion De Interfaces de Usuario
-\item
-  Pruebas Unitarias
-\end{itemize}
-
-\subsection{Prioridad de historias de
-usuario}\label{prioridad-de-historias-de-usuario}
+	\textbf{Entrevistador:} Muy bien. En términos de integración, ¿hay otros
+	sistemas o herramientas con los que el nuevo sistema debería integrarse, como sistemas
+	de contabilidad o plataformas de marketing?
+
+	\textbf{Administrador:} Sí, el sistema debería integrarse con nuestro software
+	de contabilidad para que los pagos se registren automáticamente.
+
+	\subsubsection{Soporte y mantenimiento}
+	\label{soporte-y-mantenimiento}
+
+	\textbf{Entrevistador:} Perfecto. Para finalizar, ¿hay algún otro requerimiento
+	o aspecto específico que no hayamos cubierto y que sea importante para usted?
+
+	\textbf{Administrador:} Creo que lo hemos cubierto bastante bien. Solo me gustaría:
+
+	\begin{itemize}
+		\tightlist
+
+		\item que el sistema fuera fácil de usar
+
+		\item una interfaz llamativa.
+	\end{itemize}
+
+	La facilidad de uso es importante para que tanto los empleados como los
+	miembros puedan adaptarse rápidamente.
+
+	\subsubsection{Últimas palabras}
+	\label{uxfaltimas-palabras}
+
+	\textbf{Entrevistador:} Entendido. Muchas gracias por la información detallada.
+	Con estos requisitos, podemos empezar a definir el alcance del proyecto y trabajar
+	en el diseño del sistema. ¿Hay algo más que quiera agregar antes de que
+	terminemos?
+
+	\textbf{Administrador:} No, eso es todo. Gracias a usted.
+
+	\textbf{Entrevistador:} De nada. Le mantendremos informado sobre el avance del
+	proyecto. Que tenga un buen día.
+
+	\textbf{Administrador:} Igualmente. Que tenga un buen día.
+
+	\section{Historias de Usuario}
+	\label{historias-de-usuario-1}
+
+	\paragraph{Registro de Miembros}
+	\label{registro-de-miembros-1}
+
+	Como administrador, quiero poder registrar nuevos miembros en el sistema, Para
+	automatizar el proceso de inscripción y tener un registro preciso de los datos
+	de los miembros.
+
+	\begin{itemize}
+		\tightlist
+
+		\item El sistema debe permitir ingresar información básica del miembro:
+			nombre y número de teléfono
+
+		\item El sistema debe registrar el tipo de membresía, fecha de inicio, fecha
+			final y pagos realizados.
+	\end{itemize}
+
+	\paragraph{Gestión de Pagos}
+	\label{gestiuxf3n-de-pagos}
+
+	Como administrador, quiero poder gestionar los pagos de los miembros dentro del
+	sistema, para asegurarme de que los pagos se registren de manera precisa y
+	automática.
+
+	\begin{itemize}
+		\tightlist
+
+		\item El sistema debe registrar pagos realizados por los miembros.
+
+		\item El sistema debe permitir consultar el estado de cuenta y el historial de
+			pagos.
+	\end{itemize}
+
+	\paragraph{Gestión de Empleados y Horarios}
+	\label{gestiuxf3n-de-empleados-y-horarios}
+
+	Como administrador, quiero poder gestionar los horarios de los empleados, incluyendo
+	turnos, para llevar un orden y supervisar las actividades de los trabajadores.
+
+	\begin{itemize}
+		\tightlist
+
+		\item El sistema debe hacer seguimiento de las horas trabajadas por cada empleado.
+
+		\item El sistema debe gestionar los pagos de los empleados.
+	\end{itemize}
+
+	\paragraph{Gestión de inventario de suplementos}
+	\label{gestiuxf3n-de-inventario-de-suplementos}
+
+	Como administrador, quiero poder llevar un registro de mi inventario de
+	suplementos para poder monitorear la venta de alguno y ver la disponibilad de
+	éstos.
+
+	\begin{itemize}
+		\tightlist
+
+		\item El sistema debe de permitir controlar el inventario de mis suplementos
+
+		\item El sistema debe registrar las ganancias y precios por los suplementos.
+	\end{itemize}
+
+	\section{Diagrama de Casos de uso}
+	\label{diagrama-de-casos-de-uso}
+
+	\subsection{Diseño}
+	\label{diseuxf1o}
+
+	\begin{itemize}
+		\tightlist
+
+		\item Arquitectura de Sistema de Base de Datos Distriuido
+
+		\item Esquema Conceptual Global
+
+		\item Esquema Conceptual Local
+	\end{itemize}
+
+	\subsection{Desarrollo}
+	\label{desarrollo}
+
+	\begin{itemize}
+		\tightlist
+
+		\item Implementacion del SBDD
+	\end{itemize}
+
+	\subsubsection{Estrategia top-down}
+	\label{estrategia-top-down}
+
+	\begin{itemize}
+		\tightlist
+
+		\item Implementacion De Interfaces de Usuario
+
+		\item Pruebas Unitarias
+	\end{itemize}
+	\subsection{Vision Board}
+	\label{vision-board}
+	\definecolor{html1}{HTML}{FFFF77}
+	\definecolor{html2}{HTML}{FF77FF}
+	\definecolor{html3}{HTML}{FF7777}
+	\definecolor{html4}{HTML}{77FFFF}
+	\definecolor{html5}{HTML}{77FF77}
+	\definecolor{html6}{HTML}{7777FF}
+	\definecolor{html7}{HTML}{FFBB77}
+	\definecolor{html8}{HTML}{FF77BB}
+	\definecolor{html9}{HTML}{BBFF77}
+	\definecolor{html10}{HTML}{BB77FF}
+	\definecolor{html11}{HTML}{77FFBB}
+	\definecolor{html12}{HTML}{77BBFF}
+	\noindent
+	\begin{minipage}{0.498\linewidth}
+		\noindent
+		\begin{PostItNote}
+			[Width=0.9\linewidth,Corner=true,Pin=None,Color=html2,Rotate=-1.7 ,Title={ Registro de Miembros},FontTitle={\bfseries\itshape}
+			] Como \textbf{administrador},
+
+			Quiero \textbf{poder registrar nuevos miembros en el sistema},
+
+			Para \textbf{automatizar el proceso de inscripción y tener un registro
+			preciso de los datos de los miembros}.
+		\end{PostItNote}
+		\vspace{0.5cm}
+	\end{minipage}
+	\noindent
+	\begin{minipage}{0.498\linewidth}
+		\noindent
+		\begin{PostItNote}
+			[Width=0.9\linewidth,Corner=true,Pin=None,Color=html3,Rotate=-1.2 ,Title={ Gestión de Pagos},FontTitle={\bfseries\itshape}
+			] Como \textbf{administrador},
+
+			Quiero \textbf{poder gestionar los pagos de los miembros dentro del
+			sistema},
+
+			Para \textbf{asegurarme de que los pagos se registren de manera precisa y
+			automática}.
+		\end{PostItNote}
+		\vspace{0.5cm}
+	\end{minipage}
+	\noindent
+	\begin{minipage}{0.498\linewidth}
+		\noindent
+		\begin{PostItNote}
+			[Width=0.9\linewidth,Corner=true,Pin=None,Color=html4,Rotate=-2.1 ,Title={ Seguimiento Administrativo},FontTitle={\bfseries\itshape}
+			] Como \textbf{administrador},
+
+			Quiero \textbf{tener acceso a informes sobre la asistencia y frecuencia de
+			uso de las instalaciones por parte de los miembros},
+
+			Para \textbf{monitorear la utilización de las instalaciones y mejorar la
+			gestión de recursos}.
+		\end{PostItNote}
+		\vspace{0.5cm}
+	\end{minipage}
+	\noindent
+	\begin{minipage}{0.498\linewidth}
+		\noindent
+		\begin{PostItNote}
+			[Width=0.9\linewidth,Corner=true,Pin=None,Color=html5,Rotate=-1.6 ,Title={ Gestión de Empleados y Horarios},FontTitle={\bfseries\itshape}
+			] Como \textbf{administrador},
+
+			Quiero \textbf{poder gestionar los horarios de los empleados, incluyendo turnos
+			y solicitudes de vacaciones},
+
+			Para \textbf{facilitar la administración del personal y asegurar una
+			cobertura adecuada en los gimnasios}.
+		\end{PostItNote}
+		\vspace{0.5cm}
+	\end{minipage}
+	\noindent
+	\begin{minipage}{0.498\linewidth}
+		\noindent
+		\begin{PostItNote}
+			[Width=0.9\linewidth,Corner=true,Pin=None,Color=html6,Rotate=2.4 ,Title={ Control de Acceso y Permisos},FontTitle={\bfseries\itshape}
+			] Como \textbf{administrador},
+
+			Quiero \textbf{definir diferentes niveles de acceso y permisos para los
+			usuarios del sistema},
+
+			Para \textbf{asegurar que cada usuario tenga acceso solo a las funciones
+			relevantes para su rol}.
+		\end{PostItNote}
+		\vspace{0.5cm}
+	\end{minipage}
+	\noindent
+	\begin{minipage}{0.498\linewidth}
+		\noindent
+		\begin{PostItNote}
+			[Width=0.9\linewidth,Corner=true,Pin=None,Color=html7,Rotate=-1.2 ,Title={ Integración con Otros Sistemas},FontTitle={\bfseries\itshape}
+			] Como \textbf{administrador},
+
+			Quiero \textbf{integrar el sistema con el software de contabilidad y
+			plataformas de marketing},
+
+			Para \textbf{facilitar la gestión financiera y la comunicación con los
+			miembros}.
+		\end{PostItNote}
+		\vspace{0.5cm}
+	\end{minipage}
+	\noindent
+	\begin{minipage}{0.498\linewidth}
+		\noindent
+		\begin{PostItNote}
+			[Width=0.9\linewidth,Corner=true,Pin=None,Color=html8,Rotate=-3 ,Title={ Facilidad de Uso y Soporte Técnico},FontTitle={\bfseries\itshape}
+			] Como \textbf{usuario del sistema},
+
+			Quiero \textbf{que el sistema sea fácil de usar y cuente con buen soporte
+			técnico},
+
+			Para \textbf{poder adaptarme rápidamente y recibir ayuda cuando sea
+			necesario}.
+		\end{PostItNote}
+		\vspace{0.5cm}
+	\end{minipage}
+	\section{Cronograma de actividades}
+	\label{cronograma}
+	\subsection{Definición de proyecto}
+
+	\begin{adjustbox}
+		{max size={0.85\textwidth}{0.85\textheight}} \scalebox{3}{
+
+		\def\pgfcalendarweekdayletter#1{%
+		\ifcase#1L\or M\or M\or J\or V\or S\or D\fi%
+		}
+
+		\begin{ganttchart}
+			[ x unit=0.5cm, y unit title=1cm, y unit chart=1.1cm, time slot format=big-endian,
+			vgrid, hgrid, title label font=\footnotesize, progress label text={}, newline
+			shortcut=true, group label node/.append style={align=right}, bar label
+			node/.append style={align=right}, milestone label node/.append style={align=right},
+			canvas/.style={ draw=black, dotted } ]{2024-09-12}{2024-09-18}
+
+			\gantttitlecalendar{year, month=name, weekday=letter, day} \\
+			\definecolor{html1}{HTML}{FFFF00}
+			\definecolor{html2}{HTML}{FF00FF}
+			\definecolor{html3}{HTML}{FF0000}
+			\definecolor{html4}{HTML}{00FFFF}
+			\definecolor{html5}{HTML}{00FF00}
+			\definecolor{html6}{HTML}{0000FF}
+			\definecolor{html7}{HTML}{FF7700}
+			\definecolor{html8}{HTML}{FF0077}
+			\definecolor{html9}{HTML}{77FF00}
+			\definecolor{html10}{HTML}{7700FF}
+			\definecolor{html11}{HTML}{00FF77}
+			\definecolor{html12}{HTML}{0077FF}
+			\ganttset{ bar/.append style={ pattern color=html2 }, group/.append style={ draw=black, fill=html2 }, milestone/.append style={ fill=html2 }, }
+			\ganttset{ bar/.append style={ pattern=dots }, } \ganttgroup[progress=100]{Definición de proyecto}{2024-09-12}{2024-09-18}
+			\\ \ganttset{ bar/.append style={ pattern=dots }, } \ganttbar[progress=100]{Introducción \ganttalignnewline \footnotesize{ \textit{ \textcolor{gray}{ Responsable(s): } \textcolor{html2}{ \textbf{ Magaly}} }}}{2024-09-12}{2024-09-18}
+			\\ \ganttset{ bar/.append style={ pattern=crosshatch dots }, } \ganttbar[progress=100]{Planteamiento del problema \ganttalignnewline \footnotesize{ \textit{ \textcolor{gray}{ Responsable(s): } \textcolor{html2}{ \textbf{ Monserrat}} }}}{2024-09-12}{2024-09-18}
+			\\ \ganttset{ bar/.append style={ pattern=horizontal lines }, } \ganttbar[progress=100]{Objetivo general \ganttalignnewline \footnotesize{ \textit{ \textcolor{gray}{ Responsable(s): } \textcolor{html2}{ \textbf{ Cristian}} }}}{2024-09-12}{2024-09-18}
+			\\ \ganttset{ bar/.append style={ pattern=vertical lines }, } \ganttbar[progress=100]{Objetivos específicos \ganttalignnewline \footnotesize{ \textit{ \textcolor{gray}{ Responsable(s): } \textcolor{html2}{ \textbf{ Aimar Jair}} }}}{2024-09-12}{2024-09-18}
+			\\ \ganttset{ bar/.append style={ pattern=grid }, } \ganttbar[progress=100]{Justificación \ganttalignnewline \footnotesize{ \textit{ \textcolor{gray}{ Responsable(s): } \textcolor{html2}{ \textbf{ Gerardo}} }}}{2024-09-12}{2024-09-18}
+			\\ \ganttset{ bar/.append style={ pattern=north west lines }, } \ganttbar[progress=100]{Alcances y limitaciones \ganttalignnewline \footnotesize{ \textit{ \textcolor{gray}{ Responsable(s): } \textcolor{html2}{ \textbf{ Valentín}} }}}{2024-09-12}{2024-09-18}
+			\\ \ganttset{ ,vrule offset =0.583333,} \ganttvrule{HOY}{\the\year-\the\month-\the\day}
+		\end{ganttchart}
+		}
+	\end{adjustbox}
 \end{document}

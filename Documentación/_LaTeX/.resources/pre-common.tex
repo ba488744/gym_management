@@ -1,6 +1,6 @@
-\documentclass[spanish,12pt]{article}
-\date{\today}
-\usepackage[letterpaper,margin=1in]{geometry}
+\documentclass[spanish, 12pt]{article}
+\usepackage[letterpaper, margin=1in]{geometry}
+
 \usepackage{ragged2e}
 \usepackage{fontspec}
 \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
@@ -28,6 +28,7 @@
 %\usepackage{citation-style-language}
 %\cslsetup{style=apa}
 %\addbibresource{bib.bib}
+%\usepackage{csquotes}
 
 % GANTT
 \usepackage{pgfgantt}
@@ -36,7 +37,8 @@
 \usepackage{.resources/sty/postit}
 
 % MD
-\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}
+\setlength{\parskip}{0pt}}
 
 % Portada
 \usepackage{tikz}
@@ -44,14 +46,32 @@
 \usepackage{anyfontsize}
 
 % Style
-\AddToHook{cmd/section/before}{\clearpage} % New page with each section
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{6pt plus 2pt minus 1pt}
-\setlength{\emergencystretch}{3em}
+\AddToHook{cmd/section/before}{\clearpage} % Nueva página en cada sección
+\setlength{\parindent}{0pt} %
+\setlength{\parskip}{6pt plus 2pt minus 1pt} %
+\setlength{\emergencystretch}{3em} %
 
+% Pretty Footnotes
+\usepackage[hang, flushmargin, bottom, multiple]{footmisc}
+\setlength{\footnotemargin}{0.8em} % set space between footnote nr and text
+\setlength{\footnotesep}{\baselineskip} % set space between multiple footnotes
+\setlength{\skip\footins}{0.3cm} % set space between page content and footnote
+\setlength{\footskip}{0.9cm}
+
+% Blockquote
+\definecolor{blockquote-border}{RGB}{221,221,221}
+\definecolor{blockquote-text}{RGB}{119,119,119}
+\usepackage{mdframed}
+\newmdenv[rightline=false,bottomline=false,topline=false,linewidth=3pt,linecolor=blockquote-border,skipabove=\parskip]{customblockquote}
+\renewenvironment{quote}{\begin{customblockquote}\list{}{\rightmargin=0em\leftmargin=0em}%
+\item\relax
+\color{blockquote-text}
+\ignorespaces}{\unskip\unskip\endlist\end{customblockquote}}
+
+% Enumerations and lists
 \usepackage{enumitem}
 \setlist{nolistsep}
-\setlength\itemsep{0pt}
+\setlength{\itemsep}{0pt}
 \setlength{\itemindent}{0pt}
 \setlength{\parsep}{0pt}
 

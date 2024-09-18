@@ -1,6 +1,0 @@
-1	Etapa de diseño
-
-2	2024-09-12	2024-09-16	0	Diagrama de casos de uso
-2	2024-09-13	2024-09-17	0	diagrama de secuencia
-2	2024-09-17	2024-09-19	0	Diagrama de actividades
-2	2024-09-18	2024-09-22	0	Diagrama de componentes

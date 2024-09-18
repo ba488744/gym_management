@@ -4,8 +4,11 @@ argparse -- $argv
 if not test "$argv[1]"; return; end
 
 set commondir "$argv[1]"
+set ncolor "$argv[2]"; if not test $ncolor; set ncolor 1; end
+set filter "$argv[3]"
+
 set dir (dirname "$commondir")
-set activities (find "$dir/Actividades" -mindepth 1 -maxdepth 1 -type f -iname "*$argv[3]*" -a ! -name ".*" | sort)
+set activities (find "$dir/Actividades" -mindepth 1 -maxdepth 1 -type f -iname "*$filter*" -a ! -name ".*" | sort)
 if not test "$activities[1]"; return; end
 
 set responsable \
@@ -22,8 +25,6 @@ set responsable_completo \
 "Hernández Reyes Magaly" \
 "Sánchez Carrasco Monserrat" \
 "Ramírez Suárez Gerardo"
-set c $argv[2]
-if not test $c; set c 1; end
 
 set element group bar linkedbar milestone linkedmilestone
 set barpattern \
@@ -34,7 +35,11 @@ set barpattern \
 "fivepointed stars" "sixpointed stars"
 
 function extractdays -a column file
-	for date in (cat "$file" | grep -v '^[1,4,5]' | sed '/^$/d' | cut -d \t -f "$column")
+	for date in (\
+	cat "$file" \
+	| grep -v '^[1,4,5]' \
+	| sed '/^$/d' \
+	| cut -d \t -f "$column")
 		date -d "$date" +%Y%m%d
 	end
 end
@@ -47,7 +52,8 @@ function getfirstday -a file
 			extractdays 2 "$file"
 		end)
 	end
-	set date (math "min ($dates[1]" (for d in $dates[2..]; echo ", $d"; end) ")")
+	set date (\
+	math "min ($dates[1]" (for d in $dates[2..]; echo ", $d"; end) ")")
 	date -d "$date" "+%F"
 end
 function getlastday -a file
@@ -59,7 +65,8 @@ function getlastday -a file
 			extractdays 3 "$file"
 		end)
 	end
-	set date (math "max ($dates[1]" (for d in $dates[2..]; echo ", $d"; end) ")")
+	set date \
+	(math "max ($dates[1]" (for d in $dates[2..]; echo ", $d"; end) ")")
 	date -d "$date" "+%F"
 end
 
@@ -68,7 +75,7 @@ set end_day (getlastday)
 
 function pre
 	echo '
-	\begin{adjustbox}{max size={0.9\textwidth}{0.9\textheight}}
+	\begin{adjustbox}{max size={0.85\textwidth}{0.85\textheight}}
 	\scalebox{3}{'
 	echo '
 	\def\pgfcalendarweekdayletter#1{%
@@ -108,14 +115,14 @@ function list-activities
 		echo \
 		"\ganttset{
 			bar/.append style={
-				pattern color=html$c
+				pattern color=html$ncolor
 			},
 			group/.append style={
 				draw=black,
-				fill=html$c
+				fill=html$ncolor
 			},
 			milestone/.append style={
-				fill=html$c
+				fill=html$ncolor
 			},
 		}"
 		for act in (cat "$file" | sed '/^$/d')
@@ -130,7 +137,12 @@ function list-activities
 			if test $n -eq 1 || test $n -eq 4 || test $n -eq 5
 				echo '[progress='(
 					set count 0
-					math '(' (for p in (cat "$file" | sed '/^$/d' | grep -v '^[1,4,5]' | cut -d \t -f 4)
+					math '(' (\
+					for p in (\
+					cat "$file" \
+					| sed '/^$/d' \
+					| grep -v '^[1,4,5]' \
+					| cut -d \t -f 4)
 						echo $p +
 						set count (math $count +1)
 					end) '0)/'"$count"
@@ -155,7 +167,7 @@ function list-activities
 					if test (echo $act | cut -d \t -f 6) && test $n -le 3
 						echo '\ganttalignnewline \footnotesize{ \textit{ \textcolor{gray}{ Responsable(s): } ' (
 						for resp in (echo $act | cut -d \t -f 6 | sed 's/,/\t/g' | sort | uniq)
-							echo ', \textcolor{html'$c'}{ \textbf{ '$responsable[$resp]'}}'
+							echo ', \textcolor{html'$ncolor'}{ \textbf{ '$responsable[$resp]'}}'
 						end | sed 's/^, //g') '}}'
 					end
 				))'}{'(
@@ -173,11 +185,11 @@ function list-activities
 				end)
 			end
 		end
-		set c (
-		if test $c -eq 12
+		set ncolor (
+		if test $ncolor -eq 12
 			echo 1
 		else
-			math $c + 1
+			math $ncolor + 1
 		end)
 	end
 	echo "\ganttset{
