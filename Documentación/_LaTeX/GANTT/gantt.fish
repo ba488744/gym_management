@@ -4,11 +4,12 @@ argparse -- $argv
 if not test "$argv[1]"; return; end
 
 set commondir "$argv[1]"
-set ncolor "$argv[2]"; if not test $ncolor; set ncolor 1; end
+set ncolor "$argv[2]"; if not [ "$ncolor" ]; set ncolor 1; end
 set filter "$argv[3]"
+set maxsize "$argv[4]"; if not [ "$maxsize" ]; set maxsize 0.9; end
 
 set dir (dirname "$commondir")
-set activities (find "$dir/Actividades" -mindepth 1 -maxdepth 1 -type f -iname "*$filter*" -a ! -name ".*" | sort)
+set activities (find "$dir/Actividades" -mindepth 1 -maxdepth 1 -type f ! -name ".*" | grep -i "$filter" | sort)
 if not test "$activities[1]"; return; end
 
 set responsable \
@@ -33,6 +34,7 @@ set barpattern \
 "north west lines" "north east lines" "crosshatch" \
 "bricks" "checkerboard" \
 "fivepointed stars" "sixpointed stars"
+set htmlncolors 12
 
 function extractdays -a column file
 	for date in (\
@@ -74,18 +76,16 @@ set begin_day (getfirstday)
 set end_day (getlastday)
 
 function pre
-	echo '
-	\begin{adjustbox}{max size={0.85\textwidth}{0.85\textheight}}
-	\scalebox{3}{'
-	echo '
+	echo "
+	\hfill\begin{adjustbox}{max size={$maxsize\textwidth}{$maxsize\textheight}}
+	\scalebox{3}{
 	\def\pgfcalendarweekdayletter#1{%
 	\ifcase#1L\or M\or M\or J\or V\or S\or D\fi%
-	}'
-	echo "
+	}
 	\begin{ganttchart}[
 		x unit=0.5cm,
 		y unit title=1cm,
-		y unit chart=1.1cm,
+		y unit chart=1cm,
 		time slot format=big-endian,
 		vgrid,
 		hgrid,
@@ -99,9 +99,8 @@ function pre
 			draw=black,
 			dotted
 		}
-	]{$begin_day}{$end_day}"
-	echo '
-	\gantttitlecalendar{year, month=name, weekday=letter, day} \\\\'
+	]{$begin_day}{$end_day}
+	\gantttitlecalendar{year, month=name, weekday=letter, day} \\\\"
 end
 function post
 	echo "
@@ -163,14 +162,16 @@ function list-activities
 				echo '[progress='(
 					echo $act | cut -d \t -f 4
 				)']{'(
-					echo (echo $act | cut -d \t -f 5) (
 					if test (echo $act | cut -d \t -f 6) && test $n -le 3
-						echo '\ganttalignnewline \footnotesize{ \textit{ \textcolor{gray}{ Responsable(s): } ' (
+						echo '\raisebox{-0.075cm}{' (echo $act | cut -d \t -f 5) \
+						'} \ganttalignnewline \raisebox{0.15cm}{ \footnotesize{ \textit{ \textcolor{gray}{ Responsable(s): } ' (
 						for resp in (echo $act | cut -d \t -f 6 | sed 's/,/\t/g' | sort | uniq)
 							echo ', \textcolor{html'$ncolor'}{ \textbf{ '$responsable[$resp]'}}'
-						end | sed 's/^, //g') '}}'
+						end | sed 's/^, //g') '}}}'
+					else
+						echo $act | cut -d \t -f 5
 					end
-				))'}{'(
+				)'}{'(
 					echo $act | cut -d \t -f 2
 				)'}{'(
 					echo $act | cut -d \t -f 3
@@ -186,12 +187,12 @@ function list-activities
 			end
 		end
 		set ncolor (
-		if test $ncolor -eq 12
+		if test $ncolor -eq $htmlncolors
 			echo 1
 		else
 			math $ncolor + 1
 		end)
-	end
+	end | tac | sed '0,/\\\\\\\\/s///' | tac
 	if test (date -d "$begin_day" +%s) -lt (date +%s) \
 	&& test (date -d "$end_day + 1 day" +%s) -gt (date +%s)
 		echo "\ganttset{

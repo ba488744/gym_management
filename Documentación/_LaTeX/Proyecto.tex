@@ -1,6 +1,7 @@
 \documentclass[spanish, 12pt]{article}
 \usepackage[letterpaper, margin=1in]{geometry}
-
+\usepackage{setspace}
+\setstretch{1.2}
 \usepackage{ragged2e}
 \usepackage{fontspec}
 \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
@@ -736,7 +737,7 @@
 	\begin{minipage}{0.498\linewidth}
 		\noindent
 		\begin{PostItNote}
-			[Width=0.9\linewidth,Corner=true,Pin=None,Color=html2,Rotate=-0.6 ,Title={ Registro de Miembros},FontTitle={\bfseries\itshape}
+			[Width=0.9\linewidth,Corner=true,Pin=None,Color=html2,Rotate=0.3 ,Title={ Registro de Miembros},FontTitle={\bfseries\itshape}
 			] Como \textbf{administrador},
 
 			Quiero \textbf{poder registrar nuevos miembros en el sistema},
@@ -750,7 +751,7 @@
 	\begin{minipage}{0.498\linewidth}
 		\noindent
 		\begin{PostItNote}
-			[Width=0.9\linewidth,Corner=true,Pin=None,Color=html3,Rotate=-2.9 ,Title={ Gestión de Pagos},FontTitle={\bfseries\itshape}
+			[Width=0.9\linewidth,Corner=true,Pin=None,Color=html3,Rotate=-0.2 ,Title={ Gestión de Pagos},FontTitle={\bfseries\itshape}
 			] Como \textbf{administrador},
 
 			Quiero \textbf{poder gestionar los pagos de los miembros dentro del
@@ -765,7 +766,7 @@
 	\begin{minipage}{0.498\linewidth}
 		\noindent
 		\begin{PostItNote}
-			[Width=0.9\linewidth,Corner=true,Pin=None,Color=html4,Rotate=-2.5 ,Title={ Seguimiento Administrativo},FontTitle={\bfseries\itshape}
+			[Width=0.9\linewidth,Corner=true,Pin=None,Color=html4,Rotate=-0.3 ,Title={ Seguimiento Administrativo},FontTitle={\bfseries\itshape}
 			] Como \textbf{administrador},
 
 			Quiero \textbf{tener acceso a informes sobre la asistencia y frecuencia de
@@ -780,7 +781,7 @@
 	\begin{minipage}{0.498\linewidth}
 		\noindent
 		\begin{PostItNote}
-			[Width=0.9\linewidth,Corner=true,Pin=None,Color=html5,Rotate=1.2 ,Title={ Gestión de Empleados y Horarios},FontTitle={\bfseries\itshape}
+			[Width=0.9\linewidth,Corner=true,Pin=None,Color=html5,Rotate=2.9 ,Title={ Gestión de Empleados y Horarios},FontTitle={\bfseries\itshape}
 			] Como \textbf{administrador},
 
 			Quiero \textbf{poder gestionar los horarios de los empleados, incluyendo turnos
@@ -795,7 +796,7 @@
 	\begin{minipage}{0.498\linewidth}
 		\noindent
 		\begin{PostItNote}
-			[Width=0.9\linewidth,Corner=true,Pin=None,Color=html6,Rotate=1 ,Title={ Control de Acceso y Permisos},FontTitle={\bfseries\itshape}
+			[Width=0.9\linewidth,Corner=true,Pin=None,Color=html6,Rotate=0.6 ,Title={ Control de Acceso y Permisos},FontTitle={\bfseries\itshape}
 			] Como \textbf{administrador},
 
 			Quiero \textbf{definir diferentes niveles de acceso y permisos para los
@@ -810,7 +811,7 @@
 	\begin{minipage}{0.498\linewidth}
 		\noindent
 		\begin{PostItNote}
-			[Width=0.9\linewidth,Corner=true,Pin=None,Color=html7,Rotate=-1.1 ,Title={ Integración con Otros Sistemas},FontTitle={\bfseries\itshape}
+			[Width=0.9\linewidth,Corner=true,Pin=None,Color=html7,Rotate=-1 ,Title={ Integración con Otros Sistemas},FontTitle={\bfseries\itshape}
 			] Como \textbf{administrador},
 
 			Quiero \textbf{integrar el sistema con el software de contabilidad y
@@ -825,7 +826,7 @@
 	\begin{minipage}{0.498\linewidth}
 		\noindent
 		\begin{PostItNote}
-			[Width=0.9\linewidth,Corner=true,Pin=None,Color=html8,Rotate=-0.9 ,Title={ Facilidad de Uso y Soporte Técnico},FontTitle={\bfseries\itshape}
+			[Width=0.9\linewidth,Corner=true,Pin=None,Color=html8,Rotate=0.8 ,Title={ Facilidad de Uso y Soporte Técnico},FontTitle={\bfseries\itshape}
 			] Como \textbf{usuario del sistema},
 
 			Quiero \textbf{que el sistema sea fácil de usar y cuente con buen soporte
@@ -838,22 +839,19 @@
 	\end{minipage}
 	\section{Cronograma de actividades}
 	\label{cronograma}
-	\subsection{Definición de proyecto}
+	\subsection{Definición de proyecto y Marco Teórico}
 
+	\hfill
 	\begin{adjustbox}
-		{max size={0.85\textwidth}{0.85\textheight}} \scalebox{3}{
-
-		\def\pgfcalendarweekdayletter#1{%
+		{max size={0.85\textwidth}{0.85\textheight}} \scalebox{3}{ \def\pgfcalendarweekdayletter#1{%
 		\ifcase#1L\or M\or M\or J\or V\or S\or D\fi%
 		}
-
 		\begin{ganttchart}
-			[ x unit=0.5cm, y unit title=1cm, y unit chart=1.1cm, time slot format=big-endian,
-			vgrid, hgrid, title label font=\footnotesize, progress label text={}, newline
-			shortcut=true, group label node/.append style={align=right}, bar label
+			[ x unit=0.5cm, y unit title=1cm, y unit chart=1cm, time slot format=big-endian,
+			vgrid, hgrid, title label font=\footnotesize, progress label text={},
+			newline shortcut=true, group label node/.append style={align=right}, bar label
 			node/.append style={align=right}, milestone label node/.append style={align=right},
-			canvas/.style={ draw=black, dotted } ]{2024-09-12}{2024-09-17}
-
+			canvas/.style={ draw=black, dotted } ]{2024-09-12}{2024-09-24}
 			\gantttitlecalendar{year, month=name, weekday=letter, day} \\
 			\definecolor{html1}{HTML}{FFFF00}
 			\definecolor{html2}{HTML}{FF00FF}
@@ -869,53 +867,20 @@
 			\definecolor{html12}{HTML}{0077FF}
 			\ganttset{ bar/.append style={ pattern color=html1 }, group/.append style={ draw=black, fill=html1 }, milestone/.append style={ fill=html1 }, }
 			\ganttset{ bar/.append style={ pattern=dots }, } \ganttgroup[progress=100]{Definición de proyecto}{2024-09-12}{2024-09-17}
-			\\ \ganttset{ bar/.append style={ pattern=dots }, } \ganttbar[progress=100]{Introducción \ganttalignnewline \footnotesize{ \textit{ \textcolor{gray}{ Responsable(s): } \textcolor{html1}{ \textbf{ Magaly}} }}}{2024-09-12}{2024-09-17}
-			\\ \ganttset{ bar/.append style={ pattern=crosshatch dots }, } \ganttbar[progress=100]{Planteamiento del problema \ganttalignnewline \footnotesize{ \textit{ \textcolor{gray}{ Responsable(s): } \textcolor{html1}{ \textbf{ Monserrat}} }}}{2024-09-12}{2024-09-17}
-			\\ \ganttset{ bar/.append style={ pattern=horizontal lines }, } \ganttbar[progress=100]{Objetivo general \ganttalignnewline \footnotesize{ \textit{ \textcolor{gray}{ Responsable(s): } \textcolor{html1}{ \textbf{ Cristian}} }}}{2024-09-12}{2024-09-17}
-			\\ \ganttset{ bar/.append style={ pattern=vertical lines }, } \ganttbar[progress=100]{Objetivos específicos \ganttalignnewline \footnotesize{ \textit{ \textcolor{gray}{ Responsable(s): } \textcolor{html1}{ \textbf{ Aimar Jair}} }}}{2024-09-12}{2024-09-17}
-			\\ \ganttset{ bar/.append style={ pattern=grid }, } \ganttbar[progress=100]{Justificación \ganttalignnewline \footnotesize{ \textit{ \textcolor{gray}{ Responsable(s): } \textcolor{html1}{ \textbf{ Gerardo}} }}}{2024-09-12}{2024-09-17}
-			\\ \ganttset{ bar/.append style={ pattern=north west lines }, } \ganttbar[progress=100]{Alcances y limitaciones \ganttalignnewline \footnotesize{ \textit{ \textcolor{gray}{ Responsable(s): } \textcolor{html1}{ \textbf{ Valentín}} }}}{2024-09-12}{2024-09-17}
-			\\
-		\end{ganttchart}
-		}
-	\end{adjustbox}
-	\subsection{Marco Teórico}
-
-	\begin{adjustbox}
-		{max size={0.85\textwidth}{0.85\textheight}} \scalebox{3}{
-
-		\def\pgfcalendarweekdayletter#1{%
-		\ifcase#1L\or M\or M\or J\or V\or S\or D\fi%
-		}
-
-		\begin{ganttchart}
-			[ x unit=0.5cm, y unit title=1cm, y unit chart=1.1cm, time slot format=big-endian,
-			vgrid, hgrid, title label font=\footnotesize, progress label text={}, newline
-			shortcut=true, group label node/.append style={align=right}, bar label
-			node/.append style={align=right}, milestone label node/.append style={align=right},
-			canvas/.style={ draw=black, dotted } ]{2024-09-18}{2024-09-24}
-
-			\gantttitlecalendar{year, month=name, weekday=letter, day} \\
-			\definecolor{html1}{HTML}{FFFF00}
-			\definecolor{html2}{HTML}{FF00FF}
-			\definecolor{html3}{HTML}{FF0000}
-			\definecolor{html4}{HTML}{00FFFF}
-			\definecolor{html5}{HTML}{00FF00}
-			\definecolor{html6}{HTML}{0000FF}
-			\definecolor{html7}{HTML}{FF7700}
-			\definecolor{html8}{HTML}{FF0077}
-			\definecolor{html9}{HTML}{77FF00}
-			\definecolor{html10}{HTML}{7700FF}
-			\definecolor{html11}{HTML}{00FF77}
-			\definecolor{html12}{HTML}{0077FF}
-			\ganttset{ bar/.append style={ pattern color=html2 }, group/.append style={ draw=black, fill=html2 }, milestone/.append style={ fill=html2 }, }
+			\\ \ganttset{ bar/.append style={ pattern=dots }, } \ganttbar[progress=100]{\raisebox{-0.075cm}{ Introducción } \ganttalignnewline \raisebox{0.15cm}{ \footnotesize{ \textit{ \textcolor{gray}{ Responsable(s): } \textcolor{html1}{ \textbf{ Magaly}} }}}}{2024-09-12}{2024-09-17}
+			\\ \ganttset{ bar/.append style={ pattern=crosshatch dots }, } \ganttbar[progress=100]{\raisebox{-0.075cm}{ Planteamiento del problema } \ganttalignnewline \raisebox{0.15cm}{ \footnotesize{ \textit{ \textcolor{gray}{ Responsable(s): } \textcolor{html1}{ \textbf{ Monserrat}} }}}}{2024-09-12}{2024-09-17}
+			\\ \ganttset{ bar/.append style={ pattern=horizontal lines }, } \ganttbar[progress=100]{\raisebox{-0.075cm}{ Objetivo general } \ganttalignnewline \raisebox{0.15cm}{ \footnotesize{ \textit{ \textcolor{gray}{ Responsable(s): } \textcolor{html1}{ \textbf{ Cristian}} }}}}{2024-09-12}{2024-09-17}
+			\\ \ganttset{ bar/.append style={ pattern=vertical lines }, } \ganttbar[progress=100]{\raisebox{-0.075cm}{ Objetivos específicos } \ganttalignnewline \raisebox{0.15cm}{ \footnotesize{ \textit{ \textcolor{gray}{ Responsable(s): } \textcolor{html1}{ \textbf{ Aimar Jair}} }}}}{2024-09-12}{2024-09-17}
+			\\ \ganttset{ bar/.append style={ pattern=grid }, } \ganttbar[progress=100]{\raisebox{-0.075cm}{ Justificación } \ganttalignnewline \raisebox{0.15cm}{ \footnotesize{ \textit{ \textcolor{gray}{ Responsable(s): } \textcolor{html1}{ \textbf{ Gerardo}} }}}}{2024-09-12}{2024-09-17}
+			\\ \ganttset{ bar/.append style={ pattern=north west lines }, } \ganttbar[progress=100]{\raisebox{-0.075cm}{ Alcances y limitaciones } \ganttalignnewline \raisebox{0.15cm}{ \footnotesize{ \textit{ \textcolor{gray}{ Responsable(s): } \textcolor{html1}{ \textbf{ Valentín}} }}}}{2024-09-12}{2024-09-17}
+			\\ \ganttset{ bar/.append style={ pattern color=html2 }, group/.append style={ draw=black, fill=html2 }, milestone/.append style={ fill=html2 }, }
 			\ganttset{ bar/.append style={ pattern=dots }, } \ganttgroup[progress=0]{Marco Teórico}{2024-09-18}{2024-09-24}
-			\\ \ganttset{ bar/.append style={ pattern=dots }, } \ganttbar[progress=0]{Análisis de requerimientos \ganttalignnewline \footnotesize{ \textit{ \textcolor{gray}{ Responsable(s): } \textcolor{html2}{ \textbf{ Gerardo}} }}}{2024-09-18}{2024-09-24}
-			\\ \ganttset{ bar/.append style={ pattern=crosshatch dots }, } \ganttbar[progress=0]{Diseño de vistas \ganttalignnewline \footnotesize{ \textit{ \textcolor{gray}{ Responsable(s): } \textcolor{html2}{ \textbf{ Magaly}} , \textcolor{html2}{ \textbf{ Monserrat}} }}}{2024-09-18}{2024-09-24}
-			\\ \ganttset{ bar/.append style={ pattern=horizontal lines }, } \ganttbar[progress=0]{Diseño conceptual \ganttalignnewline \footnotesize{ \textit{ \textcolor{gray}{ Responsable(s): } \textcolor{html2}{ \textbf{ Aimar Jair}} }}}{2024-09-18}{2024-09-24}
-			\\ \ganttset{ bar/.append style={ pattern=vertical lines }, } \ganttbar[progress=0]{Análisis de entidades \ganttalignnewline \footnotesize{ \textit{ \textcolor{gray}{ Responsable(s): } \textcolor{html2}{ \textbf{ Valentín}} }}}{2024-09-18}{2024-09-24}
-			\\ \ganttset{ bar/.append style={ pattern=grid }, } \ganttbar[progress=0]{Análisis funcional \ganttalignnewline \footnotesize{ \textit{ \textcolor{gray}{ Responsable(s): } \textcolor{html2}{ \textbf{ Cristian}} }}}{2024-09-18}{2024-09-24}
-			\\ \ganttset{ ,vrule offset =0.666667,} \ganttvrule{HOY}{\the\year-\the\month-\the\day}
+			\\ \ganttset{ bar/.append style={ pattern=dots }, } \ganttbar[progress=0]{\raisebox{-0.075cm}{ Análisis de requerimientos } \ganttalignnewline \raisebox{0.15cm}{ \footnotesize{ \textit{ \textcolor{gray}{ Responsable(s): } \textcolor{html2}{ \textbf{ Gerardo}} }}}}{2024-09-18}{2024-09-24}
+			\\ \ganttset{ bar/.append style={ pattern=crosshatch dots }, } \ganttbar[progress=0]{\raisebox{-0.075cm}{ Diseño de vistas } \ganttalignnewline \raisebox{0.15cm}{ \footnotesize{ \textit{ \textcolor{gray}{ Responsable(s): } \textcolor{html2}{ \textbf{ Magaly}} , \textcolor{html2}{ \textbf{ Monserrat}} }}}}{2024-09-18}{2024-09-24}
+			\\ \ganttset{ bar/.append style={ pattern=horizontal lines }, } \ganttbar[progress=0]{\raisebox{-0.075cm}{ Diseño conceptual } \ganttalignnewline \raisebox{0.15cm}{ \footnotesize{ \textit{ \textcolor{gray}{ Responsable(s): } \textcolor{html2}{ \textbf{ Aimar Jair}} }}}}{2024-09-18}{2024-09-24}
+			\\ \ganttset{ bar/.append style={ pattern=vertical lines }, } \ganttbar[progress=0]{\raisebox{-0.075cm}{ Análisis de entidades } \ganttalignnewline \raisebox{0.15cm}{ \footnotesize{ \textit{ \textcolor{gray}{ Responsable(s): } \textcolor{html2}{ \textbf{ Valentín}} }}}}{2024-09-18}{2024-09-24}
+			\\ \ganttset{ bar/.append style={ pattern=grid }, } \ganttbar[progress=0]{\raisebox{-0.075cm}{ Análisis funcional } \ganttalignnewline \raisebox{0.15cm}{ \footnotesize{ \textit{ \textcolor{gray}{ Responsable(s): } \textcolor{html2}{ \textbf{ Cristian}} }}}}{2024-09-18}{2024-09-24}
+			\ganttset{ ,vrule offset =0.625,} \ganttvrule{HOY}{\the\year-\the\month-\the\day}
 		\end{ganttchart}
 		}
 	\end{adjustbox}

@@ -2,38 +2,37 @@
 \contentsline {section}{\numberline {1}Definición de Proyecto}{4}{}%
 \contentsline {subsection}{\numberline {1.1}Introducción}{4}{}%
 \contentsline {subsection}{\numberline {1.2}Planteamiento del problema}{4}{}%
-\contentsline {subsection}{\numberline {1.3}Objetivo General}{4}{}%
+\contentsline {subsection}{\numberline {1.3}Objetivo General}{5}{}%
 \contentsline {subsection}{\numberline {1.4}Objetivos Especificos}{5}{}%
 \contentsline {subsection}{\numberline {1.5}Justificación}{5}{}%
 \contentsline {subsection}{\numberline {1.6}Alcances y Limitaciones}{6}{}%
 \contentsline {subsubsection}{\numberline {1.6.1}Alcances}{6}{}%
 \contentsline {subsubsection}{\numberline {1.6.2}Limitaciones}{6}{}%
-\contentsline {section}{\numberline {2}Marco teorico}{7}{}%
-\contentsline {subsection}{\numberline {2.1}Metodologia de Analisis}{7}{}%
-\contentsline {subsubsection}{\numberline {2.1.1}¿Qué es metodología Scrum?}{7}{}%
-\contentsline {subsubsection}{\numberline {2.1.2}¿Qué es una Metodología de análisis?}{7}{}%
-\contentsline {section}{\numberline {3}Historias de usuario y Casos de uso}{8}{}%
-\contentsline {subsection}{\numberline {3.1}Casos de Uso}{8}{}%
-\contentsline {subsection}{\numberline {3.2}Historias de Usuario}{8}{}%
-\contentsline {subsection}{\numberline {3.3}Entrevista de requerimientos}{8}{}%
-\contentsline {subsection}{\numberline {3.4}Analisis}{8}{}%
-\contentsline {subsubsection}{\numberline {3.4.1}Entrevista}{8}{}%
-\contentsline {subsubsection}{\numberline {3.4.2}Registro de miembros}{8}{}%
-\contentsline {subsubsection}{\numberline {3.4.3}Seguimiento Administrativo}{9}{}%
-\contentsline {subsubsection}{\numberline {3.4.4}Accesos al sistema}{9}{}%
-\contentsline {subsubsection}{\numberline {3.4.5}Integración}{9}{}%
-\contentsline {subsubsection}{\numberline {3.4.6}Soporte y mantenimiento}{10}{}%
-\contentsline {subsubsection}{\numberline {3.4.7}Últimas palabras}{10}{}%
-\contentsline {section}{\numberline {4}Historias de Usuario}{11}{}%
-\contentsline {paragraph}{Registro de Miembros}{11}{}%
-\contentsline {paragraph}{Gestión de Pagos}{11}{}%
-\contentsline {paragraph}{Gestión de Empleados y Horarios}{11}{}%
-\contentsline {paragraph}{Gestión de inventario de suplementos}{11}{}%
-\contentsline {section}{\numberline {5}Diagrama de Casos de uso}{12}{}%
-\contentsline {subsection}{\numberline {5.1}Diseño}{12}{}%
-\contentsline {subsection}{\numberline {5.2}Desarrollo}{12}{}%
-\contentsline {subsubsection}{\numberline {5.2.1}Estrategia top-down}{12}{}%
-\contentsline {subsection}{\numberline {5.3}Vision Board}{12}{}%
-\contentsline {section}{\numberline {6}Cronograma de actividades}{14}{}%
-\contentsline {subsection}{\numberline {6.1}Definición de proyecto}{14}{}%
-\contentsline {subsection}{\numberline {6.2}Marco Teórico}{15}{}%
+\contentsline {section}{\numberline {2}Marco teorico}{8}{}%
+\contentsline {subsection}{\numberline {2.1}Metodologia de Analisis}{8}{}%
+\contentsline {subsubsection}{\numberline {2.1.1}¿Qué es metodología Scrum?}{8}{}%
+\contentsline {subsubsection}{\numberline {2.1.2}¿Qué es una Metodología de análisis?}{8}{}%
+\contentsline {section}{\numberline {3}Historias de usuario y Casos de uso}{10}{}%
+\contentsline {subsection}{\numberline {3.1}Casos de Uso}{10}{}%
+\contentsline {subsection}{\numberline {3.2}Historias de Usuario}{10}{}%
+\contentsline {subsection}{\numberline {3.3}Entrevista de requerimientos}{10}{}%
+\contentsline {subsection}{\numberline {3.4}Analisis}{10}{}%
+\contentsline {subsubsection}{\numberline {3.4.1}Entrevista}{10}{}%
+\contentsline {subsubsection}{\numberline {3.4.2}Registro de miembros}{11}{}%
+\contentsline {subsubsection}{\numberline {3.4.3}Seguimiento Administrativo}{11}{}%
+\contentsline {subsubsection}{\numberline {3.4.4}Accesos al sistema}{11}{}%
+\contentsline {subsubsection}{\numberline {3.4.5}Integración}{12}{}%
+\contentsline {subsubsection}{\numberline {3.4.6}Soporte y mantenimiento}{12}{}%
+\contentsline {subsubsection}{\numberline {3.4.7}Últimas palabras}{12}{}%
+\contentsline {section}{\numberline {4}Historias de Usuario}{13}{}%
+\contentsline {paragraph}{Registro de Miembros}{13}{}%
+\contentsline {paragraph}{Gestión de Pagos}{13}{}%
+\contentsline {paragraph}{Gestión de Empleados y Horarios}{13}{}%
+\contentsline {paragraph}{Gestión de inventario de suplementos}{13}{}%
+\contentsline {section}{\numberline {5}Diagrama de Casos de uso}{14}{}%
+\contentsline {subsection}{\numberline {5.1}Diseño}{14}{}%
+\contentsline {subsection}{\numberline {5.2}Desarrollo}{14}{}%
+\contentsline {subsubsection}{\numberline {5.2.1}Estrategia top-down}{14}{}%
+\contentsline {subsection}{\numberline {5.3}Vision Board}{14}{}%
+\contentsline {section}{\numberline {6}Cronograma de actividades}{16}{}%
+\contentsline {subsection}{\numberline {6.1}Definición de proyecto y Marco Teórico}{16}{}%
