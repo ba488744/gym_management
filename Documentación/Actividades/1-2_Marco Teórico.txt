@@ -1,8 +1,8 @@
 1	Marco Teórico
 
-2	2024-09-18	2024-09-24	0	Análisis de requerimientos	3
-2	2024-09-18	2024-09-24	0	Diseño de vistas	4 5
-2	2024-09-18	2024-09-24	0	Diseño conceptual	1
-2	2024-09-18	2024-09-24	0	Análisis de entidades	6
-2	2024-09-18	2024-09-24	0	Análisis funcional	2
+2	2024-09-18	2024-09-24	100	Análisis de requerimientos	3
+2	2024-09-18	2024-09-24	100	Diseño de vistas	4 5
+2	2024-09-18	2024-09-24	100	Diseño conceptual	1
+2	2024-09-18	2024-09-24	100	Análisis de entidades	6
+2	2024-09-18	2024-09-24	100	Análisis funcional	2
 

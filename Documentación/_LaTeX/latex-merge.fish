@@ -35,33 +35,76 @@ end
 
 ###############################################################################
 
-function settype -a type lang fontsize margin
-	if not [ "$type" ]; set type article; end
-	if not [ "$lang" ]; set lang spanish; end
-	if not [ "$fontsize" ]; set fontsize 12pt; end
-	if not [ "$margin" ]; set margin 1in; end
+function settype \
+-d "Declara el tipo de documento y sus características generales."
+	argparse 't/type=' 'l/lang=' 'p/pagesize=' 'm/margin=' \
+	-- $argv; or return
+	if [ "$_flag_type" ]; set type "$_flag_type"
+	else; set type article; end
+	if [ "$_flag_lang" ]; set lang "$_flag_lang"
+	else; set lang spanish; end
+	if [ "$_flag_pagesize" ]; set pagesize "$_flag_pagesize"
+	else; set pagesize letterpaper; end
+	if [ "$_flag_fontsize" ]; set fontsize "$_flag_fontsize"
+	else; set fontsize 12pt; end
+	if [ "$_flag_margin" ]; set margin "$_flag_margin"
+	else; set margin 1in; end
 	echo \
 	"\documentclass[$lang, $fontsize]{$type}
-	\usepackage[letterpaper, margin=$margin]{geometry}"
+	\usepackage[$pagesize, margin=$margin]{geometry}
+	\usepackage[$lang]{babel}
+	\usepackage{translator}"
+end
+function setformat \
+-d "Declara el tipo de formato general usado por el documento."
+	argparse 'a/align=' 's/stretch=' \
+	-- $argv; or return
+	if [ "$_flag_align" ]; set align "$_flag_align"
+	else; set align justify; end
+	if [ "$_flag_stretch" ]; set stretch "$_flag_stretch"
+	else; set stretch 1.2; end
+	echo \
+	"\usepackage[$align]{ragged2e}
+	\usepackage{setspace}
+	\setstretch{$stretch}"
+end
+function setfont -a mainfont monofont \
+-d "Declara el tipo de fuente."
+	argparse 'mainfont=' 'monofont=' \
+	-- $argv; or return
+	if [ "$_flag_mainfont" ]; set mainfont "$_flag_mainfont"
+	else; set mainfont "IBM Plex Sans"; end
+	if [ "$_flag_monofont" ]; set monofont "$_flag_monofont"
+	else; set monofont "IBM Plex Mono"; end
+	echo \
+	"\usepackage{fontspec}
+	\defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+	\setmainfont{"$mainfont"}
+	\setmonofont{"$monofont"}"
+end
+function setall
+	settype
+	setformat
+	setfont
 end
 
 ###############################################################################
 
 function escribir
-settype
-
-cat "$dir/.resources/pre-common.tex"
+	setall
+	cat "$dir/.resources/pre-common.tex"
+	echo "\begin{document}"
 # Portada
-	cat "$dir/Documentos LaTeX/0. Portada.tex"
+		cat "$dir/Documentos LaTeX/0. Portada.tex"
 # Tabla de contenidos
-	echo '\tableofcontents'
+		echo '\tableofcontents'
 # MD
-	fish "$dir/MDtoLaTeX/mdtolatex.fish" "$dir"
+		fish "$dir/MDtoLaTeX/mdtolatex.fish" "$dir"
 # User Stories
-	user-stories
+		user-stories
 # GANTT
-	gantt-all
-cat "$dir/.resources/post-common.tex"
+		gantt-all
+	echo "\end{document}"
 end
 
 escribir > "$output.tex"

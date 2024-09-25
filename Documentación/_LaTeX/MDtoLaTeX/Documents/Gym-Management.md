@@ -28,7 +28,7 @@ El gimnasio enfrenta dificultades para gestionar eficientemente las membresías,
 
 ## Objetivo General
 
-Desarrollar una base de datos para un gimnasio, buscando una capacidad de escalabilidad, que nos permita optimizar la administración y el control de todas las áreas operativas, incluyendo gestión de membresías, el manejo de inventario de equipos y productos como suplemnetos de igual manera el seguimiento de los empleados de cada sucursal.
+Desarrollar una base de datos para una serie de gimnasios, buscando una capacidad de escalabilidad, que nos permita optimizar la administración y el control de todas las áreas operativas, incluyendo gestión de membresías, el manejo de inventario de equipos y productos como suplemnetos de igual manera el seguimiento de los empleados de cada sucursal.
 
 La base de datos nos dara la integridad y disponibilidad de la informacion en tiempo real para facilitar la toma de decisiones estratégicas, mejorar la eficiencia operativa y asegurar un control efectivo de los recursos a medida que el negocio crezca.
 
@@ -110,29 +110,29 @@ Asi facilitando su implementación en las diferentes etapas del proceso.
 Pressman promueve un enfoque iterativo e incrementalen e desarrollo de software, en este caso lo utilizaremos en el desarrollo de nuestra base de datos distribuida en base al proyecto del GYM, esto para que se contruya y mejore partes del proyecto de manera gradual.
 Esto tambien tomando en cuenta los aspectos de gestión de proyectos, estimación, planificación y control, asi tambien la detección temprana de los defectos y su corrección inmediata.
 
-# Historias de usuario y Casos de uso
+## Historias de usuario y Casos de uso
 
-## Casos de Uso
+### Casos de Uso
 
 Analiza el comportamiento del sistema en
 distintas condiciones en las que el sistema responde a una petición de alguno de sus participantes. En esencia, un caso de uso narra una historia estilizada sobre cómo interactúa un
 usuario final (que tiene cierto número de roles posibles) con el sistema en circunstancias específicas.
 Un caso de uso ilustra el software o sistema desde el punto de vista del usuario final.
 
-## Historias de Usuario
+### Historias de Usuario
 
 Las historia de usuario consta de ser un texto narrativo, un lineamiento de tareas o interacciones, una
 descripción basada en un formato o una representación diagramática. Sin importar su forma
 
-## Entrevista de requerimientos
+### Entrevista de requerimientos
 
 Éste es el enfoque más directo, los miembros del equipo de software se reúnen con los usuarios para entender mejor sus necesidades, motivaciones, cultura laboral y
 una multitud de aspectos adicionales. Esto se logra en reuniones individuales o a través de
 grupos de enfoque.
 
-## Analisis
+# Analisis
 
-### Entrevista
+## Entrevista
 
 **Entrevistador:** Buenas tardes. Gracias por tomarse el tiempo para esta entrevista. Para empezar, ¿puede darme una visión general de su negocio y qué es lo que espera lograr con este nuevo sistema?
 
@@ -209,34 +209,32 @@ La facilidad de uso es importante para que tanto los empleados como los miembros
 
 **Administrador:** Igualmente. Que tenga un buen día.
 
-# Historias de Usuario
+## Historias de Usuario
 
-#### Registro de Miembros
+### Registro de Miembros
 
-Como administrador, quiero poder registrar nuevos miembros en el sistema, Para automatizar el
-proceso de inscripción y tener un registro preciso de los datos de los miembros.
+Como **administrador**, quiero **poder registrar nuevos miembros en el sistema**, para **automatizar el proceso de inscripción y tener un registro preciso de los datos de los miembros**.
 
 - El sistema debe permitir ingresar información básica del miembro: nombre y número de teléfono
 - El sistema debe registrar el tipo de membresía, fecha de inicio, fecha final y pagos realizados.
 
-#### Gestión de Pagos
+### Gestión de Pagos
 
-Como administrador, quiero poder gestionar los pagos de los miembros dentro del sistema, para
-asegurarme de que los pagos se registren de manera precisa y automática.
+Como **administrador**, quiero **poder gestionar los pagos de los miembros dentro del sistema**, para **asegurarme de que los pagos se registren de manera precisa y automática**.
 
 - El sistema debe registrar pagos realizados por los miembros.
 - El sistema debe permitir consultar el estado de cuenta y el historial de pagos.
 
-#### Gestión de Empleados y Horarios
+### Gestión de Empleados y Horarios
 
-Como administrador, quiero poder gestionar los horarios de los empleados, incluyendo turnos, para llevar un orden y supervisar las actividades de los trabajadores.
+Como **administrador**, quiero **poder gestionar los horarios de los empleados, incluyendo turnos**, para **llevar un orden y supervisar las actividades de los trabajadores**.
 
 - El sistema debe hacer seguimiento de las horas trabajadas por cada empleado.
 - El sistema debe gestionar los pagos de los empleados.
 
-#### Gestión de inventario de suplementos
+### Gestión de inventario de suplementos
 
-Como administrador, quiero poder llevar un registro de mi inventario de suplementos para poder monitorear la venta de alguno y ver la disponibilad de éstos.
+Como **administrador**, quiero **poder llevar un registro de la venta e inventario de suplementos** para **monitorear las ganancias y la disponibilidad de éstos**.
 
 - El sistema debe de permitir controlar el inventario de mis suplementos
 - El sistema debe registrar las ganancias y precios por los suplementos.
@@ -255,5 +253,56 @@ Como administrador, quiero poder llevar un registro de mi inventario de suplemen
 
 ### Estrategia top-down
 
-- Implementacion De Interfaces de Usuario
-- Pruebas Unitarias
+## Analisis de Requerimientos
+
+**Funcionales:**
+
+- Gestión de membresías: Registros, renovación y cancelación de membresías.
+- Pagos: Procesamiento de pagos.
+- Gestión de Empleados:
+
+**No Funcionales:**
+
+- Escalabilidad: Capacidad del sistema para manejar un número creciente del usuario.
+- Disponibilidad: Garantizar que el sistema esté disponible 24/7.
+- Seguridad: Protección de datos personales y financieros de los miembros.
+- Rendimiento: Respuesta rápida del sistema incluso en horas pico.
+
+> - Implementacion De Interfaces de Usuario
+> - Pruebas Unitarias
+
+## Análisis de entidades
+
+### Entidades y atributos
+
+- **Gimnasio**
+  - id_gimnasio (Llave primaria)
+  - Nombre
+  - Dirección
+  - Teléfono
+  - Horario de Apertura
+  - Horario de Cierre
+- **Cliente**
+  - id_cliente (Llave primaria)
+  - Nombre
+  - Apellido Paterno
+  - Apellido Materno
+  - Teléfono
+  - Fecha de Inscripción
+- **Membresía**
+  - id_membresía (Llave primaria)
+  - Tipo (Mensual, Anual, etc.)
+  - Precio
+  - Fecha de inicio
+  - Fecha de fin
+  - id_cliente (Llave foránea)
+- **Empleado**
+  - id_empleado (Llave primaria)
+  - Nombre
+  - Apellido Paterno
+  - Apellido Materno
+  - Tipo de empleado
+  - Sueldo
+  - Teléfono
+
+### Relaciones entre Entidades
