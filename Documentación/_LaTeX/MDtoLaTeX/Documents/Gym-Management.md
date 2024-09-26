@@ -68,14 +68,15 @@ Otro punto a considerar es la resiliencia del sistema. Dado que un gimnasio mane
 4. **Consistencia Eventual**: Algunas arquitecturas distribuidas optan por la consistencia eventual, lo que puede llevar a periodos en los que los datos no están sincronizados en todos los nodos.
 5. **Problemas de Sincronización**: La sincronización de datos entre nodos puede enfrentar problemas, especialmente en redes con alta latencia o en escenarios de particionamiento de red.
 
-# Marco teorico
+# Marco teórico
 
-## Metodologia de Analisis
+## Metodología de Análisis
 
-### ¿Qué es metodología Scrum?
+### SCRUM
 
-Es un pequeño equipo de personas, un equipo Scrum. El equipo Scrum
-consta de:
+SCRUM es un marco ágil para la gestión de proyectos, especialmente en el desarrollo de software. Se basa en la colaboración, la autoorganización y la entrega incremental de productos. SCRUM utiliza roles específicos (como el Product Owner, Scrum Master y el equipo de desarrollo), así como eventos estructurados (como sprints, reuniones diarias y revisiones de sprint) para facilitar la planificación, ejecución y mejora continua del trabajo. Su objetivo es aumentar la flexibilidad y la adaptación a cambios en los requisitos del proyecto.
+
+Un equipo SCRUM es un pequeño equipo de personas, que consta de:
 
 - un Scrum Master,
 - un propietario de producto (Product Owner) y
@@ -84,9 +85,6 @@ consta de:
 Dentro de
 un equipo de Scrum, no hay sub-equipos ni jerarquías. Es una unidad cohesionada de profesionales
 enfocada en un objetivo a la vez, el objetivo del Producto.
-
-Scrum (nombre que proviene de cierta jugada que tiene lugar durante un partido de rugby) es
-un método de desarrollo ágil de software concebido por Jeff Sutherland y su equipo de desarrollo a principios de la década de 1990.
 
 Retraso: lista de prioridades de los requerimientos o características del proyecto que dan al
 cliente un valor del negocio. Es posible agregar en cualquier momento otros aspectos al retraso (ésta es la forma en la que se introducen los cambios). El gerente del proyecto evalúa el
@@ -110,8 +108,6 @@ Asi facilitando su implementación en las diferentes etapas del proceso.
 Pressman promueve un enfoque iterativo e incrementalen e desarrollo de software, en este caso lo utilizaremos en el desarrollo de nuestra base de datos distribuida en base al proyecto del GYM, esto para que se contruya y mejore partes del proyecto de manera gradual.
 Esto tambien tomando en cuenta los aspectos de gestión de proyectos, estimación, planificación y control, asi tambien la detección temprana de los defectos y su corrección inmediata.
 
-## Historias de usuario y Casos de uso
-
 ### Casos de Uso
 
 Analiza el comportamiento del sistema en
@@ -130,9 +126,69 @@ descripción basada en un formato o una representación diagramática. Sin impor
 una multitud de aspectos adicionales. Esto se logra en reuniones individuales o a través de
 grupos de enfoque.
 
-# Analisis
+## Metodología de Diseño
 
-## Entrevista
+Una metodología de diseño se compone de varios elementos que guían el proceso creativo y la resolución de problemas. Una correcta metodología de diseño dentro de los procesos de desarrollo debe tener ciertas características y secuencia para que su salida consista en un activo potencial para el desarrollo del sistema.
+
+### Definición del Problema
+
+- Definición clara del problema a abordar
+- Identificación de las necesidades y expectativas de los usuarios
+- Definición de los objetivos del diseño
+
+### Desarrollo de Conceptos
+
+- Proposición de ideas.
+- Selección de las ideas más prometedoras
+- Desarrollo en conceptos más concretos.
+- Esbozo de prototipos iniciales o maquetas para visualizar y evaluar las soluciones propuestas.
+
+### Evaluación y Pruebas
+
+- Los conceptos desarrollados se prueban y evalúan, a menudo mediante feedback de usuarios.
+- Se identifican fallos y áreas de mejora, permitiendo iteraciones en el diseño.
+
+## Metodología de Desarrollo
+
+Una metodología de desarrollo proporciona un marco estructurado para planificar, ejecutar y gestionar proyectos de manera eficiente. A continuación, se describen brevemente sus componentes fundamentales:
+
+### Planificación
+
+- Definición del alcance del proyecto
+- Identificación de los objetivos
+- Elaboración de un cronograma
+- Definición de los recursos necesarios
+- Asignación de roles y responsabilidades al equipo
+
+### Pruebas
+
+- Desarrollo de pruebas para identificar errores y garantizar que el producto cumple con los requisitos establecidos, asegurando que el software sea robusto y confiable:
+  - Pruebas unitarias,
+  - de integración y
+  - de aceptación del usuario.
+
+### Implementación
+
+Una vez que el software ha sido probado y validado, se despliega en el entorno de producción. Esto puede incluir la migración de datos y la capacitación de usuarios, asegurando una transición fluida.
+
+### Mantenimiento
+
+Después de la implementación, se requiere un seguimiento continuo para corregir errores, realizar actualizaciones y mejorar el sistema en función del feedback de los usuarios. Este componente es esencial para asegurar la longevidad y la relevancia del producto.
+
+### Evaluación y Mejora Continua
+
+Se lleva a cabo una revisión del proceso y los resultados del proyecto. Esta evaluación permite identificar lecciones aprendidas y oportunidades de mejora, lo que contribuye a la optimización de futuras metodologías de desarrollo.
+
+# Análisis
+
+## Definición del Alcance del Proyecto
+
+- **Objetivo**: Crear un sistema que gestione las operaciones de un gimnasio, incluyendo el registro de miembros, gestión de pagos, control administrativo de empleados y reportes de ganancias e inventario de suplementos.
+- **Partes interesadas**: Administradores, miembros y empleados.
+
+## Entrevista con el Administrador
+
+### Visión de negocio
 
 **Entrevistador:** Buenas tardes. Gracias por tomarse el tiempo para esta entrevista. Para empezar, ¿puede darme una visión general de su negocio y qué es lo que espera lograr con este nuevo sistema?
 
@@ -142,7 +198,7 @@ grupos de enfoque.
 
 **Administrador:** En este momento, usamos un sistema de hojas de cálculo para el registro de nuevos miembros y el seguimiento de pagos. Esto es bastante ineficiente y propenso a errores. Me gustaría que el nuevo sistema permitiera registrar automáticamente nuevos miembros y gestionar sus pagos.
 
-### Registro de miembros
+### Registro de miembros y pagos
 
 **Entrevistador:** Perfecto. Para el registro de miembros, ¿qué información específica necesita capturar?
 
@@ -173,31 +229,14 @@ También sería útil poder hacer un seguimiento de:
 - sus horas trabajadas y
 - sus pagos.
 
-### Accesos al sistema
-
-**Entrevistador:** Entiendo. ¿Qué tipo de acceso y permisos deberían tener los diferentes usuarios del sistema? Por ejemplo, ¿qué pueden ver o hacer los administradores frente a los empleados o los entrenadores?
-
-**Administrador:**
-
-- Los administradores deberían tener acceso completo a todas las funciones del sistema, incluyendo: la gestión de miembros, empleados, informes y configuraciones.
-- Los empleados y entrenadores solo deberían tener acceso a funciones relacionadas con su trabajo, como ver sus horarios y gestionar sus propias clases.
-
-### Integración
-
-**Entrevistador:** Muy bien. En términos de integración, ¿hay otros sistemas o herramientas con los que el nuevo sistema debería integrarse, como sistemas de contabilidad o plataformas de marketing?
-
-**Administrador:** Sí, el sistema debería integrarse con nuestro software de contabilidad para que los pagos se registren automáticamente.
-
-### Soporte y mantenimiento
+### Gestión de suplementos
 
 **Entrevistador:** Perfecto. Para finalizar, ¿hay algún otro requerimiento o aspecto específico que no hayamos cubierto y que sea importante para usted?
 
-**Administrador:** Creo que lo hemos cubierto bastante bien. Solo me gustaría:
+**Administrador:** Sí, actualmente también servimos como distribuidor de suplementos, por lo que me gustaría que el sistema me permita:
 
-- que el sistema fuera fácil de usar
-- una interfaz llamativa.
-
-La facilidad de uso es importante para que tanto los empleados como los miembros puedan adaptarse rápidamente.
+- llevar un control de los suplementos vendidos y las ganancias, y
+- el inventario de los suplementos que tenemos disponibles para venta.
 
 ### Últimas palabras
 
@@ -208,6 +247,22 @@ La facilidad de uso es importante para que tanto los empleados como los miembros
 **Entrevistador:** De nada. Le mantendremos informado sobre el avance del proyecto. Que tenga un buen día.
 
 **Administrador:** Igualmente. Que tenga un buen día.
+
+## Analisis de Requerimientos
+
+### Funcionales
+
+- **Gestión de clientes**: Registros, renovación y cancelación de membresías.
+- **Pagos**: Procesamiento de pagos.
+- **Gestión de empleados**: Registros, asisnación de rol y actividades a realizar y evaluación de desempeño.
+- **Administración del inventario**:
+
+### No Funcionales
+
+- **Escalabilidad**: Capacidad del sistema para manejar un número creciente del usuario.
+- **Disponibilidad**: Garantizar que el sistema esté disponible 24/7.
+- **Seguridad**: Protección de datos personales y financieros de los miembros.
+- **Rendimiento**: Respuesta rápida del sistema incluso en horas pico.
 
 ## Historias de Usuario
 
@@ -237,39 +292,15 @@ Como **administrador**, quiero **poder gestionar los horarios de los empleados, 
 Como **administrador**, quiero **poder llevar un registro de la venta e inventario de suplementos** para **monitorear las ganancias y la disponibilidad de éstos**.
 
 - El sistema debe de permitir controlar el inventario de mis suplementos
-- El sistema debe registrar las ganancias y precios por los suplementos.
+- El sistema debe registrar las ganancias y precios de los suplementos.
 
-# Diagrama de Casos de uso
+# Diseño
 
-## Diseño
+## Arquitectura de Sistema de Base de Datos Distriuido
 
-- Arquitectura de Sistema de Base de Datos Distriuido
-- Esquema Conceptual Global
-- Esquema Conceptual Local
+## Esquema Conceptual Global
 
-## Desarrollo
-
-- Implementacion del SBDD
-
-### Estrategia top-down
-
-## Analisis de Requerimientos
-
-**Funcionales:**
-
-- Gestión de membresías: Registros, renovación y cancelación de membresías.
-- Pagos: Procesamiento de pagos.
-- Gestión de Empleados:
-
-**No Funcionales:**
-
-- Escalabilidad: Capacidad del sistema para manejar un número creciente del usuario.
-- Disponibilidad: Garantizar que el sistema esté disponible 24/7.
-- Seguridad: Protección de datos personales y financieros de los miembros.
-- Rendimiento: Respuesta rápida del sistema incluso en horas pico.
-
-> - Implementacion De Interfaces de Usuario
-> - Pruebas Unitarias
+## Esquema Conceptual Local
 
 ## Análisis de entidades
 
@@ -306,3 +337,13 @@ Como **administrador**, quiero **poder llevar un registro de la venta e inventar
   - Teléfono
 
 ### Relaciones entre Entidades
+
+# Desarrollo
+
+## Implementacion del SBDD
+
+## Implementacion De Interfaces de Usuario
+
+## Pruebas Unitarias
+
+# Resultados y conclusiones

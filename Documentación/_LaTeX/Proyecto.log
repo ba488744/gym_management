@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.15.0 (TeX Live 2022/Debian)  (format=lualatex 2024.8.11)  25 SEP 2024 16:07
+This is LuaHBTeX, Version 1.15.0 (TeX Live 2022/Debian)  (format=lualatex 2024.8.11)  26 SEP 2024 14:43
  restricted system commands enabled.
 **"/home/mau/Sync/UAEH/Asignaturas/Bases de datos distribuidas/gym_management/D
 ocumentación/_LaTeX//Proyecto.tex"
@@ -1296,48 +1296,51 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 3.
  [2
 
-])
+] [3])
 \tf@toc=\write4
 
 \openout4 = Proyecto.toc
- [3]
+ [4]
 LaTeX Font Info:    Font shape `TU/IBMPlexSans(0)/m/n' will be
 (Font)              scaled to size 12.02782pt on input line 215.
 LaTeX Font Info:    Font shape `TU/IBMPlexSans(0)/b/n' will be
 (Font)              scaled to size 11.82172pt on input line 215.
- [4
+ [5
 
-] [5] [6] [7] [8
+] [6] [7] [8] [9
 
-] [9] [10
+] [10]
+[11] [12] [13
 
-]
-[11] [12] [13] [14
+] [14] [15] [16] [17
+
+] [18] [19
+
+] [20
 
 ]
 LaTeX Font Info:    Font shape `TU/IBMPlexSans(0)/b/it' will be
-(Font)              scaled to size 9.85144pt on input line 865.
+(Font)              scaled to size 9.85144pt on input line 968.
 
-Underfull \hbox (badness 1874) in paragraph at lines 865--865
+Underfull \hbox (badness 1874) in paragraph at lines 968--968
 []\TU/IBMPlexSans(0)/m/n/12 Quie-ro \TU/IBMPlexSans(0)/b/n/12 po-der re-gis-trar
  nue-vos miem-
  []
 
 
-Underfull \hbox (badness 1331) in paragraph at lines 908--908
+Underfull \hbox (badness 1331) in paragraph at lines 1011--1011
 []\TU/IBMPlexSans(0)/m/n/12 Quie-ro \TU/IBMPlexSans(0)/b/n/12 po-der lle-var un re-gis-tro de la
  []
 
-[15] [16]
 LaTeX Font Info:    Font shape `TU/IBMPlexSans(0)/m/n' will be
-(Font)              scaled to size 8.35266pt on input line 955.
+(Font)              scaled to size 8.35266pt on input line 1058.
 LaTeX Font Info:    Font shape `TU/IBMPlexSans(0)/m/it' will be
-(Font)              scaled to size 8.35266pt on input line 955.
+(Font)              scaled to size 8.35266pt on input line 1058.
 LaTeX Font Info:    Font shape `TU/IBMPlexSans(0)/b/it' will be
-(Font)              scaled to size 8.20953pt on input line 955.
- [17
+(Font)              scaled to size 8.20953pt on input line 1058.
+[21
 
-]
+] [22]
 ("/home/mau/Sync/UAEH/Asignaturas/Bases de datos distribuidas/gym_management/Do
 cumentación/_LaTeX//Proyecto.aux"
 LaTeX Info: Redefining \. on input line 10.
@@ -1349,23 +1352,24 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 )
 
 Here is how much of LuaTeX's memory you used:
- 27614 strings out of 478382
- 156268,1977958 words of node,token memory allocated
- 726 words of node memory still in use:
-   4 hlist, 1 vlist, 1 rule, 4 glue, 3 kern, 1 glyph, 9 attribute, 104 glue_spec
+ 27622 strings out of 478382
+ 156255,1977958 words of node,token memory allocated
+ 721 words of node memory still in use:
+   4 hlist, 1 vlist, 1 rule, 4 glue, 3 kern, 1 glyph, 9 attribute, 103 glue_spec
 , 6 attribute_list, 2 write nodes
-   avail lists: 2:7762,3:5660,4:198,5:1250,6:71,7:7676,8:1,9:2871,10:10,11:1022
- 46620 multiletter control sequences out of 65536+600000
+   avail lists: 1:1,2:11740,3:6646,4:214,5:1253,6:64,7:9022,8:1,9:3107,10:11,11:
+1022
+ 46628 multiletter control sequences out of 65536+600000
  64 fonts using 6926007 bytes
  109i,10n,122p,685b,1203s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/opentype/ibm/plex/IBMPlexSans-Italic.otf></
 usr/share/texlive/texmf-dist/fonts/opentype/ibm/plex/IBMPlexSans-BoldItalic.otf>
 </usr/share/texlive/texmf-dist/fonts/opentype/ibm/plex/IBMPlexSans-Regular.otf><
 /usr/share/texlive/texmf-dist/fonts/opentype/ibm/plex/IBMPlexSans-Bold.otf>
-Output written on Proyecto.pdf (17 pages, 59827 bytes).
+Output written on Proyecto.pdf (22 pages, 64117 bytes).
 
-PDF statistics: 119 PDF objects out of 1000 (max. 8388607)
- 69 compressed objects within 1 object stream
+PDF statistics: 135 PDF objects out of 1000 (max. 8388607)
+ 80 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 131072)
  166 words of extra memory for PDF output out of 10000 (max. 100000000)
 

@@ -9,12 +9,12 @@ function user-stories
 end
 function gantt -a titulo color filtro
 	if not [ "$filtro" ]; set filtro "$titulo"; end
-	echo "\subsection{$titulo}"
+	echo "\subsubsection{$titulo}"
 	fish "$dir/GANTT/gantt.fish" "$dir" "$color" "$filtro" 0.85
 end
 function gantt-all
 	#echo '\begin{landscape}'
-	echo "\section{Cronograma de actividades}\label{cronograma}"
+	echo "\subsection{Cronograma de actividades}\label{cronograma}"
 	set colores 1 3 4 5 6 7 8 9 10 11 12; set n 1
 	for grafica in \
 	"1-[1-2]_Definición de proyecto y Marco Teórico"
@@ -100,6 +100,7 @@ function escribir
 		echo '\tableofcontents'
 # MD
 		fish "$dir/MDtoLaTeX/mdtolatex.fish" "$dir"
+	echo "\section{Anexos}\label{anexos}"
 # User Stories
 		user-stories
 # GANTT
