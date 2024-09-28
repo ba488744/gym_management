@@ -307,34 +307,53 @@ Como **administrador**, quiero **poder llevar un registro de la venta e inventar
 ### Entidades y atributos
 
 - **Gimnasio**
-  - id_gimnasio (Llave primaria)
+  - idGimnasio (Llave primaria)
   - Nombre
   - Dirección
   - Teléfono
   - Horario de Apertura
   - Horario de Cierre
-- **Cliente**
-  - id_cliente (Llave primaria)
-  - Nombre
-  - Apellido Paterno
-  - Apellido Materno
-  - Teléfono
-  - Fecha de Inscripción
 - **Membresía**
-  - id_membresía (Llave primaria)
+  - idMembresía (Llave primaria)
   - Tipo (Mensual, Anual, etc.)
   - Precio
   - Fecha de inicio
   - Fecha de fin
-  - id_cliente (Llave foránea)
+- **Cliente**
+  - idCliente (Llave primaria)
+  - Nombre
+  - Apellido Paterno
+  - Apellido Materno
+  - Teléfono
+  - idMembresía (Llave foránea)
 - **Empleado**
-  - id_empleado (Llave primaria)
+  - idEmpleado (Llave primaria)
   - Nombre
   - Apellido Paterno
   - Apellido Materno
   - Tipo de empleado
   - Sueldo
   - Teléfono
+  - idGimnasio (Llave foránea)
+- **Suplemento**
+  - idSuplemento (Llave primaria)
+  - Nombre
+  - Marca
+  - Tipo
+  - Presentación (Imagen)
+  - Precio unitario
+- **Suplemento-Gimnasio** (Intermediaria)
+  - idSuplementoGimnasio (Llave primaria)
+  - Inventario
+  - idSuplemento (Llave foránea)
+  - idGimnasio (Llave foránea)
+- **Venta-Suplemento** (Intermediaria)
+  - idVenta (Llave primaria)
+  - Monto
+  - Tipo (Membresía, Suplemento)
+- **Pago-Membresía** (Intermediaria)
+  - idPagoMembresia (Llave primaria)
+  - idMembresía (Llave foránea)
 
 ### Relaciones entre Entidades
 
